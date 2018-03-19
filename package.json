@@ -1,0 +1,43 @@
+{
+  "name": "neet.love",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:jest && npm run test:compile",
+    "test:lint": "tslint -c tslint.yml ./src/**/*.ts",
+    "test:jest": "jest --coverage --config=jest.config.json",
+    "test:compile": "tsc --noEmit",
+    "start": "parcel ./src/index.html"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/preset-react": "^7.0.0-beta.42",
+    "@babel/preset-stage-3": "^7.0.0-beta.42",
+    "@babel/preset-typescript": "^7.0.0-beta.42",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-redux": "^5.0.15",
+    "@types/react-router": "^4.0.23",
+    "@types/react-router-dom": "^4.2.5",
+    "@types/redux-immutable": "^3.0.38",
+    "immutable": "^3.8.2",
+    "parcel-bundler": "^1.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-immutable": "^4.0.0",
+    "typescript": "^2.7.2",
+    "typescript-fsa": "^2.5.0",
+    "typescript-fsa-reducers": "^0.4.5"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "node-sass": "^4.7.2",
+    "tslint": "^5.9.1",
+    "tslint-microsoft-contrib": "^5.0.3"
+  }
+}
