@@ -1,0 +1,27 @@
+.polygon-wrapper {
+  position: absolute;
+  animation-name: konoha;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.polygon {
+  @include pentagon(white);
+  position: absolute;
+}
+
+.polygon-outer {
+  @include pentagon(#FF7878);
+  position: absolute;
+  filter: blur(25px);
+}
+
+@keyframes konoha {
+  0% { transform: rotateX(0deg); top: 0%}
+  20% { transform: rotateX(360deg) }
+  40% { transform: rotateX(0deg) }
+  60% { transform: rotateX(360deg) }
+  80% { transform: rotateX(0deg) }
+  100% { transform: rotateX(360deg); top: 100% }
+}

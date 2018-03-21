@@ -34,15 +34,12 @@ const config = {
         test: /\.(css|scss|sass)$/,
         use: ExtractTextWebpackPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-            },
-            {
-              loader: 'sass-loader',
-            },
-          ],
+          use: ['css-loader', 'sass-loader'],
         }),
+      },
+      {
+        test: /\.(txt|md|ya?ml)$/,
+        use: 'raw-loader',
       },
       {
         test: /\.(jpe?g|png|gif|ttf|otf|eot|svg|woff(2)?)$/,
@@ -50,7 +47,6 @@ const config = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            publicPath: '/dist/',
           },
         }],
       },
@@ -59,7 +55,7 @@ const config = {
 
   resolve: {
     extensions: ['.js', '.jsx', '.es', '.ts', '.tsx'],
-    alias: { '@': __dirname + '/src/renderer' },
+    alias: { '@': __dirname + '/src/scripts' },
   },
 
   plugins: [
@@ -82,7 +78,6 @@ const config = {
 
     new ExtractTextWebpackPlugin({
       filename: '[name].css',
-      publicPath: '/dist/',
     }),
   ],
 
