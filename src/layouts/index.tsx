@@ -1,23 +1,22 @@
-import React from 'react';
+import * as React from 'react';
 import Helmet from 'react-helmet';
+import Header from '../components/header';
+import '../styles/main.scss';
 
 interface Props {
-  children: React.ReactNode;
+  data: any;
 }
 
-import Header from '../components/header';
-import './index.css';
-
-const Layout = (props: Props) => (
+const Layout: React.SFC<Props> = ({ data, children }) => (
   <div>
     <Helmet
-      title={props.data.site.siteMetadata.title}
+      title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={props.data.site.siteMetadata.title} />
+    <Header siteTitle={data.site.siteMetadata.title} />
     <div
       style={{
         margin: '0 auto',
@@ -26,7 +25,7 @@ const Layout = (props: Props) => (
         paddingTop: 0,
       }}
     >
-      {props.children}
+      {children}
     </div>
   </div>
 );

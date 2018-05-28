@@ -1,5 +1,5 @@
 import Link from 'gatsby-link';
-import React from 'react';
+import * as React from 'react';
 
 const IndexPage: React.SFC = () => (
   <div>
