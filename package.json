@@ -10,6 +10,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@types/js-yaml": "^3.11.1",
+    "@types/md5": "^2.1.32",
+    "@types/query-string": "^5.1.0",
     "@types/react-helmet": "^5.0.6",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
@@ -18,7 +25,11 @@
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-typescript": "^1.4.20",
+    "gatsby-source-filesystem": "^1.5.36",
+    "gatsby-transformer-yaml": "^1.5.17",
     "js-yaml": "^3.11.0",
+    "md5": "^2.2.1",
+    "query-string": "^6.1.0",
     "react-helmet": "^5.2.0",
     "typescript": "^2.8.3"
   },
