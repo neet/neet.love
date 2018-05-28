@@ -1,0 +1,11 @@
+{
+  "name": "love",
+  "private": true,
+  "author": "Neetshin",
+  "license": "MIT",
+  "description": "💕 The world's coolest portfolio",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
