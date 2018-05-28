@@ -1,20 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import Header from '../components/header'
-import './index.css'
+interface Props {
+  children: React.ReactNode;
+}
 
-const Layout = ({ children, data }) => (
+import Header from '../components/header';
+import './index.css';
+
+const Layout = (props: Props) => (
   <div>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title={props.data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header siteTitle={props.data.site.siteMetadata.title} />
     <div
       style={{
         margin: '0 auto',
@@ -23,16 +26,12 @@ const Layout = ({ children, data }) => (
         paddingTop: 0,
       }}
     >
-      {children()}
+      {props.children}
     </div>
   </div>
-)
+);
 
-Layout.propTypes = {
-  children: PropTypes.func,
-}
-
-export default Layout
+export default Layout;
 
 export const query = graphql`
   query SiteTitleQuery {
@@ -42,4 +41,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
