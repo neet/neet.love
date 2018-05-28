@@ -1,0 +1,18 @@
+.content {
+  display: flex;
+}
+
+.page {
+  font-size: 21px;
+  padding: 16px 24px;
+
+  h1 {
+    font-size: 38px;
+    padding-bottom: 8px;
+    border-bottom: 6px dotted $text-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico';
+  }
+}
