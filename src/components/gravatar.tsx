@@ -3,6 +3,7 @@ import * as queryString from 'query-string';
 import * as React from 'react';
 
 interface Props {
+  className?: string;
   email: string;
   title?: string;
   size?: number;
@@ -23,7 +24,11 @@ const Gravatar: React.SFC<Props> = (props) => {
   })}`;
 
   return (
-    <img src={url} alt={props.title || ''} />
+    <img
+      className={props.className}
+      src={url}
+      alt={props.title || ''}
+    />
   );
 };
 
