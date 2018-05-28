@@ -30,6 +30,7 @@
     "js-yaml": "^3.11.0",
     "md5": "^2.2.1",
     "query-string": "^6.1.0",
+    "react-fade-in": "^0.1.6",
     "react-helmet": "^5.2.0",
     "typescript": "^2.8.3"
   },
