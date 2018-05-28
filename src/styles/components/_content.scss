@@ -6,13 +6,39 @@
   font-size: 21px;
   padding: 16px 24px;
 
-  h1 {
-    font-size: 38px;
-    padding-bottom: 8px;
-    border-bottom: 6px dotted $text-color;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico';
   }
+}
+
+.page__header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.page__avatar {
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.page__title {
+  font-size: 46px;
+}
+
+.page__excerpt {
+  font-size: 21px;
+  margin: 8px 0;
+}
+
+.page__separetar {
+  // TODO: Add reset in _reset.scss
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  display: block;
+  box-sizing: border-box;
+  border-top: 6px dotted $text-color;
+  margin: 8px 0;
 }

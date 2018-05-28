@@ -1,19 +1,19 @@
 import * as React from 'react';
 
-interface Social {
-  name: string;
-  label: string;
-  href: string;
-}
-
 interface Props {
   social: Social;
 }
 
 const SocialButton: React.SFC<Props> = ({ social }) => (
-  <a className='social-button' href={social.href}>
-    {social.name}: {social.label}
-  </a>
+  <div className='social-button'>
+    <a className='social-button__link' href={social.href} title={social.name}>
+      <i className={`social-button__fa ${social.fa}`} aria-hidden />
+
+      <span className='social-button__label'>
+        {social.label}
+      </span>
+    </a>
+  </div>
 );
 
 export default SocialButton;

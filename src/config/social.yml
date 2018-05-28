@@ -1,11 +1,14 @@
 - name: Twitter
-  label: @TheGodOfNeet
+  label: "@TheGodOfNeet"
   href: https://twitter.com/thegodofneet
+  fa: fab fa-twitter
 
 - name: Mastodon
-  label: @neet@mastodon.social
+  label: "@neet@mastodon.social"
   href: https://mastodon.social/@neet
+  fa: fab fa-mastodon
 
 - name: GitHub
-  label: @neet
+  label: "@neet"
   href: https://github.com/neet
+  fa: fab fa-github

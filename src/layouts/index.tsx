@@ -1,14 +1,20 @@
+import '@fortawesome/fontawesome';
+import '@fortawesome/fontawesome-free-brands';
+import '@fortawesome/fontawesome-free-regular';
+import '@fortawesome/fontawesome-free-solid';
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import Header from '../components/header';
+import Content from '../components/content';
+import Letterhead from '../components/letterhead';
 import '../styles/main.scss';
 
 interface Props {
   data: any;
+  children: () => React.ReactNode;
 }
 
 const Layout: React.SFC<Props> = ({ data, children }) => (
-  <div>
+  <Content>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -16,18 +22,11 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children}
-    </div>
-  </div>
+
+    <Letterhead />
+
+    {children()}
+  </Content>
 );
 
 export default Layout;
