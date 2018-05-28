@@ -1,0 +1,11 @@
+- name: Twitter
+  label: @TheGodOfNeet
+  href: https://twitter.com/thegodofneet
+
+- name: Mastodon
+  label: @neet@mastodon.social
+  href: https://mastodon.social/@neet
+
+- name: GitHub
+  label: @neet
+  href: https://github.com/neet
