@@ -1,14 +1,50 @@
-- name: Twitter
-  label: "@TheGodOfNeet"
-  href: https://twitter.com/thegodofneet
-  fa: fab fa-twitter
+---
+- name:  Email
+  label: n33t5hin@gmail.com
+  href:  mailto:n33t5hin@gmail.com
+  fa:    fas fa-envelope
 
-- name: Mastodon
+- name:  Medium (Blog)
+  label: "@neetshin"
+  href:  https://medium.com/@neetshin
+  fa:    fab fa-medium-m
+
+- name:  Mastodon
   label: "@neet@mastodon.social"
-  href: https://mastodon.social/@neet
-  fa: fab fa-mastodon
+  href:  https://mastodon.social/@neet
+  fa:    fab fa-mastodon
 
-- name: GitHub
+- name:  GitHub
   label: "@neet"
-  href: https://github.com/neet
-  fa: fab fa-github
+  href:  https://github.com/neet
+  fa:    fab fa-github
+
+- name:  Discord
+  label: neetshin#1400
+  copy:  neetshin#1400
+  fa:    fab fa-discord
+
+- name:  Twitter
+  label: "@TheGodOfNeet"
+  href:  https://twitter.com/thegodofneet
+  fa:    fab fa-twitter
+
+- name:  NPM
+  label: neetshin
+  href:  https://www.npmjs.com/~neetshin
+  fa:    fab fa-npm
+
+- name:  GitLab
+  label: neetshin
+  href:  https://gitlab.com/neetshin
+  fa:    fab fa-gitlab
+
+- name:  MDN
+  label: neetshin
+  href:  https://developer.mozilla.org/ja/profiles/Neetshin
+  fa:    fab fa-firefox
+
+- name:  Bitcoin
+  label: Bitcoin
+  copy:  3AucsLDnY37qipYngLM5KH9heWkJ1AEArv
+  fa:    fab fa-bitcoin
