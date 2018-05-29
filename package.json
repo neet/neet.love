@@ -27,6 +27,7 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-typescript": "^1.4.20",
     "gatsby-source-filesystem": "^1.5.36",
+    "gatsby-source-medium": "^1.0.14",
     "gatsby-transformer-yaml": "^1.5.17",
     "js-yaml": "^3.11.0",
     "md5": "^2.2.1",

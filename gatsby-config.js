@@ -8,6 +8,8 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-sass',
     'gatsby-transformer-yaml',
+
+    /** Resolving src/config files */
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -15,6 +17,8 @@ module.exports = {
         path: `${__dirname}/src/config`,
       },
     },
+
+    /** Resolving Google Fonts */
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -23,6 +27,14 @@ module.exports = {
           'Pacifico',
         ]
       }
-    }
+    },
+
+    /** Enabling to refer Medium */
+    {
+      resolve: 'gatsby-source-medium',
+      options: {
+        username: '@neetshin',
+      },
+    },
   ],
 }

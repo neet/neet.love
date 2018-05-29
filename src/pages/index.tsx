@@ -1,34 +1,19 @@
 import * as React from 'react';
-import Feeds from '../components/feeds';
 import Gravatar from '../components/gravatar';
+import MediumFeeds from '../components/medium_feeds';
 import Page from '../components/page';
 import Social from '../components/social';
-
-import lagunehq from '../../images/lagunehq.png';
-import nijipico from '../../images/nijipico.png';
-import tipwaves from '../../images/tipwaves.png';
+import GraphQLRoot from '../typings/graphql_root';
 
 interface Props {
-  data: {
-    allSocialYaml: {
-      edges: { node: Social }[];
-    };
-    allMetaYaml: {
-      edges: {
-        node: {
-          gravatar_email: string;
-          medium_rss_uri: string;
-        },
-      }[];
-    }
-  };
+  data: GraphQLRoot;
 }
 
 const Index: React.SFC<Props> = ({ data }) => {
   console.log(data);
   const socialNodes   = data.allSocialYaml.edges;
-  const gravatarEmail = data.allMetaYaml.edges[0].node.gravatar_email;
-  const mediumRssUri  = data.allMetaYaml.edges[0].node.medium_rss_uri;
+  const gravatarEmail = 'n33t5hin@gmail.com';
+  const mediumPosts   = data.allMediumPost.edges.map((item) => item.node);
 
   return (
     <Page
@@ -54,7 +39,7 @@ const Index: React.SFC<Props> = ({ data }) => {
       <Social socials={socialNodes} />
 
       <h2>Blog</h2>
-      <Feeds feedUri={mediumRssUri} />
+      <MediumFeeds mediumPosts={mediumPosts} />
     </Page>
   );
 };
@@ -74,11 +59,27 @@ export const query = graphql`
         }
       }
     }
-    allMetaYaml {
+    allConfigYaml {
       edges {
         node {
           gravatar_email
-          medium_rss_uri
+        }
+      }
+    }
+    allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          virtuals {
+            subtitle
+            previewImage {
+              imageId
+            }
+          }
+          author {
+            name
+          }
         }
       }
     }
