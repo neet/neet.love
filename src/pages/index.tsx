@@ -1,19 +1,34 @@
 import * as React from 'react';
-import FadeIn from 'react-fade-in';
+import Feeds from '../components/feeds';
 import Gravatar from '../components/gravatar';
 import Page from '../components/page';
-import SocialButton from '../components/social_button';
+import Social from '../components/social';
+
+import lagunehq from '../../images/lagunehq.png';
+import nijipico from '../../images/nijipico.png';
+import tipwaves from '../../images/tipwaves.png';
 
 interface Props {
   data: {
     allSocialYaml: {
       edges: { node: Social }[];
     };
+    allMetaYaml: {
+      edges: {
+        node: {
+          gravatar_email: string;
+          medium_rss_uri: string;
+        },
+      }[];
+    }
   };
 }
 
-const Index: React.SFC<Props> = ({data}) => {
-  const socialNodes = data.allSocialYaml.edges;
+const Index: React.SFC<Props> = ({ data }) => {
+  console.log(data);
+  const socialNodes   = data.allSocialYaml.edges;
+  const gravatarEmail = data.allMetaYaml.edges[0].node.gravatar_email;
+  const mediumRssUri  = data.allMetaYaml.edges[0].node.medium_rss_uri;
 
   return (
     <Page
@@ -22,7 +37,7 @@ const Index: React.SFC<Props> = ({data}) => {
       insertBefore={
         <Gravatar
           className='page__avatar'
-          email='n33t5hin@gmail.com'
+          email={gravatarEmail}
           title='Neetshin'
           size={120}
         />
@@ -35,12 +50,11 @@ const Index: React.SFC<Props> = ({data}) => {
         です，よろしくお願いします．
       </p>
 
-      <FadeIn delay={100}>
-        {
-          socialNodes.map(({node}: Social) => (
-            <SocialButton key={node.name} social={node} />
-          ))}
-      </FadeIn>
+      <h2>Social</h2>
+      <Social socials={socialNodes} />
+
+      <h2>Blog</h2>
+      <Feeds feedUri={mediumRssUri} />
     </Page>
   );
 };
@@ -48,14 +62,23 @@ const Index: React.SFC<Props> = ({data}) => {
 export default Index;
 
 export const query = graphql`
-  query AllSocialYaml {
+  query ConfigData {
     allSocialYaml {
       edges {
         node {
           name
           label
           href
+          copy
           fa
+        }
+      }
+    }
+    allMetaYaml {
+      edges {
+        node {
+          gravatar_email
+          medium_rss_uri
         }
       }
     }
