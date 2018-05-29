@@ -1,5 +1,16 @@
 .letterhead {
-  height: 100vh;
-  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
   background-color: $secondary-color;
+
+  @media screen and (min-width: 631px) {
+    width: 30px
+  }
+
+  @media screen and (min-width: 901px) {
+    width: 300px
+  }
 }

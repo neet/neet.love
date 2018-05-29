@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'Neetshin',
@@ -33,7 +35,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-medium',
       options: {
-        username: '@neetshin',
+        username: process.env.MEDIUM_USERNAME,
       },
     },
   ],

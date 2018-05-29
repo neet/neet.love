@@ -1,19 +1,45 @@
 import * as React from 'react';
+import FadeIn from 'react-fade-in';
 import Gravatar from '../components/gravatar';
-import MediumFeeds from '../components/medium_feeds';
+import MediumPosts from '../components/medium_posts';
 import Page from '../components/page';
-import Social from '../components/social';
-import GraphQLRoot from '../typings/graphql_root';
+import SocialAccounts from '../components/social_accounts';
+
+export interface SocialAccount {
+  name: string;
+  label: string;
+  href: string;
+  copy: string;
+  fa: string;
+}
+
+export interface MediumPost {
+  id: string;
+  title: string;
+  uniqueSlug: string;
+  createdAt: number;
+  virtuals: {
+    subtitle: string;
+    previewImage: {
+      imageId: string,
+    };
+  };
+}
 
 interface Props {
-  data: GraphQLRoot;
+  data: {
+    allSocialAccountsYaml: {
+      edges: { node: SocialAccount }[];
+    };
+    allMediumPost: {
+      edges: { node: MediumPost }[],
+    };
+  };
 }
 
 const Index: React.SFC<Props> = ({ data }) => {
-  console.log(data);
-  const socialNodes   = data.allSocialYaml.edges;
-  const gravatarEmail = 'n33t5hin@gmail.com';
-  const mediumPosts   = data.allMediumPost.edges.map((item) => item.node);
+  const mediumPosts = data.allMediumPost.edges.map((item) => item.node);
+  const socialAccounts = data.allSocialAccountsYaml.edges;
 
   return (
     <Page
@@ -22,24 +48,23 @@ const Index: React.SFC<Props> = ({ data }) => {
       insertBefore={
         <Gravatar
           className='page__avatar'
-          email={gravatarEmail}
+          email='n33t5hin@gmail.com'
           title='Neetshin'
           size={120}
         />
       }
     >
+      <FadeIn>
+        <p>
+          高校一年生です，よろしくおねがいします．
+        </p>
 
-      <p>
-        好きなVtuberは
-        <a href='https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA'>名取さなさん</a>
-        です，よろしくお願いします．
-      </p>
+        <h2>Social accounts</h2>
+        <SocialAccounts socialAccounts={socialAccounts} />
 
-      <h2>Social</h2>
-      <Social socials={socialNodes} />
-
-      <h2>Blog</h2>
-      <MediumFeeds mediumPosts={mediumPosts} />
+        <h2>Medium</h2>
+        <MediumPosts posts={mediumPosts} />
+      </FadeIn>
     </Page>
   );
 };
@@ -48,7 +73,7 @@ export default Index;
 
 export const query = graphql`
   query ConfigData {
-    allSocialYaml {
+    allSocialAccountsYaml {
       edges {
         node {
           name
@@ -59,27 +84,19 @@ export const query = graphql`
         }
       }
     }
-    allConfigYaml {
-      edges {
-        node {
-          gravatar_email
-        }
-      }
-    }
     allMediumPost(sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           id
           title
+          createdAt
           virtuals {
             subtitle
             previewImage {
               imageId
             }
           }
-          author {
-            name
-          }
+          uniqueSlug
         }
       }
     }

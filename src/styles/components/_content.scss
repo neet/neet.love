@@ -1,29 +1,42 @@
-.content {
-  display: flex;
-}
-
 .page {
+  width: 600px;
   font-size: 21px;
-  padding: 16px 24px;
+  padding: 28px;
+  box-sizing: border-box;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico';
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin: 0.25em 0 0.25em;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  @media screen and (min-width: 631px) {
+    margin-left: 300px;
   }
 }
 
 .page__header {
   display: flex;
   align-items: center;
-  padding-bottom: 8px;
 }
 
 .page__avatar {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 18px;
+  background-color: $dark-text-color;
 }
 
 .page__title {
   font-size: 46px;
+  margin-bottom: 0;
 }
 
 .page__excerpt {
@@ -40,5 +53,5 @@
   display: block;
   box-sizing: border-box;
   border-top: 6px dotted $text-color;
-  margin: 8px 0;
+  margin: 18px 0;
 }

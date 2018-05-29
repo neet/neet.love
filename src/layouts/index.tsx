@@ -9,7 +9,13 @@ import Letterhead from '../components/letterhead';
 import '../styles/main.scss';
 
 interface Props {
-  data: any;
+  data: {
+    site: {
+      siteMetadata: {
+        title: string;
+      }
+    }
+  };
   children: () => React.ReactNode;
 }
 

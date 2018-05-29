@@ -1,0 +1,37 @@
+.social-accounts__list {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.social-account-button__link {
+  cursor: pointer;
+  display: flex;
+  padding: 4px;
+  box-sizing: border-box;
+  width: 300px;
+  align-items: center;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: 0.15s ease-out;
+
+  &:hover {
+    background-color: $darker-primary-color;
+    text-decoration: none;
+    transition: 0.15s ease-out;
+  }
+}
+
+.social-account-button__fa-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+
+.social-account-button__fa {
+  font-size: 28px;
+}

@@ -1,4 +1,3 @@
----
 - name:  Email
   label: n33t5hin@gmail.com
   href:  mailto:n33t5hin@gmail.com
@@ -48,3 +47,8 @@
   label: Bitcoin
   copy:  3AucsLDnY37qipYngLM5KH9heWkJ1AEArv
   fa:    fab fa-bitcoin
+
+- name:  Patreon
+  label: neetshin
+  href:  https://www.patreon.com/neetshin
+  fa:    fab fa-patreon
