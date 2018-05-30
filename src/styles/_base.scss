@@ -1,6 +1,6 @@
 body {
-  color: $text-color;
-  background-color: $primary-color;
+  color: $text-50;
+  background-color: $primary-300;
   font-weight: 400;
   line-height: 1.6;
   font-family: "PT Sans","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -45,7 +45,7 @@ h6 {
 }
 
 a, .link-button {
-  color: $dark-text-color;
+  color: $text-100;
   text-decoration: none;
 
   &:hover {
@@ -53,15 +53,15 @@ a, .link-button {
   }
 }
 
-::selection {
-  color: $primary-color;
-  background-color: $text-color;
-}
+// ::selection {
+//   color: $primary-color;
+//   background-color: $text-color;
+// }
 
-::-moz-selection {
-  color: $primary-color;
-  background-color: $text-color;
-}
+// ::-moz-selection {
+//   color: $primary-color;
+//   background-color: $text-color;
+// }
 
 .invisible {
   display: none;

@@ -50,22 +50,17 @@ const Index: React.SFC<Props> = ({ data }) => {
           className='page__avatar'
           email='n33t5hin@gmail.com'
           title='Neetshin'
-          size={120}
+          size={200}
         />
       }
     >
       <FadeIn>
-        <p>
-          高校一年生です，よろしくおねがいします．
-        </p>
-
-
         <h2>Skills</h2>
         <p>
           JavaScript, TypeScript, PHP, Python, Node,
           Electron, React, Redux, Mobx, Sass,
           Web Extension, Nginx, Apache, Docker,
-          CentOS, Ubuntu, Alphine Linux,
+          CentOS, Ubuntu, Alpine Linux,
           Laravel, Express,
           MySQL, PostgreSQL, MongoDB, Redis
         </p>

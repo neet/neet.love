@@ -5,7 +5,6 @@ import '@fortawesome/fontawesome-free-solid';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import Content from '../components/content';
-import Letterhead from '../components/letterhead';
 import '../styles/main.scss';
 
 interface Props {
@@ -28,8 +27,6 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-
-    <Letterhead />
 
     { children() }
   </Content>

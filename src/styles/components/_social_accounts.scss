@@ -6,7 +6,21 @@
 }
 
 .social-accounts__list-item {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 6px);
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background-color: $primary-100;
+  box-shadow: 0 1px 6px rgba($shadow-color, 0.2);
+  transition: 0.15s ease-out;
+
+  &:hover {
+    box-shadow: 0 1px 8px 6px rgba($shadow-color, 0.2);
+    transition: 0.15s ease-out;
+  }
+
+  &:nth-child(even) {
+    margin-left: 12px;
+  }
 
   @media screen and (max-width: 630px) {
     flex-basis: 100%;
@@ -16,17 +30,13 @@
 .social-account-button__link {
   cursor: pointer;
   display: flex;
-  padding: 4px 8px;
+  color: $text-50;
+  padding: 6px 12px;
   box-sizing: border-box;
   align-items: center;
-  border-radius: 6px;
-  background-color: transparent;
-  transition: 0.15s ease-out;
 
   &:hover {
-    background-color: $darker-primary-color;
     text-decoration: none;
-    transition: 0.15s ease-out;
   }
 }
 

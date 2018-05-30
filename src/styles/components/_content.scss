@@ -1,31 +1,27 @@
 .page {
-  max-width: 600px;
-  font-size: 21px;
+  margin: 28px auto;
   padding: 28px;
+  max-width: 700px;
+  font-size: 21px;
   box-sizing: border-box;
+  border-radius: 6px;
+  background-color: $primary-200;
+  box-shadow: 0 3px 28px rgba($shadow-color, 0.2);
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico';
   }
 
   h2, h3, h4, h5, h6 {
-    margin: 0.25em 0 0.25em;
+    margin: 0.35em 0;
   }
 
   p {
     margin-bottom: 18px;
   }
 
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: 700px) {
     padding: 18px;
-  }
-
-  @media screen and (min-width: 631px) {
-    margin-left: 30px;
-  }
-
-  @media screen and (min-width: 901px) {
-    margin-left: 300px;
   }
 }
 
@@ -35,11 +31,11 @@
 }
 
 .page__avatar {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   margin-right: 18px;
-  background-color: $dark-text-color;
+  background-color: $primary-300;
 }
 
 .page__title {
@@ -60,6 +56,6 @@
 
   display: block;
   box-sizing: border-box;
-  border-top: 6px dotted $text-color;
+  border-top: 8px solid $primary-300;
   margin: 18px 0;
 }
