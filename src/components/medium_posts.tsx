@@ -15,7 +15,7 @@ export default class MediumPosts extends React.PureComponent<Props> {
     const thumbnailUrl  = `${MEDIUM_IMAGE_BASE}/${post.virtuals.previewImage.imageId}`;
 
     return (
-      <div className='medium-post' key={`${i}-${post.id}`} aria-posinset={i+1} aria-setsize={this.props.posts.length}>
+      <div className='medium-post section' key={`${i}-${post.id}`} aria-posinset={i+1} aria-setsize={this.props.posts.length}>
         <a className='medium-post__link' href={`${MEDIUM_POST_BASE}/${post.uniqueSlug}`}>
           {
             post.virtuals.previewImage.imageId !== '' ? (

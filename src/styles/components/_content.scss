@@ -16,12 +16,10 @@
     margin: 0.35em 0;
   }
 
-  p {
-    margin-bottom: 18px;
-  }
-
   @media screen and (max-width: 700px) {
+    font-size: 18px;
     padding: 18px;
+    margin: 12px;
   }
 }
 
@@ -36,15 +34,24 @@
   border-radius: 50%;
   margin-right: 18px;
   background-color: $primary-300;
+  box-shadow: 0 1px 6px rgba($shadow-color, 0.2);
+
+  @media screen and (max-width: 700px) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .page__title {
   font-size: 46px;
   margin-bottom: 0;
+
+  @media screen and (max-width: 700px) {
+    font-size: 32px;
+  }
 }
 
 .page__excerpt {
-  font-size: 21px;
   margin: 8px 0;
 }
 
@@ -58,4 +65,12 @@
   box-sizing: border-box;
   border-top: 8px solid $primary-300;
   margin: 18px 0;
+}
+
+.section {
+  margin-bottom: 18px;
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 12px;
+  }
 }

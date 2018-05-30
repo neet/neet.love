@@ -47,7 +47,7 @@ export default class SocialAccounts extends React.PureComponent<Props> {
     const { socialAccounts } = this.props;
 
     return (
-      <div className='social-accounts'>
+      <div className='social-accounts section'>
         <ul className='social-accounts__list'>
           { socialAccounts.map(({ node }, i) => this.renderItem(node, i)) }
         </ul>
