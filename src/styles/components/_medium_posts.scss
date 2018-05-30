@@ -2,8 +2,8 @@
   margin-bottom: 28px;
 }
 
-.medium-post {
-  padding: 8px 0;
+.medium-post:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .medium-post__link {
@@ -25,7 +25,7 @@
   flex-grow: 0;
   flex-shrink: 0;
   margin-right: 18px;
-  border-radius: 4px;
+  border-radius: 6px;
   width: 120px;
   height: 120px;
   background-position: center;
@@ -45,6 +45,10 @@
   white-space: nowrap;
   overflow: hidden;
   width: 600px - (120px + 18px);
+}
+
+.medium-post__date {
+  font-size: 18px;
 }
 
 .medium-post__date-icon {

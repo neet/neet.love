@@ -67,6 +67,18 @@ a, .link-button {
   display: none;
 }
 
+.unselectable {
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.unclickable {
+  cursor: not-allowed;
+  pointer-events : none;
+}
+
 .button {
   cursor: pointer;
   display: block;
