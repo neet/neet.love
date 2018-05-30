@@ -72,7 +72,6 @@ rules:
   react-no-dangerous-html: false
   react-this-binding-issue: true
   react-unused-props-and-state:
-	- true
-	- props-interface-regex: "IProps$"
-		state-interface-regex": "State$"
-]
+  - true
+  - props-interface-regex: IProps$
+    state-interface-regex: State$

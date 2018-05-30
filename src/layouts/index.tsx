@@ -12,8 +12,8 @@ interface Props {
     site: {
       siteMetadata: {
         title: string;
-      }
-    }
+      },
+    },
   };
   children: () => React.ReactNode;
 }
@@ -27,8 +27,7 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-
-    { children() }
+    {children()}
   </Content>
 );
 

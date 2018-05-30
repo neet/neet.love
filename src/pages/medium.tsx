@@ -6,7 +6,7 @@ export interface MediumPost {
   id: string;
   title: string;
   uniqueSlug: string;
-  createdAt: number;
+  createdAt: string;
   virtuals: {
     subtitle: string;
     previewImage: {
@@ -24,14 +24,14 @@ interface Props {
 }
 
 const Medium: React.SFC<Props> = ({ data }) => {
-  const mediumPosts = data.allMediumPost.edges.map((item) => item.node);
+  const posts = data.allMediumPost.edges.map((item) => item.node);
 
   return (
     <Page
       title='Medium'
       excerpt='最近更新されたブログ記事の一覧'
     >
-      <MediumPosts posts={mediumPosts} />
+      <MediumPosts posts={posts} />
     </Page>
   );
 };

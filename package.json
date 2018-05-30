@@ -7,9 +7,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "rm -rf public .cache",
-    "test": "yarn run test:jest && yarn run test:lint && yarn run test:compile",
+    "test": "yarn run test:lint && yarn run test:compile",
     "test:jest": "jest --coverage --config=jest.config.json",
-    "test:lint": "tslint",
+    "test:lint": "tslint -c tslint.yml 'src/**/*.{ts,tsx}'",
     "test:compile": "tsc --noEmit",
     "test:jest-update": "jest --coverage --config=jest.config.json --no-cache --updateSnapshot"
   },

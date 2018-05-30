@@ -13,7 +13,7 @@ describe('Gravatar', () => {
         defaultImage='https://link-to-default-image.com'
         forceDefault={false}
         rating='g'
-      />
+      />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

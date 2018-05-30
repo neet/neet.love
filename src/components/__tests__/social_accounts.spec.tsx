@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { shallow } from 'enzyme';
+import * as React from 'react';
 import renderer from 'react-test-renderer';
 import SocialAccounts from '../social_accounts';
 
@@ -9,7 +9,7 @@ const socialAccounts = [
       name: 'Twitter',
       label: '@TheGodOfNeet',
       href: 'https://twitter.com/thegodofneet',
-      fa: 'fab fa-twitter'
+      fa: 'fab fa-twitter',
     },
   },
   {
@@ -33,7 +33,7 @@ const socialAccounts = [
 describe('Gravatar', () => {
   it('renders a avatar component with given props', () => {
     const tree = renderer.create(
-      <SocialAccounts socialAccounts={socialAccounts} />
+      <SocialAccounts socialAccounts={socialAccounts} />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -42,7 +42,7 @@ describe('Gravatar', () => {
   it('does not change location even if link that comes with copy clicked', () => {
     const href = location.href;
     const button = shallow(
-      <SocialAccounts socialAccounts={socialAccounts} />
+      <SocialAccounts socialAccounts={socialAccounts} />,
     );
     button.find('a[title="neetshin#1400"]').simulate('click');
 

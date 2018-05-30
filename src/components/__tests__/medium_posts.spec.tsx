@@ -10,17 +10,17 @@ const posts = [
     virtuals: {
       subtitle: '',
       previewImage: {
-        imageId: ''
-      }
+        imageId: '',
+      },
     },
     uniqueSlug: 'あ-94d9b4a2f28c',
-  }
+  },
 ];
 
 describe('MediumPosts', () => {
   it('renders a medium posts with given props', () => {
     const tree = renderer.create(
-      <MediumPosts posts={posts} />
+      <MediumPosts posts={posts} />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

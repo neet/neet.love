@@ -4,7 +4,6 @@ interface Props {
   title: string;
   excerpt?: string;
   insertBefore?: React.ReactNode;
-  children?: React.ReactNode;
 }
 
 const Page: React.SFC<Props> = ({title, excerpt, children, insertBefore}) => (

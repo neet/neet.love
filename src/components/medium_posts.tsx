@@ -15,7 +15,7 @@ export default class MediumPosts extends React.PureComponent<Props> {
     const thumbnailUrl  = `${MEDIUM_IMAGE_BASE}/${post.virtuals.previewImage.imageId}`;
 
     return (
-      <div className='medium-post section' key={`${i}-${post.id}`} aria-posinset={i+1} aria-setsize={this.props.posts.length}>
+      <li className='medium-post section' key={`${i}-${post.id}`} role='listitem' aria-posinset={i + 1} aria-setsize={this.props.posts.length}>
         <a className='medium-post__link' href={`${MEDIUM_POST_BASE}/${post.uniqueSlug}`}>
           {
             post.virtuals.previewImage.imageId !== '' ? (
@@ -36,17 +36,17 @@ export default class MediumPosts extends React.PureComponent<Props> {
             </time>
           </div>
         </a>
-      </div>
-    )
+      </li>
+    );
   }
 
   public render () {
     const { posts } = this.props;
 
     return (
-      <div className='medium-posts'>
-        { posts.map((post, i) => this.renderItem(post, i)) }
-      </div>
+      <ul role='listbox' className='medium-posts'>
+        {posts.map((post, i) => this.renderItem(post, i))}
+      </ul>
     );
   }
 }

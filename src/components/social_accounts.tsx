@@ -1,5 +1,5 @@
-import * as React from 'react';
 import * as copy from 'copy-to-clipboard';
+import * as React from 'react';
 import { SocialAccount } from '../pages/index';
 
 interface Props {
@@ -21,7 +21,7 @@ export default class SocialAccounts extends React.PureComponent<Props> {
 
   private renderItem = (socialAccount: SocialAccount, i: number) => {
     return (
-      <li className='social-accounts__list-item' key={`${i}-${socialAccount.name}`} aria-posinset={i+1} aria-setsize={this.props.socialAccounts.length}>
+      <li className='social-accounts__list-item' key={`${i}-${socialAccount.name}`} role='listitem' aria-posinset={i + 1} aria-setsize={this.props.socialAccounts.length}>
         <div className='social-account-button'>
           <a
             className='social-account-button__link'
@@ -48,8 +48,8 @@ export default class SocialAccounts extends React.PureComponent<Props> {
 
     return (
       <div className='social-accounts section'>
-        <ul className='social-accounts__list'>
-          { socialAccounts.map(({ node }, i) => this.renderItem(node, i)) }
+        <ul className='social-accounts__list' role='listbox'>
+          {socialAccounts.map(({ node }, i) => this.renderItem(node, i))}
         </ul>
       </div>
     );
