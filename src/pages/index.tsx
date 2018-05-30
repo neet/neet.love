@@ -56,7 +56,7 @@ const Index: React.SFC<Props> = ({ data }) => {
     >
       <FadeIn>
         <h2>Skills</h2>
-        <p>
+        <p className='section'>
           JavaScript, TypeScript, PHP, Python, Node,
           Electron, React, Redux, Mobx, Sass,
           Web Extension, Nginx, Apache, Docker,
