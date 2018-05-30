@@ -11,6 +11,14 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-transformer-yaml',
 
+    /** Loading indicator for pages */
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#fafafa',
+      },
+    },
+
     /** Resolving src/config files */
     {
       resolve: 'gatsby-source-filesystem',
