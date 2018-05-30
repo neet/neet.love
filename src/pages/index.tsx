@@ -4,6 +4,7 @@ import Gravatar from '../components/gravatar';
 import MediumPosts from '../components/medium_posts';
 import Page from '../components/page';
 import SocialAccounts from '../components/social_accounts';
+import InteractiveContactForm from '../components/interactive_contact_form';
 
 export interface SocialAccount {
   name: string;
@@ -57,6 +58,17 @@ const Index: React.SFC<Props> = ({ data }) => {
       <FadeIn>
         <p>
           高校一年生です，よろしくおねがいします．
+        </p>
+
+
+        <h2>Skills</h2>
+        <p>
+          JavaScript, TypeScript, PHP, Python, Node,
+          Electron, React, Redux, Mobx, Sass,
+          Web Extension, Nginx, Apache, Docker,
+          CentOS, Ubuntu, Alphine Linux,
+          Laravel, Express,
+          MySQL, PostgreSQL, MongoDB, Redis
         </p>
 
         <h2>Social accounts</h2>

@@ -31,7 +31,7 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
 
     <Letterhead />
 
-    {children()}
+    { children() }
   </Content>
 );
 
