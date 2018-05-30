@@ -1,9 +1,9 @@
 
-$primary-color: #f4f7d9;
-$darker-primary-color: darken($primary-color, 8%);
+$primary-color: #2e2e3a;
+$darker-primary-color: #1a1a20;
 
-$secondary-color: #417378;
-$light-secondary-color: #a4cfbe;
+$secondary-color: #36366d;
+$light-secondary-color: lighten(#36366d, 0.8);
 
-$text-color: #6c6e58;
-$dark-text-color: #3e423a;
+$text-color: #9393b9;
+$dark-text-color: #56566d;
