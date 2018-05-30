@@ -1,5 +1,4 @@
 import * as md5 from 'md5';
-import * as queryString from 'query-string';
 import * as React from 'react';
 
 interface Props {
@@ -16,12 +15,13 @@ const GRAVATAR_URI = 'https://secure.gravatar.com/avatar';
 
 const Gravatar: React.SFC<Props> = (props) => {
   const hash = md5(props.email);
-  const url  = `${GRAVATAR_URI}/${hash}?${queryString.stringify({
-    s: props.size && `${props.size}px` || '80px',
-    d: props.defaultImage || '',
-    f: props.forceDefault && 'y',
-    r: props.rating || 'g',
-  })}`;
+  const options = [
+    ['s', (props.size && `${props.size}px` || '80px')],
+    ['d', (props.defaultImage || '')],
+    ['f', (props.forceDefault && 'y')],
+    ['r', (props.rating || 'g')],
+  ];
+  const url  = `${GRAVATAR_URI}/${hash}?${options.map((item) => `${item[0]}=${item[1]}`)}`;
 
   return (
     <img
