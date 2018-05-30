@@ -9,7 +9,7 @@ interface Props {
 
 const Page: React.SFC<Props> = ({title, excerpt, children, insertBefore}) => (
   <article className='page'>
-    <header className='page__header'>
+    <header className='page__header' role='banner'>
       {insertBefore}
 
       <div className='page__hgroup'>
