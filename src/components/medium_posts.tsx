@@ -50,5 +50,3 @@ export default class MediumPosts extends React.PureComponent<Props> {
     );
   }
 }
-
-export default MediumPosts;

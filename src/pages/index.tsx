@@ -4,13 +4,12 @@ import Gravatar from '../components/gravatar';
 import MediumPosts from '../components/medium_posts';
 import Page from '../components/page';
 import SocialAccounts from '../components/social_accounts';
-import InteractiveContactForm from '../components/interactive_contact_form';
 
 export interface SocialAccount {
   name: string;
   label: string;
-  href: string;
-  copy: string;
+  href?: string;
+  copy?: string;
   fa: string;
 }
 
@@ -18,7 +17,7 @@ export interface MediumPost {
   id: string;
   title: string;
   uniqueSlug: string;
-  createdAt: number;
+  createdAt: string;
   virtuals: {
     subtitle: string;
     previewImage: {

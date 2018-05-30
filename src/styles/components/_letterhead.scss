@@ -6,6 +6,12 @@
   width: 0px;
   background-color: $secondary-color;
 
+  @media screen and (max-width: 630px) {
+    position: static;
+    height: 30px;
+    width: 100%;
+  }
+
   @media screen and (min-width: 631px) {
     width: 30px
   }

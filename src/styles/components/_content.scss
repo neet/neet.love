@@ -1,5 +1,5 @@
 .page {
-  width: 600px;
+  max-width: 600px;
   font-size: 21px;
   padding: 28px;
   box-sizing: border-box;
@@ -16,7 +16,15 @@
     margin-bottom: 18px;
   }
 
+  @media screen and (max-width: 630px) {
+    padding: 18px;
+  }
+
   @media screen and (min-width: 631px) {
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: 901px) {
     margin-left: 300px;
   }
 }

@@ -7,7 +7,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "rm -rf public .cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn run test:jest && yarn run test:lint && yarn run test:compile",
+    "test:jest": "jest --coverage --config=jest.config.json",
+    "test:lint": "tslint",
+    "test:compile": "tsc --noEmit",
+    "test:jest-update": "jest --coverage --config=jest.config.json --no-cache --updateSnapshot"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
@@ -43,6 +47,15 @@
     "xml-js": "^1.6.4"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.10",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/jest": "^22.2.3",
+    "@types/react-test-renderer": "^16.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.0.1",
+    "react-test-renderer": "^16.4.0",
+    "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "tslint-microsoft-contrib": "^5.0.3",
     "tslint-react": "^3.6.0"

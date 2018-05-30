@@ -1,8 +1,16 @@
 .social-accounts__list {
-  width: 600px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 28px;
+}
+
+.social-accounts__list-item {
+  flex: 0 0 50%;
+
+  @media screen and (max-width: 630px) {
+    flex-basis: 100%;
+  }
 }
 
 .social-account-button__link {
@@ -10,7 +18,6 @@
   display: flex;
   padding: 4px 8px;
   box-sizing: border-box;
-  width: 300px;
   align-items: center;
   border-radius: 6px;
   background-color: transparent;

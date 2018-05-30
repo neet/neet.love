@@ -1,0 +1,22 @@
+{
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/templates/",
+    "/.cache"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.{ts,tsx}"
+  ],
+  "coverageDirectory": "<rootDir>/coverage"
+}
