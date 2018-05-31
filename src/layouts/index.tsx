@@ -28,7 +28,7 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
         { name: 'og:url',         content: 'https://neet.love' },
         { name: 'og:title',       content: data.site.siteMetadata.title },
         { name: 'og:site_name',   content: data.site.siteMetadata.title },
-        { name: 'og:description', content: 'The world\s kawaiiest portfolio'},
+        { name: 'og:description', content: 'The world\'s kawaiiest portfolio'},
         { name: 'og:image',       content: 'https://i.imgur.com/nPCaPrU.jpg' },
         { name: 'twitter:card',   content: 'summary' },
       ]}
