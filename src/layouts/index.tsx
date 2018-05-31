@@ -23,13 +23,14 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'theme-color',  content: '#2c2c3a' },
-        { name: 'og:type',      content: 'profile' },
-        { name: 'og:url',       content: 'https://neet.love' },
-        { name: 'og:title',     content: data.site.siteMetadata.title },
-        { name: 'og:site_name', content: data.site.siteMetadata.title },
-        { name: 'og:image',     content: 'https://i.imgur.com/nPCaPrU.jpg' },
-        { name: 'twitter:card', content: 'summary' },
+        { name: 'theme-color',    content: '#2c2c3a' },
+        { name: 'og:type',        content: 'profile' },
+        { name: 'og:url',         content: 'https://neet.love' },
+        { name: 'og:title',       content: data.site.siteMetadata.title },
+        { name: 'og:site_name',   content: data.site.siteMetadata.title },
+        { name: 'og:description', content: 'The world\s kawaiiest portfolio'},
+        { name: 'og:image',       content: 'https://i.imgur.com/nPCaPrU.jpg' },
+        { name: 'twitter:card',   content: 'summary' },
       ]}
     />
     {children()}
