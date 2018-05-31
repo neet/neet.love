@@ -23,6 +23,7 @@ const Layout: React.SFC<Props> = ({ data, children }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
+        { name: 'description',    content: 'The world\'s kawaiiest portfolio'},
         { name: 'theme-color',    content: '#2c2c3a' },
         { name: 'og:type',        content: 'profile' },
         { name: 'og:url',         content: 'https://neet.love' },
