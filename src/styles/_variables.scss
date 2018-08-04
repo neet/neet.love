@@ -1,11 +1,13 @@
 
-$primary-50: #393947;
-$primary-100: #343444;
-$primary-200: #2c2c3a;
-$primary-300: #25252d;
-$primary-400: #1E1E26;
+$primary-50: hsl(61%, 100%, 95%);
+$primary-100: darken($primary-50, 3%);
+$primary-200: hsl(66%, 65%, 91%);
+$primary-300: darken($primary-200, 8%);
+$primary-400: darken($primary-200, 12%);
 
-$text-50: #fafafa;
-$text-100: #bbb;
+$secondary-400: hsl(185%, 30%, 36%);
+
+$text-50: hsl(65%, 11%, 39%);
+$text-100: hsl(90%, 6%, 24%);
 
 $shadow-color: #000;

@@ -1,10 +1,5 @@
 .social-accounts {
-  overflow: scroll;
   border-radius: 6px;
-
-  @media screen and (max-width: 700px) {
-    max-height: 260px;
-  }
 }
 
 .social-accounts__list {
