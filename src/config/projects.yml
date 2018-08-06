@@ -1,0 +1,16 @@
+---
+- name: Lagune
+  status: open
+  description: |-
+    WIP: Hackable desktop client for Mastodon
+
+- name: Mastodon
+  status: open
+  description: |-
+    Decentralized social networking platform.
+    Contributed in web front end, Japanese localizeation and internationalization
+
+- name: Halcyon
+  status: close
+  description: |-
+    Web client for Mastodon with familiar interface

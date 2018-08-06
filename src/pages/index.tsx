@@ -4,6 +4,7 @@ import Blogs from '../components/blogs';
 import Gravatar from '../components/gravatar';
 import Links from '../components/links';
 import Page from '../components/page';
+import Projects from '../components/projects';
 
 export interface Link {
   name: string;
@@ -11,6 +12,12 @@ export interface Link {
   href?: string;
   copy?: string;
   fa: string;
+}
+
+export interface Project {
+  name: string;
+  description: string;
+  status: 'open'|'close';
 }
 
 export interface Blog {
@@ -34,12 +41,16 @@ interface Props {
     allMediumPost: {
       edges: { node: Blog }[],
     };
+    allProjectsYaml: {
+      edges: { node: Project }[],
+    };
   };
 }
 
 const Index: React.SFC<Props> = ({ data }) => {
   const blogs = data.allMediumPost.edges.map((item) => item.node);
-  const links = data.allLinksYaml.edges;
+  const projects = data.allProjectsYaml.edges.map((item) => item.node);
+  const links = data.allLinksYaml.edges.map((item) => item.node);
 
   return (
     <Page
@@ -65,6 +76,9 @@ const Index: React.SFC<Props> = ({ data }) => {
           MySQL, PostgreSQL, MongoDB, Redis
         </p>
 
+        <h2>Contributions</h2>
+        <Projects projects={projects} />
+
         <h2>Medium</h2>
         <Blogs posts={blogs} />
 
@@ -87,6 +101,15 @@ export const query = graphql`
           href
           copy
           fa
+        }
+      }
+    }
+    allProjectsYaml {
+      edges {
+        node {
+          name
+          description
+          status
         }
       }
     }
