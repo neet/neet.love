@@ -2,10 +2,10 @@ import * as React from 'react';
 import FadeIn from 'react-fade-in';
 import Blogs from '../components/blogs';
 import Gravatar from '../components/gravatar';
+import Links from '../components/links';
 import Page from '../components/page';
-import SocialAccounts from '../components/social_accounts';
 
-export interface SocialAccount {
+export interface Link {
   name: string;
   label: string;
   href?: string;
@@ -28,8 +28,8 @@ export interface Blog {
 
 interface Props {
   data: {
-    allSocialAccountsYaml: {
-      edges: { node: SocialAccount }[];
+    allLinksYaml: {
+      edges: { node: Link }[];
     };
     allMediumPost: {
       edges: { node: Blog }[],
@@ -39,7 +39,7 @@ interface Props {
 
 const Index: React.SFC<Props> = ({ data }) => {
   const blogs = data.allMediumPost.edges.map((item) => item.node);
-  const socialAccounts = data.allSocialAccountsYaml.edges;
+  const links = data.allLinksYaml.edges;
 
   return (
     <Page
@@ -69,7 +69,7 @@ const Index: React.SFC<Props> = ({ data }) => {
         <Blogs posts={blogs} />
 
         <h2>Social accounts</h2>
-        <SocialAccounts socialAccounts={socialAccounts} />
+        <Links links={links} />
       </FadeIn>
     </Page>
   );
@@ -79,7 +79,7 @@ export default Index;
 
 export const query = graphql`
   query ConfigData {
-    allSocialAccountsYaml {
+    allLinksYaml {
       edges {
         node {
           name

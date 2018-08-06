@@ -1,14 +1,14 @@
-.social-accounts {
+.links {
   border-radius: 6px;
 }
 
-.social-accounts__list {
+.links__list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.social-accounts__list-item {
+.links__list-item {
   flex: 0 0 calc(50% - 6px);
   margin-bottom: 12px;
   border-radius: 6px;
@@ -34,7 +34,7 @@
   }
 }
 
-.social-account-button__link {
+.link-button__link {
   cursor: pointer;
   display: flex;
   color: $text-50;
@@ -47,7 +47,7 @@
   }
 }
 
-.social-account-button__fa-wrapper {
+.link-button__fa-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +56,6 @@
   margin-right: 8px;
 }
 
-.social-account-button__fa {
+.link-button__fa {
   font-size: 28px;
 }
