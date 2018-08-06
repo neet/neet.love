@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MediumPosts from '../components/medium_posts';
+import MediumPosts from '../components/blogs';
 import Page from '../components/page';
 
 export interface MediumPost {

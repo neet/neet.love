@@ -1,6 +1,6 @@
 import * as copy from 'copy-to-clipboard';
 import * as React from 'react';
-import { SocialAccount } from '../pages/index';
+import { SocialAccount } from '../pages';
 
 interface Props {
   socialAccounts: { node: SocialAccount }[];

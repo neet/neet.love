@@ -1,7 +1,7 @@
 import * as React from 'react';
 import FadeIn from 'react-fade-in';
+import Blogs from '../components/blogs';
 import Gravatar from '../components/gravatar';
-import MediumPosts from '../components/medium_posts';
 import Page from '../components/page';
 import SocialAccounts from '../components/social_accounts';
 
@@ -13,7 +13,7 @@ export interface SocialAccount {
   fa: string;
 }
 
-export interface MediumPost {
+export interface Blog {
   id: string;
   title: string;
   uniqueSlug: string;
@@ -32,13 +32,13 @@ interface Props {
       edges: { node: SocialAccount }[];
     };
     allMediumPost: {
-      edges: { node: MediumPost }[],
+      edges: { node: Blog }[],
     };
   };
 }
 
 const Index: React.SFC<Props> = ({ data }) => {
-  const mediumPosts = data.allMediumPost.edges.map((item) => item.node);
+  const blogs = data.allMediumPost.edges.map((item) => item.node);
   const socialAccounts = data.allSocialAccountsYaml.edges;
 
   return (
@@ -65,11 +65,11 @@ const Index: React.SFC<Props> = ({ data }) => {
           MySQL, PostgreSQL, MongoDB, Redis
         </p>
 
+        <h2>Medium</h2>
+        <Blogs posts={blogs} />
+
         <h2>Social accounts</h2>
         <SocialAccounts socialAccounts={socialAccounts} />
-
-        <h2>Medium</h2>
-        <MediumPosts posts={mediumPosts} />
       </FadeIn>
     </Page>
   );

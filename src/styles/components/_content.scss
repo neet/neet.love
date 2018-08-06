@@ -9,7 +9,9 @@
   box-shadow: 0 3px 28px rgba($shadow-color, 0.2);
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Pacifico';
+    &:not(.not-special-font) {
+      font-family: 'Pacifico';
+    }
   }
 
   h2, h3, h4, h5, h6 {

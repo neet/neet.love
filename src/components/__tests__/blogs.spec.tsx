@@ -1,6 +1,6 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-import MediumPosts from '../medium_posts';
+import Blogs from '../blogs';
 
 const posts = [
   {
@@ -17,10 +17,10 @@ const posts = [
   },
 ];
 
-describe('MediumPosts', () => {
+describe('Blogs', () => {
   it('renders a medium posts with given props', () => {
     const tree = renderer.create(
-      <MediumPosts posts={posts} />,
+      <Blogs posts={posts} />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

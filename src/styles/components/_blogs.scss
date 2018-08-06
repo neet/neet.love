@@ -1,22 +1,27 @@
-.medium-post {
+.blogs {
+  display: flex;
+}
+
+.blog {
+  width: 300px;
   overflow: hidden;
   border-radius: 6px;
   background-color: $primary-100;
   box-shadow: 0 1px 6px rgba($shadow-color, 0.2);
   transition: 0.15s ease-out;
 
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
   &:hover {
     box-shadow: 0 1px 8px 6px rgba($shadow-color, 0.2);
     transition: 0.15s ease-out;
   }
-
-  &:not(:last-child) {
-    margin-bottom: 18px;
-  }
 }
 
-.medium-post__link {
-  display: flex;
+.blog__link {
+  display: block;
   color: $text-50;
 
   &:hover {
@@ -24,37 +29,32 @@
   }
 }
 
-.medium-post__thumbnail {
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin-right: 18px;
-  width: 120px;
+.blog__thumbnail {
+  width: 100%;
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $secondary-400; // fallback
 }
 
-.medium-post__meta {
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding: 8px 0;
+.blog__meta {
+  padding: 6px 8px;
   box-sizing: border-box;
 }
 
-.medium-post__title {
+h3.blog__title {
+  margin: 4px auto 6px;
+  font-size: 18px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 600px - (120px + 18px);
 }
 
-.medium-post__date {
+.blog__date {
   color: $text-100;
-  font-size: 18px;
+  font-size: 14px;
 }
 
-.medium-post__date-icon {
-  font-size: 0.8em;
+.blog__date-icon {
   margin-right: 4px;
 }
