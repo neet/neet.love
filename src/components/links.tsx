@@ -3,14 +3,14 @@ import * as React from 'react';
 import { Link } from '../pages';
 
 interface Props {
-  links: { node: Link }[];
+  links: Link[];
 }
 
 export default class Links extends React.PureComponent<Props> {
 
   private handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const i = e.currentTarget.getAttribute('data-index') as string;
-    const link = this.props.links[Number(i)].node;
+    const i    = e.currentTarget.getAttribute('data-index') as string;
+    const link = this.props.links[Number(i)];
 
     if (link.copy) {
       e.preventDefault();
@@ -22,9 +22,9 @@ export default class Links extends React.PureComponent<Props> {
   private renderItem = (link: Link, i: number) => {
     return (
       <li className='links__list-item' key={`${i}-${link.name}`} role='listitem' aria-posinset={i + 1} aria-setsize={this.props.links.length}>
-        <div className='link-button'>
+        <div className='link-button-wrapper'>
           <a
-            className='link-button__link'
+            className='link-button'
             href={link.href}
             title={link.label}
             data-index={i}
@@ -49,7 +49,7 @@ export default class Links extends React.PureComponent<Props> {
     return (
       <div className='links section'>
         <ul className='links__list' role='listbox'>
-          {links.map(({ node }, i) => this.renderItem(node, i))}
+          {links.map((link, i) => this.renderItem(link, i))}
         </ul>
       </div>
     );

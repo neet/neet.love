@@ -3,9 +3,11 @@
 }
 
 .links__list {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  list-style: none;
 }
 
 .links__list-item {
@@ -34,7 +36,7 @@
   }
 }
 
-.link-button__link {
+.link-button {
   cursor: pointer;
   display: flex;
   color: $text-50;

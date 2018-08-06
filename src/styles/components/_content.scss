@@ -8,16 +8,6 @@
   background-color: $primary-200;
   box-shadow: 0 3px 28px rgba($shadow-color, 0.2);
 
-  h1, h2, h3, h4, h5, h6 {
-    &:not(.not-special-font) {
-      font-family: 'Pacifico';
-    }
-  }
-
-  h2, h3, h4, h5, h6 {
-    margin: 0.35em 0;
-  }
-
   @media screen and (max-width: 700px) {
     font-size: 18px;
     padding: 18px;
