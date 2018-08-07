@@ -1,3 +1,4 @@
+import * as marked from 'marked';
 import * as React from 'react';
 import { Project } from '../pages/index';
 
@@ -16,6 +17,7 @@ export default class Projects extends React.PureComponent<Props> {
 
   private renderItem = (project: Project) => {
     const { name, description } = project;
+    const htmlDescription = { __html: marked(description, { breaks: true }) };
 
     return (
       <li className='project'>
@@ -23,9 +25,7 @@ export default class Projects extends React.PureComponent<Props> {
           {name}
         </span>
 
-        <p className='project__description'>
-          {description}
-        </p>
+        <p className='project__description' dangerouslySetInnerHTML={htmlDescription} />
       </li>
     );
   }
@@ -41,7 +41,7 @@ export default class Projects extends React.PureComponent<Props> {
           }
         </ul>
 
-        <h3>In past</h3>
+        <h3>Projects in past</h3>
         <ul className='projects__list projects__list--close'>
           {
             projects.close.map((project) => this.renderItem(project))
@@ -51,3 +51,4 @@ export default class Projects extends React.PureComponent<Props> {
     );
   }
 }
+

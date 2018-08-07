@@ -12,6 +12,9 @@ export interface Link {
   href?: string;
   copy?: string;
   fa: string;
+  color1: string;
+  color2: string;
+  tag: 'social'|'dev'|'donate';
 }
 
 export interface Project {
@@ -101,6 +104,9 @@ export const query = graphql`
           href
           copy
           fa
+          color1
+          color2
+          tag
         }
       }
     }

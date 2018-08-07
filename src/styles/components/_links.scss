@@ -1,7 +1,3 @@
-.links {
-  border-radius: 6px;
-}
-
 .links__list {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +10,7 @@
   flex: 0 0 calc(50% - 6px);
   margin-bottom: 12px;
   border-radius: 6px;
+  overflow: hidden;
   background-color: $primary-100;
   box-shadow: 0 1px 6px rgba($shadow-color, 0.2);
   transition: 0.15s ease-out;
@@ -40,7 +37,6 @@
   cursor: pointer;
   display: flex;
   color: $text-50;
-  padding: 6px 12px;
   box-sizing: border-box;
   align-items: center;
 
@@ -53,11 +49,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
-  margin-right: 8px;
+  width: 38px;
+  height: 38px;
+  margin-right: 12px;
+  padding: 6px;
 }
 
 .link-button__fa {
   font-size: 28px;
+}
+
+.link-button__text {
+  // padding: 6px 12px;
+}
+
+.link-button__name {
+  margin: 0;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.link-button__label {
+  font-size: 14px;
+  color: $text-25;
 }

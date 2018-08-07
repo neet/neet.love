@@ -8,9 +8,17 @@ interface Props {
 
 export default class Links extends React.PureComponent<Props> {
 
+  private categorizeLinks = (links: Link[]) => (
+    {
+      social: links.filter((link) => link.tag === 'social'),
+      dev:    links.filter((link) => link.tag === 'dev'),
+      donate: links.filter((link) => link.tag === 'donate'),
+    }
+  )
+
   private handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const i    = e.currentTarget.getAttribute('data-index') as string;
-    const link = this.props.links[Number(i)];
+    const name = e.currentTarget.getAttribute('data-name') as string;
+    const link = this.props.links.filter((link) => link.name === name)[0];
 
     if (link.copy) {
       e.preventDefault();
@@ -21,22 +29,40 @@ export default class Links extends React.PureComponent<Props> {
 
   private renderItem = (link: Link, i: number) => {
     return (
-      <li className='links__list-item' key={`${i}-${link.name}`} role='listitem' aria-posinset={i + 1} aria-setsize={this.props.links.length}>
+      <li
+        className='links__list-item'
+        key={`${i}-${link.name}`}
+        role='listitem'
+        aria-posinset={i + 1}
+        aria-setsize={this.props.links.length}
+      >
         <div className='link-button-wrapper'>
           <a
             className='link-button'
             href={link.href}
             title={link.label}
-            data-index={i}
+            data-name={link.name}
             onClick={this.handleClick}
           >
-            <span className='link-button__fa-wrapper'>
+            <div
+              className='link-button__fa-wrapper'
+              style={{
+                backgroundColor: link.color1,
+                color: link.color2,
+              }}
+            >
               <i className={`link-button__fa ${link.fa}`} aria-hidden />
-            </span>
+            </div>
 
-            <span className='link-button__label'>
-              {link.name}
-            </span>
+            <div className='link-button__text'>
+              <h4 className='link-button__name not-special-font'>
+                {link.name}
+              </h4>
+
+              <p className='link-button__label'>
+                {link.label}
+              </p>
+            </div>
           </a>
         </div>
       </li>
@@ -44,12 +70,23 @@ export default class Links extends React.PureComponent<Props> {
   }
 
   public render () {
-    const { links } = this.props;
+    const links = this.categorizeLinks(this.props.links);
 
     return (
       <div className='links section'>
+        <h3>Contact</h3>
         <ul className='links__list' role='listbox'>
-          {links.map((link, i) => this.renderItem(link, i))}
+          {links.social.map((link, i) => this.renderItem(link, i))}
+        </ul>
+
+        <h3>Development</h3>
+        <ul className='links__list' role='listbox'>
+          {links.dev.map((link, i) => this.renderItem(link, i))}
+        </ul>
+
+        <h3>Donation</h3>
+        <ul className='links__list' role='listbox'>
+          {links.donate.map((link, i) => this.renderItem(link, i))}
         </ul>
       </div>
     );
