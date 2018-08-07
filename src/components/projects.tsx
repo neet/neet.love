@@ -34,7 +34,7 @@ export default class Projects extends React.PureComponent<Props> {
     const projects = this.categorizeProjects(this.props.projects);
 
     return (
-      <div className='projects'>
+      <div className='projects section'>
         <ul className='projects__list projects__list--open'>
           {
             projects.open.map((project) => this.renderItem(project))

@@ -15,7 +15,7 @@ export default class Blogs extends React.PureComponent<Props> {
     const thumbnailUrl  = `${MEDIUM_IMAGE_BASE}/${post.virtuals.previewImage.imageId}`;
 
     return (
-      <li className='blog section' key={`${i}-${post.id}`} role='listitem' aria-posinset={i + 1} aria-setsize={this.props.posts.length}>
+      <li className='blog' key={`${i}-${post.id}`} role='listitem' aria-posinset={i + 1} aria-setsize={this.props.posts.length}>
         <a className='blog__link' href={`${MEDIUM_POST_BASE}/${post.uniqueSlug}`}>
           {
             post.virtuals.previewImage.imageId !== '' ? (
@@ -44,7 +44,7 @@ export default class Blogs extends React.PureComponent<Props> {
     const { posts } = this.props;
 
     return (
-      <ul role='listbox' className='blogs'>
+      <ul className='blogs section' role='listbox'>
         {posts.map((post, i) => this.renderItem(post, i))}
       </ul>
     );

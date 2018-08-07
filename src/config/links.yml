@@ -23,20 +23,20 @@
   color2: white
   tag:    social
 
+- name:   Telegram
+  label:  '@neetshin'
+  href:   https://t.me/neetshin
+  fa:     fab fa-telegram-plane
+  color1: '#2ca5e0'
+  color2: white
+  tag:    social
+
 - name:   Twitter
   label:  "@TheGodOfNeet"
   href:   https://twitter.com/thegodofneet
   fa:     fab fa-twitter
   color1: '#1a97f0'
   color2: white
-  tag:    social
-
-- name:   Medium
-  label:  "@neetshin"
-  href:   https://medium.com/@neetshin
-  fa:     fab fa-medium-m
-  color1: white
-  color2: black
   tag:    social
 
 - name:   Wantedly
@@ -63,6 +63,22 @@
   color2: white
   tag:    dev
 
+- name:   Medium
+  label:  "@neetshin"
+  href:   https://medium.com/@neetshin
+  fa:     fab fa-medium-m
+  color1: white
+  color2: black
+  tag:    dev
+
+- name:   SlideShare
+  label:  ssuser881c4e
+  href:   https://www.slideshare.net/ssuser881c4e
+  fa:     fab fa-slideshare
+  color1: '#0077b5'
+  color2: white
+  tag:    dev
+
 - name:   NPM
   label:  neetshin
   href:   https://www.npmjs.com/~neetshin
@@ -71,12 +87,12 @@
   color2: white
   tag:    dev
 
-- name:   MDN
+- name:   Docker Hub
   label:  neetshin
-  href:   https://developer.mozilla.org/ja/profiles/Neetshin
-  fa:     fab fa-firefox
-  color1: '#7dcbef'
-  color2: black
+  href:   https://hub.docker.com/r/neetshin/
+  fa:     fab fa-docker
+  color1: '#1488c6'
+  color2: white
   tag:    dev
 
 - name:   Bitcoin
