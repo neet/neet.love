@@ -70,14 +70,12 @@ const Index: React.SFC<Props> = ({ data }) => {
     >
       <FadeIn>
         <h2>Skills</h2>
-        <p className='section'>
-          JavaScript, TypeScript, PHP, Python, Node,
-          Electron, React, Redux, Mobx, Sass,
-          Web Extension, Nginx, Apache, Docker,
-          CentOS, Ubuntu, Alpine Linux,
-          Laravel, Express,
-          MySQL, PostgreSQL, MongoDB, Redis
-        </p>
+        <ul className='section'>
+          <li>/(Java|Type|Ecma)Script/</li>
+          <li>Node.js</li>
+          <li>PHP</li>
+          <li>Python</li>
+        </ul>
 
         <h2>Contributions</h2>
         <Projects projects={projects} />
