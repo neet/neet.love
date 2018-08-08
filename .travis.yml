@@ -21,9 +21,8 @@ install:
   - yarn
 
 before_script:
-  - yarn run build
+  - yarn run compile
 
 script:
   - yarn run test
   - yarn run lint
-  - yarn run compile
