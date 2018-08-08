@@ -1,4 +1,7 @@
 # love
+[![Build Status](https://travis-ci.com/neet/love.svg?branch=master)](https://travis-ci.com/neet/love)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d145152a14e077e47ead/maintainability)](https://codeclimate.com/github/neet/love/maintainability)
+
 💕 The world's kawaiiest portfolio
 
 ## Contains
