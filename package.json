@@ -7,11 +7,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "rm -rf public .cache",
-    "test": "yarn run test:lint && yarn run test:compile",
-    "test:jest": "jest --coverage --config=jest.config.json",
-    "test:lint": "tslint -c tslint.yml 'src/**/*.{ts,tsx}'",
-    "test:compile": "tsc --noEmit",
-    "test:jest-update": "jest --coverage --config=jest.config.json --no-cache --updateSnapshot"
+    "test": "jest --coverage --config=jest.config.json",
+    "lint": "tslint -c tslint.yml 'src/**/*.{ts,tsx}' --exclude 'src/**/*.d.ts'",
+    "compile": "tsc --noEmit",
+    "test:update": "yarn run test -- --updateSnapshot"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
@@ -22,6 +21,8 @@
     "@types/js-yaml": "^3.11.2",
     "@types/marked": "^0.4.0",
     "@types/md5": "^2.1.32",
+    "@types/react": "^16.4.8",
+    "@types/react-dom": "^16.0.7",
     "@types/react-helmet": "^5.0.7",
     "@types/react-textarea-autosize": "^4.3.3",
     "classnames": "^2.2.6",
@@ -41,6 +42,8 @@
     "js-yaml": "^3.12.0",
     "marked": "^0.4.0",
     "md5": "^2.2.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-fade-in": "^0.1.6",
     "react-helmet": "^5.2.0",
     "react-textarea-autosize": "^7.0.4",

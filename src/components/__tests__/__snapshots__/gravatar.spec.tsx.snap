@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gravatar renders a avatar component with given props 1`] = `
+<img
+  alt="Neetshin"
+  className="class"
+  src="https://secure.gravatar.com/avatar/edb1b2a09bf17af58dbabbabc1e0dddd?s=20px,d=https://link-to-default-image.com,f=false,r=g"
+/>
+`;

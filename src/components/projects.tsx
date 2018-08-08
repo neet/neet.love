@@ -15,12 +15,12 @@ export default class Projects extends React.PureComponent<Props> {
     };
   }
 
-  private renderItem = (project: Project) => {
+  private renderItem = (project: Project, i: number) => {
     const { name, description } = project;
     const htmlDescription = { __html: marked(description, { breaks: true }) };
 
     return (
-      <li className='project'>
+      <li className='project' key={`${i}-${project.name}`}>
         <h4 className='project__name not-special-font'>
           {name}
         </h4>
@@ -37,14 +37,14 @@ export default class Projects extends React.PureComponent<Props> {
       <div className='projects section'>
         <ul className='projects__list projects__list--open'>
           {
-            projects.open.map((project) => this.renderItem(project))
+            projects.open.map((project, i) => this.renderItem(project, i))
           }
         </ul>
 
         <h3>Projects in past</h3>
         <ul className='projects__list projects__list--close'>
           {
-            projects.close.map((project) => this.renderItem(project))
+            projects.close.map((project, i) => this.renderItem(project, i))
           }
         </ul>
       </div>

@@ -14,13 +14,13 @@ export interface Link {
   fa: string;
   color1: string;
   color2: string;
-  tag: 'social'|'dev'|'donate';
+  tag: string;
 }
 
 export interface Project {
   name: string;
   description: string;
-  status: 'open'|'close';
+  status: string;
 }
 
 export interface Blog {

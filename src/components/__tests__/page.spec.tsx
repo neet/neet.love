@@ -1,10 +1,10 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import * as ReactTestRenderer from 'react-test-renderer';
 import Page from '../page';
 
 describe('Page', () => {
   it('renders a page with given title and excerpt', () => {
-    const tree = renderer.create(
+    const tree = ReactTestRenderer.create(
       <Page
         title='Awesome article'
         excerpt='This article is awesome you should read'

@@ -2,10 +2,15 @@
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },
+  "setupFiles": [
+    "./test_setup.ts"
+  ],
+  "testEnvironment": "jsdom",
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/templates/",
+    "/public/",
     "/.cache"
   ],
   "moduleFileExtensions": [
@@ -17,6 +22,9 @@
   ],
   "collectCoverageFrom": [
     "src/**/*.{ts,tsx}"
+  ],
+  "coveragePathIgnorePatterns": [
+    ".*\\.d\\.ts"
   ],
   "coverageDirectory": "<rootDir>/coverage"
 }

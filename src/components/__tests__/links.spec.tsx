@@ -1,51 +1,44 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import * as ReactTestRenderer from 'react-test-renderer';
 import Links from '../links';
 
 const links = [
   {
-    node: {
-      name: 'Twitter',
-      label: '@TheGodOfNeet',
-      href: 'https://twitter.com/thegodofneet',
-      fa: 'fab fa-twitter',
-    },
+    name: 'Twitter',
+    label: '@TheGodOfNeet',
+    href: 'https://twitter.com/thegodofneet',
+    fa: 'fab fa-twitter',
+    color1: '#297ccd',
+    color2: 'white',
+    tag: 'social',
   },
   {
-    node: {
-      name: 'Mastodon',
-      label: '@neet@mastodon.social',
-      href: 'https://mastodon.social/@neet',
-      fa: 'fab fa-mastodon',
-    },
+    name: 'Mastodon',
+    label: '@neet@mastodon.social',
+    href: 'https://mastodon.social/@neet',
+    fa: 'fab fa-mastodon',
+    color1: '#1981e0',
+    color2: 'white',
+    tag: 'social',
   },
   {
-    node: {
-      name: 'Discord',
-      label: 'neetshin#1400',
-      copy: 'neetshin#1400',
-      fa: 'fab fa-discord',
-    },
+    name: 'Discord',
+    label: 'neetshin#1400',
+    copy: 'neetshin#1400',
+    fa: 'fab fa-discord',
+    color1: '#7289da',
+    color2: 'white',
+    tag: 'social',
   },
 ];
 
-describe('Gravatar', () => {
+describe('Links', () => {
   it('renders a avatar component with given props', () => {
-    const tree = renderer.create(
+    const tree = ReactTestRenderer.create(
       <Links links={links} />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
-  });
-
-  it('does not change location even if link that comes with copy clicked', () => {
-    const href = location.href;
-    const button = shallow(
-      <Links links={links} />,
-    );
-    button.find('a[title="neetshin#1400"]').simulate('click');
-
-    expect(location.href).toBe(href);
   });
 });

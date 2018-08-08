@@ -1,10 +1,10 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import * as ReactTestRenderer from 'react-test-renderer';
 import Content from '../content';
 
 describe('Content', () => {
   it('renders a content with given react node', () => {
-    const tree = renderer.create(
+    const tree = ReactTestRenderer.create(
       <Content>
         <p>This is a node</p>
       </Content>,

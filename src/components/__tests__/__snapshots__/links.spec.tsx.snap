@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links renders a avatar component with given props 1`] = `
+<div
+  className="links section"
+>
+  <h3>
+    Contact
+  </h3>
+  <ul
+    className="links__list"
+    role="listbox"
+  >
+    <li
+      aria-posinset={1}
+      aria-setsize={3}
+      className="links__list-item"
+      role="listitem"
+    >
+      <div
+        className="link-button-wrapper"
+      >
+        <a
+          className="link-button"
+          data-name="Twitter"
+          href="https://twitter.com/thegodofneet"
+          onClick={[Function]}
+          target="__blank"
+          title="@TheGodOfNeet"
+        >
+          <div
+            className="link-button__fa-wrapper"
+            style={
+              Object {
+                "backgroundColor": "#297ccd",
+                "color": "white",
+              }
+            }
+          >
+            <i
+              aria-hidden={true}
+              className="link-button__fa fab fa-twitter"
+            />
+          </div>
+          <div
+            className="link-button__text"
+          >
+            <h4
+              className="link-button__name not-special-font"
+            >
+              Twitter
+            </h4>
+            <p
+              className="link-button__label"
+            >
+              @TheGodOfNeet
+            </p>
+          </div>
+        </a>
+      </div>
+    </li>
+    <li
+      aria-posinset={2}
+      aria-setsize={3}
+      className="links__list-item"
+      role="listitem"
+    >
+      <div
+        className="link-button-wrapper"
+      >
+        <a
+          className="link-button"
+          data-name="Mastodon"
+          href="https://mastodon.social/@neet"
+          onClick={[Function]}
+          target="__blank"
+          title="@neet@mastodon.social"
+        >
+          <div
+            className="link-button__fa-wrapper"
+            style={
+              Object {
+                "backgroundColor": "#1981e0",
+                "color": "white",
+              }
+            }
+          >
+            <i
+              aria-hidden={true}
+              className="link-button__fa fab fa-mastodon"
+            />
+          </div>
+          <div
+            className="link-button__text"
+          >
+            <h4
+              className="link-button__name not-special-font"
+            >
+              Mastodon
+            </h4>
+            <p
+              className="link-button__label"
+            >
+              @neet@mastodon.social
+            </p>
+          </div>
+        </a>
+      </div>
+    </li>
+    <li
+      aria-posinset={3}
+      aria-setsize={3}
+      className="links__list-item"
+      role="listitem"
+    >
+      <div
+        className="link-button-wrapper"
+      >
+        <a
+          className="link-button"
+          data-name="Discord"
+          onClick={[Function]}
+          target="__blank"
+          title="neetshin#1400"
+        >
+          <div
+            className="link-button__fa-wrapper"
+            style={
+              Object {
+                "backgroundColor": "#7289da",
+                "color": "white",
+              }
+            }
+          >
+            <i
+              aria-hidden={true}
+              className="link-button__fa fab fa-discord"
+            />
+          </div>
+          <div
+            className="link-button__text"
+          >
+            <h4
+              className="link-button__name not-special-font"
+            >
+              Discord
+            </h4>
+            <p
+              className="link-button__label"
+            >
+              neetshin#1400
+            </p>
+          </div>
+        </a>
+      </div>
+    </li>
+  </ul>
+  <h3>
+    Development
+  </h3>
+  <ul
+    className="links__list"
+    role="listbox"
+  />
+  <h3>
+    Donation
+  </h3>
+  <ul
+    className="links__list"
+    role="listbox"
+  />
+</div>
+`;

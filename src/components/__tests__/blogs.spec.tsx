@@ -1,5 +1,5 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import * as ReactTestRenderer from 'react-test-renderer';
 import Blogs from '../blogs';
 
 const posts = [
@@ -19,9 +19,8 @@ const posts = [
 
 describe('Blogs', () => {
   it('renders a medium posts with given props', () => {
-    const tree = renderer.create(
-      <Blogs posts={posts} />,
-    ).toJSON();
+    const component = ReactTestRenderer.create(<Blogs posts={posts} />);
+    const tree      = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

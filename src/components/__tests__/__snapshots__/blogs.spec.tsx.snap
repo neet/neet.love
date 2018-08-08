@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blogs renders a medium posts with given props 1`] = `
+<ul
+  className="blogs section"
+  role="listbox"
+>
+  <li
+    aria-posinset={1}
+    aria-setsize={1}
+    className="blog"
+    role="listitem"
+  >
+    <a
+      className="blog__link"
+      href="https://medium.com/@neetshin/あ-94d9b4a2f28c"
+    >
+      <div
+        className="blog__thumbnail blog__thumbnail--no-image"
+      />
+      <div
+        className="blog__meta"
+      >
+        <h3
+          className="blog__title not-special-font"
+        >
+          あ
+        </h3>
+        <time
+          className="blog__date"
+        >
+          <i
+            aria-hidden={true}
+            className="far fa-clock blog__date-icon"
+          />
+          2018年4月25日
+        </time>
+      </div>
+    </a>
+  </li>
+</ul>
+`;

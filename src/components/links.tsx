@@ -20,7 +20,7 @@ export default class Links extends React.PureComponent<Props> {
     const name = e.currentTarget.getAttribute('data-name') as string;
     const link = this.props.links.filter((link) => link.name === name)[0];
 
-    if (link.copy) {
+    if (link && link.copy) {
       e.preventDefault();
       copy(link.copy);
       alert(`${link.copy}をコピーしました`);

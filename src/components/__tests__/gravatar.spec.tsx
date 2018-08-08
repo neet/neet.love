@@ -1,10 +1,10 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import * as ReactTestRenderer from 'react-test-renderer';
 import Gravatar from '../gravatar';
 
 describe('Gravatar', () => {
   it('renders a avatar component with given props', () => {
-    const tree = renderer.create(
+    const tree = ReactTestRenderer.create(
       <Gravatar
         className='class'
         email='n33t5hin@gmail.com'

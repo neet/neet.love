@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content renders a content with given react node 1`] = `
+<main
+  className="content"
+>
+  <p>
+    This is a node
+  </p>
+</main>
+`;
