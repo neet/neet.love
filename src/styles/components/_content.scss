@@ -29,8 +29,9 @@
   box-shadow: 0 2px 10px rgba($shadow-color, 0.2);
 
   @media screen and (max-width: 700px) {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    margin-right: $space-middle;
   }
 }
 
@@ -45,7 +46,7 @@
 
 .page__excerpt {
   display: inline-block;
-  margin: $space-small 0;
+  margin-top: $space-small;
 }
 
 .page__separetar {
