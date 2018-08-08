@@ -1,20 +1,19 @@
 ---
 - name: Lagune
   status: open
-  description: |
+  description: |-
     Hackable desktop client for Mastodon and other related projects
-    https://github.com/lagunehq
+    <https://github.com/lagunehq>
 
 - name: Mastodon
   status: open
-  description: |
+  description: |-
     Decentralized social networking platform.
     Contributed in web front end, Japanese localizeation and internationalization
-    https://joinmastodon.org/
+    <https://joinmastodon.org>
 
 - name: Halcyon
   status: close
-  description: |
+  description: |-
     Web client for Mastodon with familiar interface
-    https://github.com/halcyon-suite/halcyon
-
+    <https://github.com/halcyon-suite/halcyon>

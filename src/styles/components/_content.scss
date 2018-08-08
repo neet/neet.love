@@ -1,17 +1,17 @@
 .page {
-  margin: 28px auto;
-  padding: 28px;
+  margin: ($space-middle * 2) auto;
+  padding: ($space-middle * 2);
   max-width: 700px;
-  font-size: 21px;
+  font-size: 18px;
   box-sizing: border-box;
   border-radius: 6px;
   background-color: $primary-200;
-  box-shadow: 0 3px 28px rgba($shadow-color, 0.2);
+  box-shadow: 0 4px 10px rgba($shadow-color, 0.2);
 
   @media screen and (max-width: 700px) {
-    font-size: 18px;
-    padding: 18px;
-    margin: 12px;
+    font-size: 16px;
+    padding: $space-large;
+    margin: $space-middle;
   }
 }
 
@@ -24,9 +24,9 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  margin-right: 18px;
+  margin-right: $space-large;
   background-color: $secondary-400;
-  box-shadow: 0 1px 6px rgba($shadow-color, 0.2);
+  box-shadow: 0 2px 10px rgba($shadow-color, 0.2);
 
   @media screen and (max-width: 700px) {
     width: 120px;
@@ -36,7 +36,7 @@
 
 .page__title {
   font-size: 46px;
-  margin-bottom: 0;
+  margin: 0;
 
   @media screen and (max-width: 700px) {
     font-size: 32px;
@@ -44,7 +44,8 @@
 }
 
 .page__excerpt {
-  margin: 8px 0;
+  display: inline-block;
+  margin: $space-small 0;
 }
 
 .page__separetar {
@@ -56,13 +57,13 @@
   display: block;
   box-sizing: border-box;
   border-top: 8px dotted $text-100;
-  margin: 18px 0;
+  margin: $space-large 0;
 }
 
 .section {
-  margin-bottom: 18px;
+  margin-bottom: $space-large;
 
   @media screen and (max-width: 700px) {
-    margin-bottom: 12px;
+    // margin-bottom: 12px;
   }
 }

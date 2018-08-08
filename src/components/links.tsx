@@ -43,6 +43,7 @@ export default class Links extends React.PureComponent<Props> {
             title={link.label}
             data-name={link.name}
             onClick={this.handleClick}
+            target='__blank'
           >
             <div
               className='link-button__fa-wrapper'

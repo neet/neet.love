@@ -15,17 +15,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  &:not(.not-special-font) {
-    font-family: 'Pacifico';
-  }
-}
-
-h2, h3, h4, h5, h6 {
+  line-height: 1;
   margin: 0.35em 0;
 }
 
 h1 {
-  font-size: 32px;
+  font-family: 'Pacifico';
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -40,22 +36,22 @@ h3 {
 }
 
 h4 {
-  font-size: 21px;
-  font-weight: 600;
-}
-
-h5 {
   font-size: 18px;
   font-weight: 600;
 }
 
-h6 {
+h5 {
   font-size: 16px;
   font-weight: 600;
 }
 
+h6 {
+  font-size: 8px;
+  font-weight: 600;
+}
+
 a, .link-button {
-  color: $text-100;
+  color: $secondary-400;
   text-decoration: none;
 
   &:hover {
@@ -63,10 +59,14 @@ a, .link-button {
   }
 }
 
+code {
+  font-family: monospace;
+}
+
 ul {
   list-style-type: disc;
   list-style-position: outside;
-  margin-left: 28px;
+  margin-left: $space-large;
 }
 
 // ::selection {

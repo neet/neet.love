@@ -21,9 +21,9 @@ export default class Projects extends React.PureComponent<Props> {
 
     return (
       <li className='project'>
-        <span className='project__name'>
+        <h4 className='project__name not-special-font'>
           {name}
-        </span>
+        </h4>
 
         <p className='project__description' dangerouslySetInnerHTML={htmlDescription} />
       </li>
