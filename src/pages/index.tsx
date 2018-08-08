@@ -77,11 +77,11 @@ const Index: React.SFC<Props> = ({ data }) => {
           <li>Python</li>
         </ul>
 
-        <h2>Medium</h2>
-        <Blogs posts={blogs} />
-
         <h2>Contributions</h2>
         <Projects projects={projects} />
+
+        <h2>Medium</h2>
+        <Blogs posts={blogs} />
 
         <h2>Social accounts</h2>
         <Links links={links} />
