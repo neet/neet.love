@@ -1,4 +1,3 @@
-import { shallow } from 'enzyme';
 import * as React from 'react';
 import * as ReactTestRenderer from 'react-test-renderer';
 import Links from '../links';
