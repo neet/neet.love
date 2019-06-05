@@ -16,16 +16,16 @@
   tag:    social
 
 - name:   Discord
-  label:  '@neetshin#1400'
-  copy:   neetshin#1400
+  label:  '@neet#9999'
+  copy:   neet#9999
   fa:     fab fa-discord
   color1: '#7289da'
   color2: white
   tag:    social
 
 - name:   Telegram
-  label:  '@neetshin'
-  href:   https://t.me/neetshin
+  label:  '@neetchan'
+  href:   https://t.me/neetchan
   fa:     fab fa-telegram-plane
   color1: '#2ca5e0'
   color2: white
