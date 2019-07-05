@@ -1,16 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import IndexLayout from '../layouts';
+import styled from 'styled-components';
+import { Bio } from '../components/bio';
+import { RandomInformation } from '../components/random-information';
+import { Projects } from '../components/projects';
+import { Single } from '../layouts';
+import { theme } from '../styles/variables';
 
-const IndexPage = () => (
-  <IndexLayout>
-    <article>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <Link to="/page-2/">Go to page 2</Link>
-    </article>
-  </IndexLayout>
+const Border = styled.hr`
+  margin: 28px auto;
+  border: none;
+  border-bottom: 1px solid ${theme.bg.wash};
+`
+
+const Index: React.SFC = () => (
+  <Single>
+    <Bio />
+    <Border />
+    <RandomInformation />
+    <Projects />
+  </Single>
 );
 
-export default IndexPage;
+export default Index;

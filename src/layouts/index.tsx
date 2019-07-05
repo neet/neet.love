@@ -1,6 +1,16 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Banner } from '../components/banner';
+import { GlobalStyle } from '../styles/global-style';
+
+const Wrapper = styled.main``;
+
+const Content = styled.article`
+  width: 560px;
+  margin: auto;
+`;
 
 interface StaticQueryProps {
   site: {
@@ -12,7 +22,7 @@ interface StaticQueryProps {
   };
 }
 
-const IndexLayout: React.SFC = ({ children }) => {
+export const Single: React.SFC = ({ children }) => {
   const data = useStaticQuery<StaticQueryProps>(graphql`
     query IndexLayoutQuery {
       site {
@@ -25,7 +35,7 @@ const IndexLayout: React.SFC = ({ children }) => {
   `);
 
   return (
-    <div>
+    <Wrapper>
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
@@ -33,9 +43,9 @@ const IndexLayout: React.SFC = ({ children }) => {
           { name: 'keywords', content: data.site.siteMetadata.keywords },
         ]}
       />
-      <main>{children}</main>
-    </div>
+      <Banner />
+      <Content>{children}</Content>
+      <GlobalStyle />
+    </Wrapper>
   );
 };
-
-export default IndexLayout;
