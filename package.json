@@ -1,24 +1,19 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
+  "name": "love",
   "version": "1.0.0",
   "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
-  "keywords": [
-    "gatsby"
-  ],
+  "author": "Ryo Igarashi <n33t5hin@gmail.com>",
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "start": "npm run dev",
-    "test": "npm run type-check && npm run lint",
-    "type-check": "tsc"
+    "develop": "gatsby develop",
+    "test": "yarn run test:prettier & yarn run test:eslint & yarn run test:static-type-check",
+    "test:prettier": "prettier --write 'src/**/*.{ts,tsx,md}'",
+    "test:eslint": "eslint 'src/**/*.{ts,tsx}'",
+    "test:static-type-check": "tsc",
+    "start": "yarn run develop"
   },
   "engines": {
     "node": ">=8.0.0"
