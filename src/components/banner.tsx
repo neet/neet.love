@@ -1,12 +1,17 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/variables';
+import { breakpoints, theme } from '../styles/variables';
 
 const Wrapper = styled.header`
   display: flex;
   align-items: center;
-  padding: 24px;
+  margin-bottom: 18px;
+  padding: 12px;
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    margin-bottom: 24px;
+  }
 `;
 
 const Hgroup = styled.div`
@@ -19,6 +24,7 @@ const Title = styled.h1`
   font-weight: 500;
 
   & > a {
+    margin: auto 18px;
     color: ${theme.fg.default};
 
     &:hover {
@@ -41,7 +47,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin: auto 18px;
 
-  a {
+  & > a {
     color: ${theme.fg.default};
     font-size: 14px;
     font-weight: 500;
@@ -70,16 +76,20 @@ export const Banner = () => {
         <List>
           <ListItem>
             <a href="https://keybase.io/neet/pgp_keys.asc" target="__blank">
-              PGP Key
+              PGP
             </a>
           </ListItem>
 
           <ListItem>
-            <Link to="/blog" activeClassName='active'>Blog</Link>
+            <Link to="/blog" activeClassName="active">
+              Blog
+            </Link>
           </ListItem>
 
           <ListItem>
-            <Link to="/links" activeClassName='active'>Links</Link>
+            <Link to="/links" activeClassName="active">
+              Links
+            </Link>
           </ListItem>
         </List>
       </Nav>

@@ -44,7 +44,6 @@ export const socialAccounts: SocialAccount[] = [
     fa: faEnvelope,
     bgColor: '#1981e0',
     fgColor: 'white',
-    suggested: true,
   },
   {
     name: 'Discord',
@@ -71,6 +70,7 @@ export const socialAccounts: SocialAccount[] = [
     fa: faKeybase,
     bgColor: '#FF6300',
     fgColor: 'white',
+    suggested: true,
   },
   {
     name: 'Twitter',

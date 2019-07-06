@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     width: 100%;
     height: 100%;
-    background-color: ${theme.bg.light};
+    background-color: ${theme.bg.default};
     color: ${theme.fg.default};
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;

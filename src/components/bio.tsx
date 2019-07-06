@@ -3,22 +3,28 @@ import GatsbyImage, { GatsbyImageProps } from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { LinkButton } from '../components/link-button';
-import { theme } from '../styles/variables';
+import { breakpoints, theme } from '../styles/variables';
 
 const Wrapper = styled.section`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 450px;
-  margin: auto;
+  justify-content: center;
+  width: 100%;
 `;
 
 const Avatar = styled(GatsbyImage)`
-  width: 116px;
-  height: auto;
-  margin-right: 26px;
+  flex-shrink: 0;
+  width: 100px !important;
+  height: 100px !important;
+  margin-right: 18px;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    width: 116px !important;
+    height: 116px !important;
+    margin-right: 26px;
+  }
 `;
 
 const Meta = styled.div`
@@ -26,14 +32,22 @@ const Meta = styled.div`
 `;
 
 const Name = styled.h2`
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 500;
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    font-size: 26px;
+  }
 `;
 
 const Description = styled.span`
-  color: ${theme.fg.light};
-  font-size: 18px;
+  color: ${theme.fg.wash};
+  font-size: 16px;
   font-weight: 400;
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    font-size: 18px;
+  }
 `;
 
 const Actions = styled.div`
@@ -54,21 +68,21 @@ const Note = styled.blockquote<NoteProps>`
   flex: 0 0;
   margin: 24px auto;
   padding-left: 16px;
-  color: ${theme.fg.light};
+  color: ${theme.fg.wash};
   font-size: 16px;
   font-style: italic;
   font-weight: 300;
   text-align: center;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 17px;
     height: 17px;
-    background-image: url(${(props) => props.fixed && props.fixed.src});
+    background-image: url(${props => props.fixed && props.fixed.src});
     background-size: cover;
   }
 `;
@@ -121,8 +135,7 @@ export const Bio = () => {
       </Wrapper>
 
       <Note fixed={data.quote.childImageSharp.fixed}>
-Hi there! I'm a high schooler engineer who loves the web and decentralisation of social networking!
-In these days, I'm working on... blah blah blah
+実は俺がインターネットなのではないかと思ってきた。
       </Note>
     </>
   );

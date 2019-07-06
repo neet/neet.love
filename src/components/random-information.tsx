@@ -2,18 +2,23 @@ import { graphql, useStaticQuery } from 'gatsby';
 import GatsbyImage, { GatsbyImageProps } from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/variables';
+import { breakpoints, theme } from '../styles/variables';
 
 const FieldList = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 8px;
 `;
 
 const Field = styled.li`
   display: flex;
-  flex: 0 0 calc(100% / 3);
+  flex: 0 0 50%;
   align-items: center;
-  margin: 8px 0;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    flex-basis: calc(100% / 3);
+  }
 `;
 
 const Image = styled(GatsbyImage)`
@@ -24,12 +29,13 @@ const Image = styled(GatsbyImage)`
 
 const Name = styled.span`
   display: block;
-  color: ${theme.fg.light};
   font-size: 12px;
+  font-weight: 500;
 `;
 
 const Value = styled.span`
   display: block;
+  color: ${theme.fg.wash};
   font-size: 14px;
 `;
 

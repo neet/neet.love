@@ -8,14 +8,13 @@ import { theme } from '../styles/variables';
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 8px -8px;
+  margin: 8px -8px -16px;
 `;
 
 const ListItem = styled.li`
   box-sizing: border-box;
   flex: 1 0 50%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+  padding: 0 8px 16px;
 `;
 
 const Repository = styled.div`
@@ -23,9 +22,9 @@ const Repository = styled.div`
   box-sizing: border-box;
   flex-direction: column;
   height: 100%;
-  padding: 12px 16px;
+  padding: 16px;
   border-radius: 4px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 16%);
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 16%);
 `;
 
 const RepositoryName = styled.a`
@@ -40,22 +39,21 @@ const RepositoryName = styled.a`
 const RepositoryDescription = styled.p`
   flex: 1 1;
   margin-bottom: 12px;
-  color: ${theme.fg.light};
+  color: ${theme.fg.wash};
   font-size: 12px;
 `;
 
 const Footer = styled.footer`
   display: flex;
-  flex: 0 0;
+  flex-shrink: 0;
   align-items: center;
-  margin-bottom: 0;
 `;
 
 const FooterItem = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 12px;
-  color: ${theme.fg.light};
+  margin-right: 18px;
+  color: ${theme.fg.wash};
   font-size: 12px;
 `;
 
@@ -67,8 +65,7 @@ const PrimaryLanguageColor = styled.div`
 `;
 
 const PrimaryLanguageName = styled.span`
-  margin-right: 12px;
-  color: ${theme.fg.light};
+  color: ${theme.fg.wash};
   font-size: 12px;
 `;
 
@@ -132,7 +129,7 @@ export const Projects = () => {
         <ListItem key={repository.id}>
           <Repository>
             <RepositoryName href={repository.url} target="__blank">
-              <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px', color: theme.fg.light }} />
+              <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px', color: theme.fg.wash }} />
               {repository.name}
             </RepositoryName>
 

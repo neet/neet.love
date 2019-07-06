@@ -1,19 +1,25 @@
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import { Link } from 'gatsby';
 import React, { useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { socialAccounts } from '../social-accounts';
-import { theme } from '../styles/variables';
+import { breakpoints, theme } from '../styles/variables';
 
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 8px;
 `;
 
 const ListItem = styled.li`
-  flex: 0 1 50%;
-  margin: 8px auto;
+  flex: 0 1 100%;
+  margin-bottom: 18px;
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    flex: 0 1 50%;
+  }
 
   & > a {
     display: flex;
@@ -32,9 +38,8 @@ const Icon = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
-  padding: 8px;
-  font-size: 21px;
+  margin-right: 12px;
+  font-size: 34px;
 `;
 
 const Meta = styled.div`
@@ -43,22 +48,26 @@ const Meta = styled.div`
 `;
 
 const Name = styled.span`
-  display: block;
-  color: ${theme.fg.default};
+  display: flex;
+  align-items: center;
   font-size: 12px;
   font-weight: 500;
 `;
 
 const Suggested = styled.span`
-  margin: 0 0.8em;
-  color: ${theme.fg.light};
+  display: block;
+  margin: 0 0.5em;
+  color: ${theme.fg.wash};
   font-size: 10px;
-  font-weight: 400;
 `;
 
 const Label = styled.span`
   display: block;
-  color: ${theme.hl.default};
+  color: ${theme.fg.wash};
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Footer = styled.footer`
@@ -95,7 +104,7 @@ export const SocialAccounts = (props: SocialAccountsProps) => {
 
       e.preventDefault();
       copyToClipboard(acct.copyable);
-      window.alert(`Copied ${acct.copyable}!`);
+      window.alert(`Copied "${acct.copyable}"!`);
     },
     [accts],
   );
@@ -113,7 +122,11 @@ export const SocialAccounts = (props: SocialAccountsProps) => {
               <Meta>
                 <Name>
                   {acct.name}
-                  {acct.suggested === true ? <Suggested title="Suggested: I may respond quickly">Suggested</Suggested> : null}
+                  {acct.suggested === true ? (
+                    <Suggested title="Suggested: I may respond quickly">
+                      <FontAwesomeIcon icon={faCheck} />
+                    </Suggested>
+                  ) : null}
                 </Name>
 
                 <Label>{acct.label}</Label>

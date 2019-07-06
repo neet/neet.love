@@ -10,7 +10,7 @@ import { theme } from '../styles/variables';
 const Border = styled.hr`
   margin: 28px auto;
   border: none;
-  border-bottom: 1px solid ${theme.bg.wash};
+  border-top: 1px solid ${theme.border.default};
 `;
 
 const Section = styled.section`
@@ -23,7 +23,7 @@ const Index: React.SFC = () => (
     <Border />
 
     <Section>
-      <h3>Random Bits</h3>
+      <h3>Random Facts</h3>
       <RandomInformation />
     </Section>
 

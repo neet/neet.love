@@ -3,6 +3,7 @@ import React from 'react';
 // import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { Banner } from '../components/banner';
+import { Footer } from '../components/footer';
 import { GlobalStyle } from '../styles/global-style';
 
 const Wrapper = styled.main``;
@@ -26,6 +27,7 @@ export const Article: React.SFC = ({ children }) => {
     <Wrapper>
       <Banner />
       <Content>{children}</Content>
+      <Footer/>
       <GlobalStyle />
     </Wrapper>
   );

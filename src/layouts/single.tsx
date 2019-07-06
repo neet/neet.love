@@ -3,14 +3,19 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { Banner } from '../components/banner';
+import { Footer } from '../components/footer';
 import { GlobalStyle } from '../styles/global-style';
+import { breakpoints } from '../styles/variables';
 
 const Wrapper = styled.main``;
 
 const Content = styled.div`
-  width: 580px;
   margin: auto;
-  padding: 24px 0;
+  padding: 0 24px;
+
+  @media screen and (min-width: ${breakpoints.desktop}) {
+    width: 580px;
+  }
 `;
 
 interface StaticQueryProps {
@@ -46,6 +51,7 @@ export const Single: React.SFC = ({ children }) => {
       />
       <Banner />
       <Content>{children}</Content>
+      <Footer />
       <GlobalStyle />
     </Wrapper>
   );

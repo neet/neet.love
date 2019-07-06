@@ -1,13 +1,18 @@
 export const theme = {
   bg: {
-    default: '#F9F9F9',
-    wash: '#BABABA',
-    light: '#FFFFFF',
+    default: '#FFFFFF',
+    wash: '#F9F9F9',
+    dark: '#BABABA',
+  },
+
+  border: {
+    default: '#EAEAEA',
   },
 
   fg: {
     default: '#3B3B3B',
-    light: '#7A7A7A',
+    wash: '#7A7A7A',
+    light: '#999999',
     reverse: '#ffffff',
   },
 
@@ -15,3 +20,7 @@ export const theme = {
     default: '#0076FF',
   },
 };
+
+export const breakpoints = {
+  desktop: '700px',
+}
