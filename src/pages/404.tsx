@@ -1,16 +1,16 @@
-import React from 'react';
 import { Link } from 'gatsby';
-import IndexLayout from '../layouts';
+import React from 'react';
+import { Single }from '../layouts';
 
 const NotFoundPage = () => (
-  <IndexLayout>
+  <Single>
     <article>
       <h1>404: Page not found.</h1>
       <p>
         You've hit the void. <Link to="/">Go back.</Link>
       </p>
     </article>
-  </IndexLayout>
+  </Single>
 );
 
 export default NotFoundPage;

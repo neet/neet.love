@@ -7,8 +7,8 @@ import { GlobalStyle } from '../styles/global-style';
 
 const Wrapper = styled.main``;
 
-const Content = styled.article`
-  width: 560px;
+const Content = styled.div`
+  width: 580px;
   margin: auto;
 `;
 

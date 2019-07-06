@@ -50,9 +50,8 @@ interface NoteProps {
 const Note = styled.blockquote<NoteProps>`
   position: relative;
   flex: 0 0;
-  width: 350px;
   margin: 24px auto;
-  padding-left: 22px;
+  padding-left: 16px;
   color: ${theme.fg.light};
   font-size: 16px;
   font-style: italic;
@@ -120,7 +119,8 @@ export const Bio = () => {
       </Wrapper>
 
       <Note fixed={data.quote.childImageSharp.fixed}>
-この世に本当に信用できるものは2つしか無い。<br/>一つはフォロワー30前後の鍵垢、<br/>一つは同人音声作品に出演するプロ声優。
+Hi there! I'm a high schooler engineer who loves the web and decentralisation of social networking!
+In these days, I'm working on... blah blah blah
       </Note>
     </>
   );

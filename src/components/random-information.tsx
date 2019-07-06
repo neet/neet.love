@@ -93,7 +93,7 @@ export const RandomInformation = () => {
   `);
 
   return (
-    <section>
+    <section style={{marginBottom: '24px'}}>
       <h3>Random Bits</h3>
 
       <FieldList>
