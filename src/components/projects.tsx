@@ -127,40 +127,36 @@ export const Projects = () => {
   `);
 
   return (
-    <section>
-      <h3>Projects</h3>
+    <List>
+      {data.github.user.pinnedItems.nodes.map(repository => (
+        <ListItem key={repository.id}>
+          <Repository>
+            <RepositoryName href={repository.url} target="__blank">
+              <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px', color: theme.fg.light }} />
+              {repository.name}
+            </RepositoryName>
 
-      <List>
-        {data.github.user.pinnedItems.nodes.map(repository => (
-          <ListItem key={repository.id}>
-            <Repository>
-              <RepositoryName href={repository.url} target='__blank'>
-                <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px', color: theme.fg.light }} />
-                {repository.name}
-              </RepositoryName>
+            <RepositoryDescription>{repository.description}</RepositoryDescription>
 
-              <RepositoryDescription>{repository.description}</RepositoryDescription>
+            <Footer>
+              <FooterItem>
+                <PrimaryLanguageColor style={{ backgroundColor: repository.primaryLanguage.color }} />
+                <PrimaryLanguageName>{repository.primaryLanguage.name}</PrimaryLanguageName>
+              </FooterItem>
 
-              <Footer>
-                <FooterItem>
-                  <PrimaryLanguageColor style={{ backgroundColor: repository.primaryLanguage.color }} />
-                  <PrimaryLanguageName>{repository.primaryLanguage.name}</PrimaryLanguageName>
-                </FooterItem>
+              <FooterItem>
+                <Icon icon={faStar} style={{ fontSize: '10px', marginRight: '2px' }} />
+                {repository.stargazers.totalCount}
+              </FooterItem>
 
-                <FooterItem>
-                  <Icon icon={faStar} style={{ fontSize: '10px', marginRight: '2px' }} />
-                  {repository.stargazers.totalCount}
-                </FooterItem>
-
-                <FooterItem>
-                  <Icon icon={faCodeBranch} style={{ fontSize: '10px', marginRight: '2px' }} />
-                  {repository.forkCount}
-                </FooterItem>
-              </Footer>
-            </Repository>
-          </ListItem>
-        ))}
-      </List>
-    </section>
+              <FooterItem>
+                <Icon icon={faCodeBranch} style={{ fontSize: '10px', marginRight: '2px' }} />
+                {repository.forkCount}
+              </FooterItem>
+            </Footer>
+          </Repository>
+        </ListItem>
+      ))}
+    </List>
   );
 };

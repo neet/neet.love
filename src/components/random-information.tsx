@@ -93,50 +93,46 @@ export const RandomInformation = () => {
   `);
 
   return (
-    <section style={{marginBottom: '24px'}}>
-      <h3>Random Bits</h3>
+    <FieldList>
+      <Field>
+        <Image fixed={data.japan.childImageSharp.fixed} />
+        <div>
+          <Name>Nation</Name>
+          <Value>Japan</Value>
+        </div>
+      </Field>
 
-      <FieldList>
-        <Field>
-          <Image fixed={data.japan.childImageSharp.fixed} />
-          <div>
-            <Name>Nation</Name>
-            <Value>Japan</Value>
-          </div>
-        </Field>
+      <Field>
+        <Image fixed={data.chai.childImageSharp.fixed} />
+        <div>
+          <Name>Favourite drink</Name>
+          <Value>Chai</Value>
+        </div>
+      </Field>
 
-        <Field>
-          <Image fixed={data.chai.childImageSharp.fixed} />
-          <div>
-            <Name>Favourite drink</Name>
-            <Value>Chai</Value>
-          </div>
-        </Field>
+      <Field>
+        <Image fixed={data.vscode.childImageSharp.fixed} />
+        <div>
+          <Name>IDE</Name>
+          <Value>VSCode</Value>
+        </div>
+      </Field>
 
-        <Field>
-          <Image fixed={data.vscode.childImageSharp.fixed} />
-          <div>
-            <Name>IDE</Name>
-            <Value>VSCode</Value>
-          </div>
-        </Field>
+      <Field>
+        <Image fixed={data.computer.childImageSharp.fixed} />
+        <div>
+          <Name>Workstation</Name>
+          <Value>MacBook Pro</Value>
+        </div>
+      </Field>
 
-        <Field>
-          <Image fixed={data.computer.childImageSharp.fixed} />
-          <div>
-            <Name>Workstation</Name>
-            <Value>MacBook Pro</Value>
-          </div>
-        </Field>
-
-        <Field>
-          <Image fixed={data.globe.childImageSharp.fixed} />
-          <div>
-            <Name>2nd languages</Name>
-            <Value>English, Mandarin</Value>
-          </div>
-        </Field>
-      </FieldList>
-    </section>
+      <Field>
+        <Image fixed={data.globe.childImageSharp.fixed} />
+        <div>
+          <Name>2nd languages</Name>
+          <Value>English, Mandarin</Value>
+        </div>
+      </Field>
+    </FieldList>
   );
 };

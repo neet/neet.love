@@ -10,6 +10,7 @@ const Wrapper = styled.main``;
 const Content = styled.div`
   width: 580px;
   margin: auto;
+  padding: 24px 0;
 `;
 
 interface StaticQueryProps {

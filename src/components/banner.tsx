@@ -17,6 +17,14 @@ const Hgroup = styled.div`
 const Title = styled.h1`
   font-size: 20px;
   font-weight: 500;
+
+  & > a {
+    color: ${theme.fg.default};
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 `;
 
 const Nav = styled.nav`
@@ -38,6 +46,14 @@ const ListItem = styled.li`
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: ${theme.hl.default};
+    }
   }
 `;
 
@@ -45,21 +61,25 @@ export const Banner = () => {
   return (
     <Wrapper>
       <Hgroup>
-        <Title>neet.love</Title>
+        <Title>
+          <Link to="/">neet.love</Link>
+        </Title>
       </Hgroup>
 
       <Nav>
         <List>
           <ListItem>
-            <Link to="/pgp-key">PGP Key</Link>
+            <a href="https://keybase.io/neet/pgp_keys.asc" target="__blank">
+              PGP Key
+            </a>
           </ListItem>
 
           <ListItem>
-            <Link to="/articles">Blog</Link>
+            <Link to="/blog" activeClassName='active'>Blog</Link>
           </ListItem>
 
           <ListItem>
-            <Link to="/links">Links</Link>
+            <Link to="/links" activeClassName='active'>Links</Link>
           </ListItem>
         </List>
       </Nav>

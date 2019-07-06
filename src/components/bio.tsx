@@ -8,6 +8,7 @@ import { theme } from '../styles/variables';
 const Wrapper = styled.section`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   max-width: 450px;
   margin: auto;
 `;
@@ -15,12 +16,13 @@ const Wrapper = styled.section`
 const Avatar = styled(GatsbyImage)`
   width: 116px;
   height: auto;
+  margin-right: 26px;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
 `;
 
 const Meta = styled.div`
-  margin: auto;
+  margin: 0;
 `;
 
 const Name = styled.h2`

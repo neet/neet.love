@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Single }from '../layouts';
+import { Single }from '../layouts/single';
 
 const NotFoundPage = () => (
   <Single>
