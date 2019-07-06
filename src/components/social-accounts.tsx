@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import copyToClipboard from 'copy-to-clipboard';
 import { Link } from 'gatsby';
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { socialAccounts } from '../social-accounts';
 import { theme } from '../styles/variables';
@@ -31,7 +32,7 @@ const Icon = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 8px;
   padding: 8px;
   font-size: 21px;
 `;
@@ -85,12 +86,26 @@ export const SocialAccounts = (props: SocialAccountsProps) => {
 
   const isPartial = useMemo(() => !!(take || onlySuggested), [take, onlySuggested]);
 
+  const handleClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      const index = Number(e.currentTarget.getAttribute('data-index'));
+      const acct = accts[index];
+
+      if (!acct.copyable) return;
+
+      e.preventDefault();
+      copyToClipboard(acct.copyable);
+      window.alert(`Copied ${acct.copyable}!`);
+    },
+    [accts],
+  );
+
   return (
     <>
       <List>
         {accts.map((acct, i) => (
           <ListItem key={`${acct.name}-${i}`}>
-            <a href={acct.href} target="__blank">
+            <a href={acct.href || '#'} target="__blank" data-index={i} onClick={handleClick}>
               <Icon>
                 <FontAwesomeIcon icon={acct.fa} />
               </Icon>

@@ -1,4 +1,19 @@
-import { faDiscord, faGithub, faMastodon, faTelegramPlane, IconDefinition, faTwitter, faGitlab, faSlideshare, faNpm, faDocker, faBitcoin, faPatreon, faKeybase, faMedium, faMediumM } from '@fortawesome/free-brands-svg-icons';
+import {
+  faBitcoin,
+  faDiscord,
+  faDocker,
+  faGithub,
+  faGitlab,
+  faKeybase,
+  faMastodon,
+  faMediumM,
+  faNpm,
+  faPatreon,
+  faSlideshare,
+  faTelegramPlane,
+  faTwitter,
+  IconDefinition,
+} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export type SocialAccount = {
@@ -8,13 +23,9 @@ export type SocialAccount = {
   fgColor: string;
   bgColor: string;
   suggested?: boolean;
-} & (
-  | {
-      href: string;
-    }
-  | {
-      copyable: string;
-    });
+  href?: string;
+  copyable?: string;
+};
 
 export const socialAccounts: SocialAccount[] = [
   {
