@@ -5,12 +5,13 @@ import styled from 'styled-components';
 const Wrapper = styled.header`
   display: flex;
   position: sticky;
+  z-index: 999;
   top: 0;
   left: 0;
   align-items: center;
   margin-bottom: 18px;
   padding: 12px;
-  background-color: var(--bg-default-color);
+  background: rgba(255,255,255,80%);
 
   @media screen and (min-width: 700px) {
     margin-bottom: 24px;
