@@ -11,19 +11,19 @@ Node.js + Express + node-telegram-bot-apiでbotを制作します．実際に運
 
 　Telegramのオフィシャルbotである[@botfather](https://t.me/botfather)に`/newbot`と送信することでbotの登録が開始できます．はじめにbotの表示名を設定しますが，こちらは後から変更可能です．
 　
-<img width="340" alt="スクリーンショット 2018-02-27 10.00.00.png" src="https://qiita-image-store.s3.amazonaws.com/0/237683/ed95a8c7-6407-cb9b-8e15-fea891939d53.png">
+![Create a new bot](./create-a-new-bot.png)
 
 　次に，botのユーザー名（@usernameの形式のもの）を設定します．こちらは残念ながら後から変更が出来ない上，末尾が`bot`で終了する必要があるため注意してください．
 
-<img width="340" alt="スクリーンショット 2018-02-27 13.30.07.png" src="https://qiita-image-store.s3.amazonaws.com/0/237683/de2cb307-a054-6047-0f8b-0b6714911baa.png">
+![Naming the bot](./naming-bot.png)
 
 　Botアカウントが登録できると，最後にAPIにアクセスするためのトークンが送られてきます．`/token`と送信することで再発行も可能ですが，安全性のために適切に保存してください．
 
-<img width="340" alt='名称未設定.png' src='https://qiita-image-store.s3.amazonaws.com/0/237683/84e6a6b4-7dc3-34e3-efdb-8b8ba33bd241.png' />
+![Fetching a token](./fetching-token.png)
 
 　デフォルトではbotは`/`から始まるメッセージにしかアクセス出来ないようになっていますが，これは`/setprivacy`を利用することで無効化できます．必要であれば設定してください．
 
-<img width="340" alt="スクリーンショット 2018-02-27 13.55.56.png" src="https://qiita-image-store.s3.amazonaws.com/0/237683/669c6548-c05d-82d0-837b-2072db39d43e.png">
+![Setting privacy](./setting-privacy.png)
 
 ## APIのインストール
 　Axiosなどから直接APIにアクセスすることも可能ですが，npmで[node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)という優れたライブラリが公開されているのでこちらを利用します．
@@ -66,9 +66,8 @@ bot.on('message', (message) => {
 node bot.js
 ```
 
-**結果:**
-
-![スクリーンショット 2018-02-27 12.18.59.png](https://qiita-image-store.s3.amazonaws.com/0/237683/82721237-8785-b3cd-9e70-3b29fb3c84bc.png)
+#### 結果
+![Recieving message](./recieving-message.png)
 
 ## APIの利用: メッセージを送信する
 　先程のコードを少し変更し，今度は受け取ったテキストをそのまま返信するbotを作ります．botからメッセージを送信するためには`sendMessage()`というメソッドを利用します．以下が例です
@@ -88,8 +87,8 @@ bot.on('message', (message) => {
 
 尚，利用可能な他のメソッドは[Telegramの公式ドキュメント](https://core.telegram.org/bots/api#available-methods)で詳しく解説されているのでカスタマイズしてみると面白いと思います．
 
-**結果:**
-![スクリーンショット 2018-02-27 10.32.24.png](https://qiita-image-store.s3.amazonaws.com/0/237683/e0674011-bc41-2e59-c345-5b4a1cdaacf4.png)
+#### 結果
+![Response](./respond-to-message.png)
 
 ## Webhookの利用
 　Webhookを利用することも可能なので方法をご紹介します．上記のコードは全てpollingでイベントを受信していましたが，ここはExpressを使って受信用のアプリケーションを構築します．

@@ -38,6 +38,7 @@ const Icon = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  width: 34px;
   margin-right: 12px;
   font-size: 34px;
 `;

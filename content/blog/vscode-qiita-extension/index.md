@@ -3,7 +3,7 @@ title: Visual Studio CodeからQiitaに投稿できる拡張機能をつくっ�
 date: 2018-09-20T00:00:00+09:00
 ---
 
-![スクリーンショット](https://i.imgur.com/oyzlwX7.png)
+![スクリーンショット](./thumbnail.png)
 
 VSCodeで編集中のMarkdownファイルを一発でQiitaに公開できるスマートな拡張機能があればいいな〜と思ってGoogleで検索したら [こちらの記事](https://qiita.com/wenbose/items/3a4425f69b9eb2fe52c6) がヒットしたのですが、どうやら開発が滞ってしまっていたようで、同様のものを開発しても良いかをコメントでお尋ねしたところ[快諾してくださった](https://qiita.com/wenbose/items/3a4425f69b9eb2fe52c6#comment-324f27d5beac7e9d3052)ので公開してみました。
 
@@ -19,7 +19,7 @@ VSCodeの拡張機能は基本的にTypeScriptで実装できます。直接DOM�
 VSCodeのAPIでは、自作のコマンドやビュー領域を `package.json` に追記して設定するのですが、それらの設定が増えてくるにつれてどうしてもpackage.jsonも太ってしまうので見づらかったりタイポに気づかなかったりして大変でした。せっかくMS自家製の素晴らしい型システムがあるんだから.tsファイルから設定させてくれればいいのにとも思いましたが、それではダメだったのでしょうか...
 
 ### TreeDataProvider
-<img width="326" alt="スクリーンショット 2018-09-20 18.40.36.png" src="https://qiita-image-store.s3.amazonaws.com/0/237683/3ee29edb-2988-ac59-9a06-cb7c5fbcdbe2.png">
+![Tree data provider](./tree-data-provider.png)
 
 TreeDataProviderとTreeItemというクラスをビュー領域に登録することでサイドバーにエクスプローラーっぽいものを作れました ([詳細](https://code.visualstudio.com/docs/extensionAPI/vscode-api#TreeItem))。アイテムがクリックされたら発火するコマンドを指定できるので、ビューが切り替わったときに呼ばれる関数で投稿を取得できるようにしておいて、クリックされたらローカルディレクトリにファイルを保存してユーザーのワークスペースにMarkdownが表示されるようになっています。
 
@@ -28,11 +28,11 @@ TreeDataProviderとTreeItemというクラスをビュー領域に登録する�
 
 InputBoxはその名の通りinputするboxで、ユーザーが入力を変更した際、決定した際のイベントを登録できるようになっていました。最大文字数などのバリデーションも行いたかったのですがそういったものは無く、決定されたときのイベントリスナー `onDidAccept` で値をバリデーションしました。
 
-<img width="633" alt="スクリーンショット 2018-09-20 18.47.03.png" src="https://qiita-image-store.s3.amazonaws.com/0/237683/2dfe2ed0-5666-e90c-f391-1e05f145bf74.png">
+![autocomplete](./autocomplete.png)
 
 QuickPickは複数の選択肢からユーザーに選択を促すもので、公開範囲の選択とタグの登録に利用しました。また、複数選択が可能かどうか `canSelectMany` やプレースホルダーなども細かく指定可能で思い通りに実装できたと思います。
 
-<img width="621" alt="スクリーンショット 2018-09-20 18.52.37.png" src="https://qiita-image-store.s3.amazonaws.com/0/237683/3d698d03-78e3-7a0f-b3d5-4654cb2e5169.png">
+![input-tag](./input-tag.png)
 
 ### テスト
 普段はJestで書くのですが、VSCodeの公式ドキュメントとコードジェネレーターがやたらMochaを推していて他のテストフレームワークについて記述がなく止む無くMochaで書くことにしました。
