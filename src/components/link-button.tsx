@@ -8,7 +8,7 @@ export interface LinkButtonProps {
 export const LinkButton = styled(Link)<LinkButtonProps>`
   display: block;
   box-sizing: border-box;
-  padding: 8px 28px;
+  padding: 8px 21px;
   border: 1px solid var(--hl-default-color);
   border-radius: 4px;
   font-size: 12px;

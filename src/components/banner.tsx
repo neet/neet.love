@@ -8,6 +8,7 @@ const Wrapper = styled.header`
   z-index: 999;
   top: 0;
   left: 0;
+  box-sizing: border-box;
   align-items: center;
   margin-bottom: 18px;
   padding: 12px;

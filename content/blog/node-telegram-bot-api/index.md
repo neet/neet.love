@@ -61,7 +61,7 @@ bot.on('message', (message) => {
 
 そして，`on('message')`で受信できる[`Message`エンティティ](https://core.telegram.org/bots/api#message)は，`text`に生のテキストが格納されているので，それを`console.log`で出力することができます．
 
-　Botを起動
+#### Botを起動
 
 ```sh
 node bot.js

@@ -8,13 +8,19 @@ const Article = styled.article``;
 
 const Title = styled.h1`
   margin-bottom: 24px;
+  font-weight: bold;
   line-height: 1.6;
 `;
 
 const Content = styled.div`
   font-size: 16px;
 
-  p, pre, ul {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 2;
+  }
+
+  p, pre, ul, ol, table {
     margin-bottom: 24px;
   }
 

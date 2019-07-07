@@ -27,6 +27,8 @@ const Avatar = styled(GatsbyImage)`
 `;
 
 const Meta = styled.div`
+  flex-grow: 1;
+  flex-shrink: 1;
   margin: 0;
 `;
 
@@ -54,7 +56,11 @@ const Actions = styled.div`
   margin-top: 14px;
 
   & > *:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 12px;
+
+    @media screen and (min-width: 700px) {
+      margin-right: 16px;
+    }
   }
 `;
 
@@ -133,9 +139,7 @@ export const Bio = () => {
         </Meta>
       </Wrapper>
 
-      <Note fixed={data.quote.childImageSharp.fixed}>
-実は俺がインターネットなのではないかと思ってきた。
-      </Note>
+      <Note fixed={data.quote.childImageSharp.fixed}>実は俺がインターネットなのではないかと思ってきた。</Note>
     </>
   );
 };

@@ -44,28 +44,25 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
-  h1 {
-    font-size: 28px;
+  h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     line-height: 2;
+  }
+
+  h1 {
+    font-size: 28px;
   }
 
   h2 {
     font-size: 24px;
-    font-weight: 500;
-    line-height: 2;
   }
 
   h3 {
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 2;
+    font-size: 18px;
   }
 
   h4 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 2;
+    font-size: 16px;
   }
 
   a {

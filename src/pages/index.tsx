@@ -33,7 +33,7 @@ const Index: React.SFC = () => (
 
     <Section>
       <h3>Contact</h3>
-      <SocialAccounts take={6} onlySuggested />
+      <SocialAccounts take={6} />
     </Section>
   </Single>
 );
