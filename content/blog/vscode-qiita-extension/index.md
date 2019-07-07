@@ -1,6 +1,7 @@
 ---
 title: Visual Studio CodeからQiitaに投稿できる拡張機能をつくってみた
 date: 2018-09-20T00:00:00+09:00
+thumbnail: ./thumbnail.png
 ---
 
 ![スクリーンショット](./thumbnail.png)
@@ -48,7 +49,7 @@ TypeScriptを使って開発していたので型の情報も提供してくれ�
 ### ページネーション
 Qiita APIには投稿一覧の取得などにページネーションが提供されていたので、せっかくだから言語の新しい機能を使おうと思い、最近TC39でstage-4に上がった [Async iteration](https://github.com/tc39/proposal-async-iteration) を使って実装しました。まだVSCodeが利用しているChromiumのバージョンでは実装されていなかったのでpolyfillが必要でした。
 
-```自分の投稿の覧を取得.ts
+```typescript
 // itemsに最新投稿を代入
 const iterable = fetchMyItems({ page: 1 });
 const { value: items } = await iterable.next();

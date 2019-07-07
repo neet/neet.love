@@ -1,6 +1,7 @@
 ---
 title: Node.jsでTelegramのチャットボットを作る
 date: 2018-09-18T00:00:00+09:00
+thumbnail: ./create-a-new-bot.png
 ---
 
 Node.js + Express + node-telegram-bot-apiでbotを制作します．実際に運用しているbotのソースコードは[GitHub](https://github.com/neetshin/minazuki-bot)で公開していますのでご参考までにどうぞ．

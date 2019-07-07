@@ -42,6 +42,7 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-transformer-sharp',
           {
             resolve: 'gatsby-remark-images',
             options: {
