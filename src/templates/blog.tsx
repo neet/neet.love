@@ -14,13 +14,15 @@ const Title = styled.h1`
 const Content = styled.div`
   font-size: 16px;
 
-  p {
+  p, pre, ul {
     margin-bottom: 24px;
+  }
+
+  p {
     line-height: 1.6;
   }
 
   ul {
-    margin-bottom: 24px;
     margin-left: 24px;
     list-style: inside;
   }

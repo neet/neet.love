@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   ${reset}
 
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&display=swap');
+  @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css');
 
   :root {
     --bg-default-color: rgb(255,255,255);
@@ -74,5 +75,11 @@ export const GlobalStyle = createGlobalStyle`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: var(--prism-fg);
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
   }
 `;
