@@ -4,9 +4,13 @@ import styled from 'styled-components';
 
 const Wrapper = styled.header`
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
   align-items: center;
   margin-bottom: 18px;
   padding: 12px;
+  background-color: var(--bg-default-color);
 
   @media screen and (min-width: 700px) {
     margin-bottom: 24px;
@@ -80,13 +84,13 @@ export const Banner = () => {
           </ListItem>
 
           <ListItem>
-            <Link to="/blog" activeClassName="active">
+            <Link to="/blog" activeClassName="active" partiallyActive>
               Blog
             </Link>
           </ListItem>
 
           <ListItem>
-            <Link to="/links" activeClassName="active">
+            <Link to="/links" activeClassName="active" partiallyActive>
               Links
             </Link>
           </ListItem>
