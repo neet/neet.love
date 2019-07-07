@@ -9,9 +9,12 @@ import { GlobalStyle } from '../styles/global-style';
 const Wrapper = styled.div``;
 
 const Content = styled.main`
-  width: 700px;
   margin: auto;
-  padding: 24px 0;
+  padding: 0 24px;
+
+  @media screen and (min-width: 700px) {
+    width: 700px;
+  }
 `;
 
 interface ArticleQueryData {

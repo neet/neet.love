@@ -1,6 +1,30 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { Article } from '../layouts/article';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
+import { Article as ArticleLayout } from '../layouts/article';
+
+const Article = styled.article``;
+
+const Title = styled.h1`
+  margin-bottom: 24px;
+  line-height: 1.6;
+`;
+
+const Content = styled.div`
+  font-size: 16px;
+
+  p {
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-bottom: 24px;
+    margin-left: 24px;
+    list-style: inside;
+  }
+`;
 
 interface PageTemplateProps {
   data: {
@@ -25,12 +49,13 @@ interface PageTemplateProps {
 }
 
 const Blog: React.SFC<PageTemplateProps> = ({ data }) => (
-  <Article>
-    <article>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    </article>
-  </Article>
+  <ArticleLayout>
+    <Helmet title={`${data.markdownRemark.frontmatter.title} - ${data.site.siteMetadata.title}`} />
+    <Article>
+      <Title>{data.markdownRemark.frontmatter.title}</Title>
+      <Content dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    </Article>
+  </ArticleLayout>
 );
 
 export default Blog;
@@ -43,7 +68,6 @@ export const query = graphql`
         description
         author {
           name
-          url
         }
       }
     }

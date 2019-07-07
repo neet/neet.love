@@ -22,7 +22,6 @@ interface StaticQueryProps {
     siteMetadata: {
       title: string;
       description: string;
-      keywords: string;
     };
   };
 }
@@ -41,13 +40,7 @@ export const Single: React.SFC = ({ children }) => {
 
   return (
     <Wrapper>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: data.site.siteMetadata.description },
-          { name: 'keywords', content: data.site.siteMetadata.keywords },
-        ]}
-      />
+      <Helmet title={data.site.siteMetadata.title} meta={[{ name: 'description', content: data.site.siteMetadata.description }]} />
       <Banner />
       <Content>{children}</Content>
       <Footer />

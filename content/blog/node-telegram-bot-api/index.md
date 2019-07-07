@@ -8,26 +8,26 @@ Node.js + Express + node-telegram-bot-apiでbotを制作します．実際に運
 
 ## Botアカウントの登録
 
-　はじめに，Telegram APIを利用するためのbotを登録します．Twitterなどとは異なり電話番号から登録する普通のアカウントとは別のbotアカウントを作成して，そちらにAPIを介してアクセスします．あくまでもbot専用のAPIというわけです．
+はじめに，Telegram APIを利用するためのbotを登録します．Twitterなどとは異なり電話番号から登録する普通のアカウントとは別のbotアカウントを作成して，そちらにAPIを介してアクセスします．あくまでもbot専用のAPIというわけです．
 
-　Telegramのオフィシャルbotである[@botfather](https://t.me/botfather)に`/newbot`と送信することでbotの登録が開始できます．はじめにbotの表示名を設定しますが，こちらは後から変更可能です．
+Telegramのオフィシャルbotである[@botfather](https://t.me/botfather)に`/newbot`と送信することでbotの登録が開始できます．はじめにbotの表示名を設定しますが，こちらは後から変更可能です．
 　
 ![Create a new bot](./create-a-new-bot.png)
 
-　次に，botのユーザー名（@usernameの形式のもの）を設定します．こちらは残念ながら後から変更が出来ない上，末尾が`bot`で終了する必要があるため注意してください．
+次に，botのユーザー名（@usernameの形式のもの）を設定します．こちらは残念ながら後から変更が出来ない上，末尾が`bot`で終了する必要があるため注意してください．
 
 ![Naming the bot](./naming-bot.png)
 
-　Botアカウントが登録できると，最後にAPIにアクセスするためのトークンが送られてきます．`/token`と送信することで再発行も可能ですが，安全性のために適切に保存してください．
+Botアカウントが登録できると，最後にAPIにアクセスするためのトークンが送られてきます．`/token`と送信することで再発行も可能ですが，安全性のために適切に保存してください．
 
 ![Fetching a token](./fetching-token.png)
 
-　デフォルトではbotは`/`から始まるメッセージにしかアクセス出来ないようになっていますが，これは`/setprivacy`を利用することで無効化できます．必要であれば設定してください．
+デフォルトではbotは`/`から始まるメッセージにしかアクセス出来ないようになっていますが，これは`/setprivacy`を利用することで無効化できます．必要であれば設定してください．
 
 ![Setting privacy](./setting-privacy.png)
 
 ## APIのインストール
-　Axiosなどから直接APIにアクセスすることも可能ですが，npmで[node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)という優れたライブラリが公開されているのでこちらを利用します．
+Axiosなどから直接APIにアクセスすることも可能ですが，npmで[node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)という優れたライブラリが公開されているのでこちらを利用します．
 
 **npm:**
 
@@ -42,7 +42,7 @@ yarn add node-telegram-bot-api
 ```
 
 ## APIの利用: メッセージを受信する
-　トークンを取得し，ライブラリをインストールできたら早速botを動かし始めることができます．以下のコードを参考にメッセージを受信したらコンソールに受信したテキストを表示するbotを作ります．
+トークンを取得し，ライブラリをインストールできたら早速botを動かし始めることができます．以下のコードを参考にメッセージを受信したらコンソールに受信したテキストを表示するbotを作ります．
 
 ```bot.js
 const TelegramBot = require('node-telegram-bot-api');
@@ -71,9 +71,9 @@ node bot.js
 ![Recieving message](./recieving-message.png)
 
 ## APIの利用: メッセージを送信する
-　先程のコードを少し変更し，今度は受け取ったテキストをそのまま返信するbotを作ります．botからメッセージを送信するためには`sendMessage()`というメソッドを利用します．以下が例です
+先程のコードを少し変更し，今度は受け取ったテキストをそのまま返信するbotを作ります．botからメッセージを送信するためには`sendMessage()`というメソッドを利用します．以下が例です
 
-```bot.js
+```javascript
 const TelegramBot = require('node-telegram-bot-api');
 
 // トークンを指定してインスタンス化
@@ -92,9 +92,9 @@ bot.on('message', (message) => {
 ![Response](./respond-to-message.png)
 
 ## Webhookの利用
-　Webhookを利用することも可能なので方法をご紹介します．上記のコードは全てpollingでイベントを受信していましたが，ここはExpressを使って受信用のアプリケーションを構築します．
+Webhookを利用することも可能なので方法をご紹介します．上記のコードは全てpollingでイベントを受信していましたが，ここはExpressを使って受信用のアプリケーションを構築します．
 
-　まず追加で必要なライブラリをインストールします．
+まず追加で必要なライブラリをインストールします．
 　
 **npm:**　
 
@@ -109,18 +109,18 @@ yarn add express body-parser
 ```
 　
 ### 証明書の発行
-　Webhookでのイベント受信には自己署名証明書（いわゆるオレオレ証明書）の発行が必要なのでOpenSSLを用いて発行します．Let's encryptなどで発行したものでは正常にリクエストが送られてこないので注意してください．
+Webhookでのイベント受信には自己署名証明書（いわゆるオレオレ証明書）の発行が必要なのでOpenSSLを用いて発行します．Let's encryptなどで発行したものでは正常にリクエストが送られてこないので注意してください．
 
 ```sh
 openssl req -newkey rsa:2048 -sha256 -nodes -keyout key.pem -x509 -days 365 -out cert.pem
 ```
 
 ### サンプル
-　Webhookでは，イベントが発生する度にTelegramのサーバーからPOSTリクエストが送信されるため，それをExpressで受信してbotに受け渡す必要があります．
+Webhookでは，イベントが発生する度にTelegramのサーバーからPOSTリクエストが送信されるため，それをExpressで受信してbotに受け渡す必要があります．
 
-　以下のコードを参考に，ExpressとWebhookでbotを起動します．`app.listen()`で引数に指定したポート番号（例では8080）にリクエストが送信されるので，Webサーバー側で適切にプロキシの設定を行うことで運用が可能です．
+以下のコードを参考に，ExpressとWebhookでbotを起動します．`app.listen()`で引数に指定したポート番号（例では8080）にリクエストが送信されるので，Webサーバー側で適切にプロキシの設定を行うことで運用が可能です．
 
-```js
+```javascript
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const TelegramBot = require('node-telegram-bot-api');
