@@ -5,12 +5,11 @@ import { Projects } from '../components/projects';
 import { RandomInformation } from '../components/random-information';
 import { SocialAccounts } from '../components/social-accounts';
 import { Single } from '../layouts/single';
-import { theme } from '../styles/variables';
 
 const Border = styled.hr`
   margin: 28px auto;
   border: none;
-  border-top: 1px solid ${theme.border.default};
+  border-top: 1px solid var(--border-default-color);
 `;
 
 const Section = styled.section`

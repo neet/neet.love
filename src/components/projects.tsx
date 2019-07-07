@@ -1,9 +1,8 @@
 import { faBook, faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/variables';
 
 const List = styled.ul`
   display: flex;
@@ -24,13 +23,17 @@ const Repository = styled.div`
   height: 100%;
   padding: 16px;
   border-radius: 4px;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 16%);
+  box-shadow: 0 3px 16px var(--shadow-bg-color);
+`;
+
+const Icon = styled(FontAwesomeIcon)`
+  color: var(--fg-wash-color);
 `;
 
 const RepositoryName = styled.a`
   flex: 0 0;
   margin-bottom: 4px;
-  color: ${theme.hl.default};
+  color: var(--hl-default-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -39,7 +42,7 @@ const RepositoryName = styled.a`
 const RepositoryDescription = styled.p`
   flex: 1 1;
   margin-bottom: 12px;
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
   font-size: 12px;
 `;
 
@@ -53,7 +56,7 @@ const FooterItem = styled.div`
   display: flex;
   align-items: center;
   margin-right: 18px;
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
   font-size: 12px;
 `;
 
@@ -65,7 +68,7 @@ const PrimaryLanguageColor = styled.div`
 `;
 
 const PrimaryLanguageName = styled.span`
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
   font-size: 12px;
 `;
 
@@ -129,7 +132,7 @@ export const Projects = () => {
         <ListItem key={repository.id}>
           <Repository>
             <RepositoryName href={repository.url} target="__blank">
-              <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px', color: theme.fg.wash }} />
+              <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px' }} />
               {repository.name}
             </RepositoryName>
 

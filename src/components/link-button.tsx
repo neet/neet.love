@@ -1,7 +1,5 @@
 import { Link } from 'gatsby';
-import { transparentize } from 'polished';
 import styled, { css } from 'styled-components';
-import { theme, breakpoints } from '../styles/variables';
 
 export interface LinkButtonProps {
   appearance?: 'skeleton';
@@ -11,7 +9,7 @@ export const LinkButton = styled(Link)<LinkButtonProps>`
   display: block;
   box-sizing: border-box;
   padding: 8px 28px;
-  border: 1px solid ${theme.hl.default};
+  border: 1px solid var(--hl-default-color);
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
@@ -19,7 +17,7 @@ export const LinkButton = styled(Link)<LinkButtonProps>`
   text-align: center;
   text-transform: uppercase;
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     padding: 8px 36px;
   }
 
@@ -28,10 +26,10 @@ export const LinkButton = styled(Link)<LinkButtonProps>`
   }
 
   ${({ appearance }) => (appearance === 'skeleton' ? css`
-    color: ${theme.hl.default};
+    color: var(--hl-default-color);
   ` : css`
-    color: ${theme.fg.reverse};
-    background-color: ${theme.hl.default};
-    box-shadow: 0 3px 6px ${transparentize(0.84, theme.hl.default)};
+    color: var(--fg-reverse-color);
+    background-color: var(--hl-default-color);
+    box-shadow: 0 3px 6px var(--shadow-hl-color);
   `)};
 `;

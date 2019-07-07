@@ -5,7 +5,6 @@ import { Link } from 'gatsby';
 import React, { useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { socialAccounts } from '../social-accounts';
-import { breakpoints, theme } from '../styles/variables';
 
 const List = styled.ul`
   display: flex;
@@ -17,14 +16,14 @@ const ListItem = styled.li`
   flex: 0 1 100%;
   margin-bottom: 18px;
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     flex: 0 1 50%;
   }
 
   & > a {
     display: flex;
     align-items: center;
-    color: ${theme.fg.default};
+    color: var(--fg-default-color);
 
     &:hover {
       text-decoration: none;
@@ -58,13 +57,13 @@ const Name = styled.span`
 const Suggested = styled.span`
   display: block;
   margin: 0 0.5em;
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
   font-size: 10px;
 `;
 
 const Label = styled.span`
   display: block;
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
 
   &:hover {
     text-decoration: underline;

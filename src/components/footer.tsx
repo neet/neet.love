@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/variables';
 
 const Wrapper = styled.footer`
   display: flex;
   justify-content: flex-end;
   margin-top: 18px;
   padding: 12px;
-  border-top: 1px solid ${theme.border.default};
-  background-color: ${theme.bg.wash};
-  color: ${theme.fg.light};
+  border-top: 1px solid var(--border-default-color);
+  background-color: var(--bg-wash-color);
+  color: var(--fg-light-color);
 `;
 
 export const Footer = () => {

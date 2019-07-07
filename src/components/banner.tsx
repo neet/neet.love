@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoints, theme } from '../styles/variables';
 
 const Wrapper = styled.header`
   display: flex;
@@ -9,7 +8,7 @@ const Wrapper = styled.header`
   margin-bottom: 18px;
   padding: 12px;
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     margin-bottom: 24px;
   }
 `;
@@ -25,7 +24,7 @@ const Title = styled.h1`
 
   & > a {
     margin: auto 18px;
-    color: ${theme.fg.default};
+    color: var(--fg-default-color);
 
     &:hover {
       text-decoration: none;
@@ -48,7 +47,7 @@ const ListItem = styled.li`
   margin: auto 18px;
 
   & > a {
-    color: ${theme.fg.default};
+    color: var(--fg-default-color);
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
@@ -58,7 +57,7 @@ const ListItem = styled.li`
     }
 
     &.active {
-      color: ${theme.hl.default};
+      color: var(--hl-default-color);
     }
   }
 `;

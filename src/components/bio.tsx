@@ -3,7 +3,6 @@ import GatsbyImage, { GatsbyImageProps } from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { LinkButton } from '../components/link-button';
-import { breakpoints, theme } from '../styles/variables';
 
 const Wrapper = styled.section`
   display: flex;
@@ -18,9 +17,9 @@ const Avatar = styled(GatsbyImage)`
   height: 100px !important;
   margin-right: 18px;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+  box-shadow: 0 3px 6px var(--shadow-bg-color);
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     width: 116px !important;
     height: 116px !important;
     margin-right: 26px;
@@ -35,17 +34,17 @@ const Name = styled.h2`
   font-size: 18px;
   font-weight: 500;
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     font-size: 26px;
   }
 `;
 
 const Description = styled.span`
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
   font-size: 16px;
   font-weight: 400;
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     font-size: 18px;
   }
 `;
@@ -68,7 +67,7 @@ const Note = styled.blockquote<NoteProps>`
   flex: 0 0;
   margin: 24px auto;
   padding-left: 16px;
-  color: ${theme.fg.wash};
+  color: var(--fg-wash-color);
   font-size: 16px;
   font-style: italic;
   font-weight: 300;

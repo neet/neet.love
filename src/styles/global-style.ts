@@ -1,22 +1,30 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from './reset';
-import { theme } from './variables';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
 
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&display=swap');
 
-  html {
-    width: 100%;
-    height: 100%;
+  :root {
+    --bg-default-color: rgb(255,255,255);
+    --bg-wash-color: rgb(249,249,249);
+    --bg-dark-color: rgb(186,186,186);
+    --border-default-color: rgb(234,234,234);
+    --fg-default-color: rgb(59,59,59);
+    --fg-wash-color: rgb(122,122,122);
+    --fg-light-color: rgb(153,153,153);
+    --fg-reverse-color: rgb(255,255,255);
+    --hl-default-color: rgb(0,118,255);
+    --shadow-bg-color: rgba(0,0,0,16%);
+    --shadow-hl-color: rgba(0,118,255,16%);
   }
 
   body {
     width: 100%;
     height: 100%;
-    background-color: ${theme.bg.default};
-    color: ${theme.fg.default};
+    background-color: var(--bg-default-color);
+    color: var(--fg-default-color);
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
@@ -60,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${theme.hl.default};
+    color: var(--hl-default-color);
     text-decoration: none;
 
     &:hover {

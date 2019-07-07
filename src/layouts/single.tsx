@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { Banner } from '../components/banner';
 import { Footer } from '../components/footer';
 import { GlobalStyle } from '../styles/global-style';
-import { breakpoints } from '../styles/variables';
 
 const Wrapper = styled.main``;
 
@@ -13,7 +12,7 @@ const Content = styled.div`
   margin: auto;
   padding: 0 24px;
 
-  @media screen and (min-width: ${breakpoints.desktop}) {
+  @media screen and (min-width: 700px) {
     width: 580px;
   }
 `;
