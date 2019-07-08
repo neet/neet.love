@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Bio } from '../components/bio';
-import { Projects } from '../components/projects';
 import { FactListContainer } from '../containers/fact-list-container';
 import { SocialAccountListContainer } from '../containers/social-account-list-container';
 import { Single } from '../layouts/single';
+import { RepositoryListContainer } from '../containers/repository-list-container';
 
 const Border = styled.hr`
   margin: 28px auto;
@@ -28,7 +28,7 @@ const Index: React.SFC = () => (
 
     <Section>
       <h3>Projects</h3>
-      <Projects />
+      <RepositoryListContainer />
     </Section>
 
     <Section>

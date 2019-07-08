@@ -42,3 +42,35 @@ export interface BannerField {
   value: string;
   external?: boolean;
 }
+
+export interface GithubRepository {
+  id: string;
+  name: string;
+  forkCount: number;
+  url: string;
+  stargazers: {
+    totalCount: number;
+  };
+  primaryLanguage: {
+    color: string;
+    name: string;
+  };
+  description: string;
+};
+
+export interface Article {
+  id: string;
+  excerpt: string;
+  fields: {
+    slug: string;
+  };
+  frontmatter: {
+    title: string;
+    date: string;
+    thumbnail: {
+      childImageSharp: {
+        fixed: FixedObject;
+      };
+    };
+  };
+}
