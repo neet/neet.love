@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Bio } from '../components/bio';
+import { BioContainer } from '../containers/bio-container';
 import { FactListContainer } from '../containers/fact-list-container';
 import { SocialAccountListContainer } from '../containers/social-account-list-container';
 import { Single } from '../layouts/single';
@@ -18,7 +18,7 @@ const Section = styled.section`
 
 const Index: React.SFC = () => (
   <Single>
-    <Bio />
+    <BioContainer />
     <Border />
 
     <Section>

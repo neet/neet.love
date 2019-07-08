@@ -56,7 +56,7 @@ export interface GithubRepository {
     name: string;
   };
   description: string;
-};
+}
 
 export interface Article {
   id: string;
@@ -72,5 +72,21 @@ export interface Article {
         fixed: FixedObject;
       };
     };
+  };
+}
+
+export interface SiteMetadata {
+  title: string;
+  description: string;
+  author: {
+    name: string;
+    email: string;
+    avatar: {
+      childImageSharp: {
+        fixed: FixedObject;
+      };
+    };
+    note: string;
+    quote: string;
   };
 }

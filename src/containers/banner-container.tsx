@@ -1,14 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Banner } from '../components/banner';
-import { BannerField } from '../utils/entities';
+import { BannerField, SiteMetadata } from '../utils/entities';
 
 interface BannerContainerQueryData {
-  site: {
-    siteMetadata: {
-      title: string;
-    };
-  };
+  siteMetadataYaml: SiteMetadata;
   allBannerYaml: {
     edges: {
       node: BannerField;
@@ -19,10 +15,8 @@ interface BannerContainerQueryData {
 export const BannerContainer = () => {
   const data = useStaticQuery<BannerContainerQueryData>(graphql`
     query BannerContainerQuery {
-      site {
-        siteMetadata {
-          title
-        }
+      siteMetadataYaml {
+        title
       }
       allBannerYaml {
         edges {
@@ -36,5 +30,5 @@ export const BannerContainer = () => {
     }
   `);
 
-  return <Banner siteTitle={data.site.siteMetadata.title} fields={data.allBannerYaml.edges.map(edge => edge.node)} />;
+  return <Banner siteTitle={data.siteMetadataYaml.title} fields={data.allBannerYaml.edges.map(edge => edge.node)} />;
 };

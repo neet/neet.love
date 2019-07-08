@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Footer } from '../components/footer';
 import { BannerContainer } from '../containers/banner-container';
 import { GlobalStyle } from '../styles/global-style';
+import { SiteMetadata } from '../utils/entities';
 
 const Wrapper = styled.div``;
 
@@ -19,29 +20,22 @@ const Content = styled.main`
 `;
 
 interface ArticleQueryData {
-  site: {
-    siteMetadata: {
-      title: string;
-      description: string;
-    };
-  };
+  siteMetadataYaml: SiteMetadata;
 }
 
 export const Article: React.SFC = ({ children }) => {
   const data = useStaticQuery<ArticleQueryData>(graphql`
     query ArticleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
+      siteMetadataYaml {
+        title
+        description
       }
     }
   `);
 
   return (
     <Wrapper>
-      <Helmet title={data.site.siteMetadata.title} meta={[{ name: 'description', content: data.site.siteMetadata.description }]} />
+      <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
       <BannerContainer />
       <Content>{children}</Content>
       <Footer />

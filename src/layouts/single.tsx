@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { BannerContainer } from '../containers/banner-container';
 import { Footer } from '../components/footer';
 import { GlobalStyle } from '../styles/global-style';
+import { SiteMetadata } from '../utils/entities';
 
 const Wrapper = styled.main``;
 
@@ -19,29 +20,22 @@ const Content = styled.div`
 `;
 
 interface StaticQueryProps {
-  site: {
-    siteMetadata: {
-      title: string;
-      description: string;
-    };
-  };
+  siteMetadataYaml: SiteMetadata;
 }
 
 export const Single: React.SFC = ({ children }) => {
   const data = useStaticQuery<StaticQueryProps>(graphql`
     query IndexLayoutQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
+      siteMetadataYaml {
+        title
+        description
       }
     }
   `);
 
   return (
     <Wrapper>
-      <Helmet title={data.site.siteMetadata.title} meta={[{ name: 'description', content: data.site.siteMetadata.description }]} />
+      <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
       <BannerContainer />
       <Content>{children}</Content>
       <Footer />

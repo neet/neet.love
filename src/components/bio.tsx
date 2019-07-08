@@ -1,21 +1,25 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import GatsbyImage, { GatsbyImageProps } from 'gatsby-image';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { LinkButton } from '../components/link-button';
+import { SiteMetadata } from '../utils/entities';
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-areas: "avatar  meta"
-                       "actions actions";
+  grid-template-areas:
+    'avatar  meta'
+    'actions actions';
   grid-template-columns: auto 1fr;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
 
   @media screen and (min-width: 580px) {
-    grid-template-areas: "avatar meta"
-                         "avatar actions";
+    grid-template-areas:
+      'avatar meta'
+      'avatar actions';
     justify-content: center;
   }
 `;
@@ -85,11 +89,7 @@ const Actions = styled.div`
   }
 `;
 
-interface NoteProps {
-  fixed: GatsbyImageProps['fixed'];
-}
-
-const Note = styled.blockquote<NoteProps>`
+const Note = styled.blockquote`
   position: relative;
   flex: 0 0;
   margin: 24px auto;
@@ -99,57 +99,30 @@ const Note = styled.blockquote<NoteProps>`
   font-style: italic;
   font-weight: 300;
   text-align: center;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 17px;
-    height: 17px;
-    background-image: url(${props => props.fixed && props.fixed.src});
-    background-size: cover;
-  }
 `;
 
-interface BioQueryData {
-  avatar: {
-    childImageSharp: GatsbyImageProps;
-  };
-  quote: {
-    childImageSharp: GatsbyImageProps;
-  };
+const QuoteIcon = styled(FontAwesomeIcon)`
+  margin-right: 0.5em;
+  color: var(--fg-default-color);
+`;
+
+interface BioProps {
+  author?: SiteMetadata['author'];
 }
 
-export const Bio = () => {
-  const data = useStaticQuery<BioQueryData>(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
-        childImageSharp {
-          fixed(width: 120, height: 120) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      quote: file(absolutePath: { regex: "/quote.png/" }) {
-        childImageSharp {
-          fixed(width: 20, height: 20) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
+export const Bio = (props: BioProps) => {
+  const { author } = props;
+
+  if (!author) return null;
 
   return (
     <>
       <Wrapper>
-        <Avatar fixed={data.avatar.childImageSharp.fixed} alt="My avatar" />
+        <Avatar fixed={author.avatar.childImageSharp.fixed} alt="My avatar" />
 
         <Meta>
-          <Name>Ryo Igarashi</Name>
-          <Description>High schooler, web engineer, designer</Description>
+          <Name>{author.name}</Name>
+          <Description>{author.note}</Description>
         </Meta>
 
         <Actions>
@@ -160,7 +133,10 @@ export const Bio = () => {
         </Actions>
       </Wrapper>
 
-      <Note fixed={data.quote.childImageSharp.fixed}>実は俺がインターネットなのではないかと思ってきた。</Note>
+      <Note>
+        <QuoteIcon icon={faQuoteLeft} />
+        {author.quote}
+      </Note>
     </>
   );
 };
