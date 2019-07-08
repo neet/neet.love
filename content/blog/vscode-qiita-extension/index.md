@@ -4,8 +4,6 @@ date: 2018-09-20T00:00:00+09:00
 thumbnail: ./thumbnail.png
 ---
 
-![スクリーンショット](./thumbnail.png)
-
 VSCodeで編集中のMarkdownファイルを一発でQiitaに公開できるスマートな拡張機能があればいいな〜と思ってGoogleで検索したら [こちらの記事](https://qiita.com/wenbose/items/3a4425f69b9eb2fe52c6) がヒットしたのですが、どうやら開発が滞ってしまっていたようで、同様のものを開発しても良いかをコメントでお尋ねしたところ[快諾してくださった](https://qiita.com/wenbose/items/3a4425f69b9eb2fe52c6#comment-324f27d5beac7e9d3052)ので公開してみました。
 
 - [GitHub](https://github.com/neet/vscode-qiita) （★ください）

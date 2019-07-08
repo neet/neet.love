@@ -1,4 +1,4 @@
-import { FixedObject } from 'gatsby-image';
+import { FixedObject, FluidObject } from 'gatsby-image';
 
 export type SocialAccountType =
   | 'mastodon'
@@ -61,15 +61,17 @@ export interface GithubRepository {
 export interface Article {
   id: string;
   excerpt: string;
+  html: string;
   fields: {
     slug: string;
   };
   frontmatter: {
     title: string;
     date: string;
-    thumbnail: {
+    thumbnail?: {
       childImageSharp: {
         fixed: FixedObject;
+        fluid: FluidObject;
       };
     };
   };

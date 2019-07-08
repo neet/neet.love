@@ -50,6 +50,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.3.2",
+    "ts-optchain": "^0.1.7",
     "typescript": "^3.5.2"
   },
   "devDependencies": {
