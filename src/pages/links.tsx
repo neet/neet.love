@@ -1,12 +1,12 @@
 import React from 'react';
 import { SocialAccountListContainer } from '../containers/social-account-list-container';
-import { Single } from '../layouts/single';
+import { SingleLayout } from '../layouts/single-layout';
 
 const Links: React.SFC = () => (
-  <Single>
+  <SingleLayout>
     <h2>Links</h2>
     <SocialAccountListContainer />
-  </Single>
+  </SingleLayout>
 );
 
 export default Links;

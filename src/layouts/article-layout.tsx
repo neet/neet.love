@@ -2,30 +2,30 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import { BannerContainer } from '../containers/banner-container';
 import { Footer } from '../components/footer';
+import { BannerContainer } from '../containers/banner-container';
 import { GlobalStyle } from '../styles/global-style';
 import { SiteMetadata } from '../utils/entities';
 
-const Wrapper = styled.main``;
+const Wrapper = styled.div``;
 
-const Content = styled.div`
+const Content = styled.main`
   box-sizing: border-box;
   margin: auto;
   padding: 0 24px;
 
   @media screen and (min-width: 700px) {
-    width: 580px;
+    width: 700px;
   }
 `;
 
-interface StaticQueryProps {
+interface ArticleLayoutQueryData {
   siteMetadataYaml: SiteMetadata;
 }
 
-export const Single: React.SFC = ({ children }) => {
-  const data = useStaticQuery<StaticQueryProps>(graphql`
-    query IndexLayoutQuery {
+export const ArticleLayout: React.SFC = ({ children }) => {
+  const data = useStaticQuery<ArticleLayoutQueryData>(graphql`
+    query ArticleQuery {
       siteMetadataYaml {
         title
         description
@@ -34,12 +34,14 @@ export const Single: React.SFC = ({ children }) => {
   `);
 
   return (
-    <Wrapper>
+    <>
+      <Wrapper>
+        <BannerContainer />
+        <Content>{children}</Content>
+        <Footer />
+      </Wrapper>
       <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
-      <BannerContainer />
-      <Content>{children}</Content>
-      <Footer />
       <GlobalStyle />
-    </Wrapper>
+    </>
   );
 };

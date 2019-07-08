@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { BioContainer } from '../containers/bio-container';
 import { FactListContainer } from '../containers/fact-list-container';
-import { SocialAccountListContainer } from '../containers/social-account-list-container';
-import { Single } from '../layouts/single';
 import { RepositoryListContainer } from '../containers/repository-list-container';
+import { SocialAccountListContainer } from '../containers/social-account-list-container';
+import { SingleLayout } from '../layouts/single-layout';
 
 const Border = styled.hr`
   margin: 28px auto;
@@ -17,7 +17,7 @@ const Section = styled.section`
 `;
 
 const Index: React.SFC = () => (
-  <Single>
+  <SingleLayout>
     <BioContainer />
     <Border />
 
@@ -35,7 +35,7 @@ const Index: React.SFC = () => (
       <h3>Contact</h3>
       <SocialAccountListContainer limit={6} />
     </Section>
-  </Single>
+  </SingleLayout>
 );
 
 export default Index;

@@ -1,16 +1,16 @@
 import React from 'react';
 import { ArticleListContainer } from '../containers/article-list-container';
-import { Single } from '../layouts/single';
+import { SingleLayout } from '../layouts/single-layout';
 
 const Blog: React.SFC = () => {
   return (
-    <Single>
+    <SingleLayout>
       <h2>Blog</h2>
 
       <section>
         <ArticleListContainer />
       </section>
-    </Single>
+    </SingleLayout>
   );
 };
 
