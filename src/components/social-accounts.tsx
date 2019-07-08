@@ -13,8 +13,11 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
+  box-sizing: border-box;
   flex: 0 1 100%;
-  margin-bottom: 18px;
+  min-width: 0;
+  margin-bottom: 8px;
+  padding: 8px;
 
   @media screen and (min-width: 700px) {
     flex: 0 1 50%;
@@ -37,9 +40,9 @@ const Icon = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  margin-right: 16px;
-  font-size: 34px;
+  width: 33px;
+  margin-right: 10px;
+  font-size: 33px;
 `;
 
 const Meta = styled.div`
@@ -63,7 +66,11 @@ const Suggested = styled.span`
 
 const Label = styled.span`
   display: block;
+  width: 100%;
+  overflow: hidden;
   color: var(--fg-wash-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:hover {
     text-decoration: underline;
