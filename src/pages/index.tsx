@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Bio } from '../components/bio';
 import { Projects } from '../components/projects';
-import { RandomInformation } from '../components/random-information';
-import { SocialAccounts } from '../components/social-accounts';
+import { FactListContainer } from '../containers/fact-list-container';
+import { SocialAccountListContainer } from '../containers/social-account-list-container';
 import { Single } from '../layouts/single';
 
 const Border = styled.hr`
@@ -23,7 +23,7 @@ const Index: React.SFC = () => (
 
     <Section>
       <h3>Random Facts</h3>
-      <RandomInformation />
+      <FactListContainer />
     </Section>
 
     <Section>
@@ -33,7 +33,7 @@ const Index: React.SFC = () => (
 
     <Section>
       <h3>Contact</h3>
-      <SocialAccounts take={6} />
+      <SocialAccountListContainer limit={6} />
     </Section>
   </Single>
 );

@@ -1,0 +1,9 @@
+- name: PGP
+  value: https://keybase.io/neet/pgp_keys.asc
+  external: true
+
+- name: Blog
+  value: /blog
+
+- name: Links
+  value: /links

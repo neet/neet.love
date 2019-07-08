@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import { BannerField } from '../utils/entities';
 
 const Wrapper = styled.header`
   display: flex;
@@ -12,7 +13,7 @@ const Wrapper = styled.header`
   align-items: center;
   margin-bottom: 18px;
   padding: 12px 24px;
-  background: rgba(255,255,255,80%);
+  background: rgba(255, 255, 255, 80%);
 
   @media screen and (min-width: 700px) {
     margin-bottom: 24px;
@@ -73,34 +74,35 @@ const ListItem = styled.li`
   }
 `;
 
-export const Banner = () => {
+export interface BannerProps {
+  siteTitle: string;
+  fields: BannerField[];
+}
+
+export const Banner = (props: BannerProps) => {
   return (
     <Wrapper>
       <Hgroup>
         <Title>
-          <Link to="/">neet.love</Link>
+          <Link to="/">{props.siteTitle}</Link>
         </Title>
       </Hgroup>
 
       <Nav>
         <List>
-          <ListItem>
-            <a href="https://keybase.io/neet/pgp_keys.asc" target="__blank">
-              PGP
-            </a>
-          </ListItem>
-
-          <ListItem>
-            <Link to="/blog" activeClassName="active" partiallyActive>
-              Blog
-            </Link>
-          </ListItem>
-
-          <ListItem>
-            <Link to="/links" activeClassName="active" partiallyActive>
-              Links
-            </Link>
-          </ListItem>
+          {props.fields.map(field => (
+            <ListItem>
+              {field.external ? (
+                <a href={field.value} target="__blank">
+                  {field.name}
+                </a>
+              ) : (
+                <Link to={field.value} activeClassName="active" partiallyActive>
+                  {field.name}
+                </Link>
+              )}
+            </ListItem>
+          ))}
         </List>
       </Nav>
     </Wrapper>

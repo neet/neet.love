@@ -28,6 +28,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'config',
+        path: `${__dirname}/content/config`,
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -37,10 +44,6 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1rem',
             },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-transformer-sharp',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -49,6 +52,10 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-transformer-sharp',
         ],
       },
     },
@@ -63,6 +70,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-transformer-yaml',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',

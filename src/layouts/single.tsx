@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import { Banner } from '../components/banner';
+import { BannerContainer } from '../containers/banner-container';
 import { Footer } from '../components/footer';
 import { GlobalStyle } from '../styles/global-style';
 
@@ -42,7 +42,7 @@ export const Single: React.SFC = ({ children }) => {
   return (
     <Wrapper>
       <Helmet title={data.site.siteMetadata.title} meta={[{ name: 'description', content: data.site.siteMetadata.description }]} />
-      <Banner />
+      <BannerContainer />
       <Content>{children}</Content>
       <Footer />
       <GlobalStyle />

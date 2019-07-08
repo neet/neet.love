@@ -1,11 +1,11 @@
 import React from 'react';
-import { SocialAccounts } from '../components/social-accounts';
+import { SocialAccountListContainer } from '../containers/social-account-list-container';
 import { Single } from '../layouts/single';
 
 const Links: React.SFC = () => (
   <Single>
     <h2>Links</h2>
-    <SocialAccounts />
+    <SocialAccountListContainer />
   </Single>
 );
 
