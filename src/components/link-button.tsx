@@ -1,11 +1,11 @@
 import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
 
-export interface LinkButtonProps {
+export interface ButtonProps {
   appearance?: 'skeleton';
 }
 
-export const LinkButton = styled(Link)<LinkButtonProps>`
+const button = (props: ButtonProps) => css`
   display: block;
   box-sizing: border-box;
   padding: 8px 21px;
@@ -25,11 +25,21 @@ export const LinkButton = styled(Link)<LinkButtonProps>`
     text-decoration: none;
   }
 
-  ${({ appearance }) => (appearance === 'skeleton' ? css`
-    color: var(--hl-default-color);
-  ` : css`
-    color: var(--fg-reverse-color);
-    background-color: var(--hl-default-color);
-    box-shadow: 0 3px 6px var(--shadow-hl-color);
-  `)};
+  ${props.appearance === 'skeleton'
+    ? css`
+        color: var(--hl-default-color);
+      `
+    : css`
+        color: var(--fg-reverse-color);
+        background-color: var(--hl-default-color);
+        box-shadow: 0 3px 6px var(--shadow-hl-color);
+      `};
+`;
+
+export const LinkButton = styled(Link)<ButtonProps>`
+  ${button}
+`;
+
+export const Button = styled.button<ButtonProps>`
+  ${button}
 `;

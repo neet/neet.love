@@ -1,8 +1,10 @@
-import React from 'react';
 import GatsbyImage from 'gatsby-image';
+import React from 'react';
 import styled from 'styled-components';
-import { Article as ArticleEntity } from '../utils/entities';
 import { oc } from 'ts-optchain';
+import { Article as ArticleEntity, SiteMetadata } from '../../utils/entities';
+import { Header } from './header';
+import { Footer } from './footer';
 
 const Wrapper = styled.article``;
 
@@ -49,16 +51,19 @@ const Content = styled.div`
 
 export interface ArticleProps {
   article: ArticleEntity;
+  author: SiteMetadata['author'];
 }
 
 export const Article = (props: ArticleProps) => {
-  const { article } = props;
+  const { article, author } = props;
 
   return (
     <Wrapper>
       <Title>{article.frontmatter.title}</Title>
       <Thumbnail fluid={oc(article.frontmatter.thumbnail).childImageSharp.fluid()} />
+      <Header article={article} author={author} />
       <Content dangerouslySetInnerHTML={{ __html: article.html }} />
+      <Footer article={article} />
     </Wrapper>
-  )
-}
+  );
+};

@@ -16,7 +16,7 @@ const Blog: React.SFC<PageTemplateProps> = ({ data }) => (
   <>
     <Helmet title={`${data.markdownRemark.frontmatter.title} - ${data.siteMetadataYaml.title}`} />
     <ArticleLayout>
-      <Article article={data.markdownRemark} />
+      <Article article={data.markdownRemark} author={data.siteMetadataYaml.author} />
     </ArticleLayout>
   </>
 );
@@ -30,10 +30,20 @@ export const query = graphql`
       description
       author {
         name
+        avatar {
+          childImageSharp {
+            fixed(width: 46) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date

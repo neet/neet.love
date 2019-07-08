@@ -86,6 +86,7 @@ export interface SiteMetadata {
     avatar: {
       childImageSharp: {
         fixed: FixedObject;
+        fluid: FluidObject;
       };
     };
     note: string;

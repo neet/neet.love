@@ -62,7 +62,7 @@ export const SocialAccount = (props: SocialAccountProps) => {
 
       e.preventDefault();
       copyToClipboard(acct.copyable);
-      window.alert(`Copied "${acct.copyable}"!`);
+      alert(`Copied "${acct.copyable}"!`);
     },
     [acct],
   );

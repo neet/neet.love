@@ -90,8 +90,8 @@ export const Banner = (props: BannerProps) => {
 
       <Nav>
         <List>
-          {props.fields.map(field => (
-            <ListItem>
+          {props.fields.map((field, i) => (
+            <ListItem key={`${field.name}-${i}`}>
               {field.external ? (
                 <a href={field.value} target="__blank">
                   {field.name}
