@@ -44,7 +44,7 @@ yarn add node-telegram-bot-api
 ## APIの利用: メッセージを受信する
 トークンを取得し，ライブラリをインストールできたら早速botを動かし始めることができます．以下のコードを参考にメッセージを受信したらコンソールに受信したテキストを表示するbotを作ります．
 
-```bot.js
+```javascript
 const TelegramBot = require('node-telegram-bot-api');
 
 // トークンを指定してインスタンス化
