@@ -30,7 +30,7 @@ const Thumbnail = styled(GatsbyImage)`
   margin-right: 18px;
   border-radius: 4px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 580px) {
     width: 116px !important;
     height: 116px !important;
   }

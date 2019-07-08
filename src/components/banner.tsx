@@ -11,7 +11,7 @@ const Wrapper = styled.header`
   box-sizing: border-box;
   align-items: center;
   margin-bottom: 18px;
-  padding: 12px;
+  padding: 12px 24px;
   background: rgba(255,255,255,80%);
 
   @media screen and (min-width: 700px) {
@@ -29,7 +29,6 @@ const Title = styled.h1`
   font-weight: 500;
 
   & > a {
-    margin: auto 18px;
     color: var(--fg-default-color);
 
     &:hover {
@@ -50,7 +49,13 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  margin: auto 18px;
+  &:not(:last-child) {
+    margin-right: 28px;
+
+    @media screen and (min-width: 700px) {
+      margin-right: 36px;
+    }
+  }
 
   & > a {
     color: var(--fg-default-color);

@@ -9,6 +9,7 @@ import { GlobalStyle } from '../styles/global-style';
 const Wrapper = styled.main``;
 
 const Content = styled.div`
+  box-sizing: border-box;
   margin: auto;
   padding: 0 24px;
 

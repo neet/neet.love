@@ -38,7 +38,7 @@ const Icon = styled.div`
   align-items: center;
   justify-content: center;
   width: 34px;
-  margin-right: 12px;
+  margin-right: 16px;
   font-size: 34px;
 `;
 

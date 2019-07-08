@@ -17,7 +17,7 @@ export const LinkButton = styled(Link)<LinkButtonProps>`
   text-align: center;
   text-transform: uppercase;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 580px) {
     padding: 8px 36px;
   }
 

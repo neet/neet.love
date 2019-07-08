@@ -15,7 +15,7 @@ const Field = styled.li`
   align-items: center;
   margin-bottom: 16px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 580px) {
     flex-basis: calc(100% / 3);
   }
 `;
