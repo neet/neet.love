@@ -1,137 +1,41 @@
-import * as React from 'react';
-import FadeIn from 'react-fade-in';
-import Blogs from '../components/blogs';
-import Gravatar from '../components/gravatar';
-import Links from '../components/links';
-import Page from '../components/page';
-import Projects from '../components/projects';
+import React from 'react';
+import styled from 'styled-components';
+import { BioContainer } from '../containers/bio-container';
+import { FactListContainer } from '../containers/fact-list-container';
+import { RepositoryListContainer } from '../containers/repository-list-container';
+import { SocialAccountListContainer } from '../containers/social-account-list-container';
+import { SingleLayout } from '../layouts/single-layout';
 
-export interface Link {
-  name: string;
-  label: string;
-  href?: string;
-  copy?: string;
-  fa: string;
-  color1: string;
-  color2: string;
-  tag: string;
-}
+const Border = styled.hr`
+  margin: 24px auto;
+  border: none;
+  border-top: 1px solid var(--border-default-color);
+`;
 
-export interface Project {
-  name: string;
-  description: string;
-  status: string;
-}
+const Section = styled.section`
+  margin-bottom: 24px;
+`;
 
-export interface Blog {
-  id: string;
-  title: string;
-  uniqueSlug: string;
-  createdAt: string;
-  virtuals: {
-    subtitle: string;
-    previewImage: {
-      imageId: string,
-    };
-  };
-}
+const Index: React.SFC = () => (
+  <SingleLayout>
+    <BioContainer />
+    <Border />
 
-interface Props {
-  data: {
-    allLinksYaml: {
-      edges: { node: Link }[];
-    };
-    allMediumPost: {
-      edges: { node: Blog }[],
-    };
-    allProjectsYaml: {
-      edges: { node: Project }[],
-    };
-  };
-}
+    <Section>
+      <h3>Random Facts</h3>
+      <FactListContainer />
+    </Section>
 
-const Index: React.SFC<Props> = ({ data }) => {
-  const blogs = data.allMediumPost.edges.map((item) => item.node);
-  const projects = data.allProjectsYaml.edges.map((item) => item.node);
-  const links = data.allLinksYaml.edges.map((item) => item.node);
+    <Section>
+      <h3>Projects</h3>
+      <RepositoryListContainer />
+    </Section>
 
-  return (
-    <Page
-      title='Neetshin'
-      excerpt='Web engineer / FOSS developer'
-      insertBefore={
-        <Gravatar
-          className='page__avatar'
-          email='n33t5hin@gmail.com'
-          title='Neetshin'
-          size={200}
-        />
-      }
-    >
-      <FadeIn>
-        <h2>Skills</h2>
-        <ul className='section'>
-          <li>/(Java|Type|Ecma)Script/</li>
-          <li>Node.js</li>
-          <li>PHP</li>
-          <li>Python</li>
-        </ul>
-
-        <h2>Contributions</h2>
-        <Projects projects={projects} />
-
-        <h2>Medium</h2>
-        <Blogs posts={blogs} />
-
-        <h2>Social accounts</h2>
-        <Links links={links} />
-      </FadeIn>
-    </Page>
-  );
-};
+    <Section>
+      <h3>Contact</h3>
+      <SocialAccountListContainer limit={6} />
+    </Section>
+  </SingleLayout>
+);
 
 export default Index;
-
-export const query = graphql`
-  query ConfigData {
-    allLinksYaml {
-      edges {
-        node {
-          name
-          label
-          href
-          copy
-          fa
-          color1
-          color2
-          tag
-        }
-      }
-    }
-    allProjectsYaml {
-      edges {
-        node {
-          name
-          description
-          status
-        }
-      }
-    }
-    allMediumPost(sort: { fields: [createdAt], order: DESC }) {
-      edges {
-        node {
-          id
-          title
-          createdAt
-          virtuals {
-            subtitle
-            previewImage {
-              imageId
-            }
-          }
-          uniqueSlug
-        }
-      }
-    }
-  }
-`;

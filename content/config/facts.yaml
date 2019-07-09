@@ -1,0 +1,20 @@
+---
+- name: Nation
+  value: Japan
+  image: ../assets/japan.png
+
+- name: Favourite drink
+  value: Chai
+  image: ../assets/chai.png
+
+- name: IDE
+  value: VSCode
+  image: ../assets/vscode.png
+
+- name: Workstation
+  value: Macbook Pro
+  image: ../assets/computer.png
+
+- name: 2nd languages
+  value: English, Mandarin
+  image: ../assets/globe.png

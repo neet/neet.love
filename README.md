@@ -1,25 +1,50 @@
-# love
-[![Build Status](https://travis-ci.com/neet/love.svg?branch=master)](https://travis-ci.com/neet/love)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d145152a14e077e47ead/maintainability)](https://codeclimate.com/github/neet/love/maintainability)
+# gatsby-starter-typescript-plus
 
-💕 The world's kawaiiest portfolio
+> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
 
-## Contains
-- [x] [TypeScript 2.8](https://www.typescriptlang.org/)
-- [x] [TSLint](https://palantir.github.io/tslint/)
-- [x] [TypeDoc](http://typedoc.org/)
-- [x] [React 16.3](https://reactjs.org/)
-- [x] [Yarn](http://yarnpkg.com/)
-- [x] [Jest](https://facebook.github.io/jest)
-- [x] [Enzyme](http://airbnb.io/enzyme/)
-- [x] [GatsbyJS](https://www.gatsbyjs.org/)
-- [x] [GraphQL](https://graphql.org/)
-- [x] Server-side rendering
-- [x] [Service Worker](https://www.w3.org/TR/service-workers-1/)
-- [x] [Sass (SCSS)](https://sass-lang.com/)
-- [x] [Grid layout](https://www.w3.org/TR/css-grid-1/)
-- [x] Responsive design
-- [x] [WAI-ARIA](https://www.w3.org/TR/wai-aria/)
+This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
 
-## License
-MIT
+## Features
+
+- TypeScript
+- ESLint (with custom ESLint rules)
+- Markdown rendering with Remark
+- Basic component structure
+- Styling with [emotion](https://emotion.sh/)
+
+## Geting started
+
+Install this starter (assuming you have `gatsby-cli` installed) by running the following command:
+
+```bash
+gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
+```
+
+## Developing
+
+A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
+
+```bash
+# install dependencies
+yarn
+
+# ...or, for npm
+npm install
+
+# serve with hot reload at localhost:8000
+npm start
+
+# build for production
+npm run build
+
+# build for production and push to gh-pages branch
+npm run deploy
+```
+
+## Credits
+
+Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
+
+## Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)

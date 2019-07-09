@@ -1,14 +1,16 @@
-import * as React from 'react';
-import Content from '../components/content';
-import Page from '../components/page';
+import { Link } from 'gatsby';
+import React from 'react';
+import { SingleLayout } from '../layouts/single-layout';
 
-const NotFoundPage: React.SFC = () => (
-  <Content>
-    <Page title='お探しのページは虚無'>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Page>
-  </Content>
+const NotFoundPage = () => (
+  <SingleLayout>
+    <article>
+      <h1>404: Page not found.</h1>
+      <p>
+        You've hit the void. <Link to="/">Go back.</Link>
+      </p>
+    </article>
+  </SingleLayout>
 );
 
 export default NotFoundPage;
