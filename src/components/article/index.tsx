@@ -3,15 +3,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { oc } from 'ts-optchain';
 import { Article as ArticleEntity, SiteMetadata } from '../../utils/entities';
-import { Header } from './header';
 import { Footer } from './footer';
+import { Header } from './header';
 
 const Wrapper = styled.article``;
 
 const Title = styled.h1`
   margin-bottom: 24px;
-  font-weight: bold;
-  line-height: 1.6;
+  font-weight: 500;
+  line-height: 1.5;
 `;
 
 const Thumbnail = styled(GatsbyImage)`
@@ -27,7 +27,7 @@ const Content = styled.div`
   h4,
   h5,
   h6 {
-    font-weight: bold;
+    font-weight: 500;
     line-height: 2;
   }
 

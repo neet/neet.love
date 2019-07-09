@@ -6,8 +6,6 @@ import { Article } from '../utils/entities';
 
 const Wrapper = styled(Link)`
   display: flex;
-  margin-bottom: 18px;
-  padding: 18px;
   border-radius: 4px;
   box-shadow: 0 3px 16px var(--shadow-bg-color);
   color: var(--fg-default-color);
@@ -23,34 +21,43 @@ const Wrapper = styled(Link)`
 `;
 
 const Thumbnail = styled(GatsbyImage)`
-  flex-shrink: 0;
-  width: 100px !important;
-  height: 100px !important;
-  margin-right: 18px;
-  border-radius: 4px;
-
-  @media screen and (min-width: 580px) {
-    width: 116px !important;
-    height: 116px !important;
-  }
+  flex: 1 0 116px;
+  margin-right: 8px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 `;
 
 const Meta = styled.div`
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  padding: 8px;
+
+  @media screen and (min-width: 580px) {
+    padding: 12px;
+  }
 `;
 
 const Title = styled.h3`
+  display: block;
   margin-bottom: 6px;
+  overflow: hidden;
   color: var(--fg-default-color);
-  font-weight: bold;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const Excerpt = styled.p`
+  display: block;
   flex-grow: 1;
   margin-bottom: 12px;
+  overflow: hidden;
   color: var(--fg-wash-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const Time = styled.time`
@@ -66,7 +73,7 @@ export const ArticleCard = (props: ArticleCardProps) => {
 
   return (
     <Wrapper to={article.fields.slug}>
-      {article.frontmatter.thumbnail && <Thumbnail fixed={article.frontmatter.thumbnail.childImageSharp.fixed} />}
+      {article.frontmatter.thumbnail && <Thumbnail fluid={article.frontmatter.thumbnail.childImageSharp.fluid} />}
 
       <Meta>
         <Title>{article.frontmatter.title}</Title>

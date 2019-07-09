@@ -6,11 +6,17 @@ import styled from 'styled-components';
 import { Article } from '../../utils/entities';
 import { Button } from '../link-button';
 
-const Wrapper = styled.footer``;
+const Wrapper = styled.footer`
+  margin-bottom: 24px;
+
+  ${Button} {
+    width: 100%;
+  }
+`;
 
 const Icon = styled(FontAwesomeIcon)`
-  margin-right: .5em;
-`
+  margin-right: 0.5em;
+`;
 
 interface FooterProps {
   article: Article;
@@ -26,6 +32,7 @@ export const Footer = (props: FooterProps) => {
       });
 
       location.href = `https://twitter.com/intent/tweet?${params}`;
+
       return;
     }
 

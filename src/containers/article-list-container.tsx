@@ -27,8 +27,8 @@ export const ArticleListContainer = () => {
               title
               thumbnail {
                 childImageSharp {
-                  fixed(width: 116, height: 116) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 116, maxHeight: 116) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

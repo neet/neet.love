@@ -4,10 +4,12 @@ import { Article } from '../utils/entities';
 import { ArticleCard } from './article-card';
 
 const List = styled.ul`
-  margin: 18px 0;
+  margin: 8px 0;
 `;
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  margin-bottom: 16px;
+`;
 
 export interface ArticleListProps {
   articles: Article[];
