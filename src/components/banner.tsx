@@ -11,9 +11,9 @@ const Wrapper = styled.header`
   left: 0;
   box-sizing: border-box;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
   padding: 12px 24px;
-  background: rgba(255, 255, 255, 80%);
+  background: var(--banner-bg-color);
 
   @media screen and (min-width: 700px) {
     margin-bottom: 24px;

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { SocialAccount } from './social-account';
+import { SocialAccount as SocialAccountEntity } from '../utils/entities';
 
 const List = styled.ul`
   display: flex;
@@ -13,21 +14,11 @@ const ListItem = styled.li`
   box-sizing: border-box;
   flex: 0 1 100%;
   min-width: 0;
-  margin-bottom: 8px;
-  padding: 8px;
+  padding-bottom: 18px;
 
-  @media screen and (min-width: 700px) {
-    flex: 0 1 50%;
-  }
-
-  & > a {
-    display: flex;
-    align-items: center;
-    color: var(--fg-default-color);
-
-    &:hover {
-      text-decoration: none;
-    }
+  @media screen and (min-width: 580px) {
+    flex-basis: 50%;
+    padding-right: 8px;
   }
 `;
 
@@ -42,7 +33,7 @@ const ShowMore = styled(Link)`
 
 export interface SocialAccountsProps {
   isPartial?: boolean;
-  socialAccounts?: SocialAccount[];
+  socialAccounts?: SocialAccountEntity[];
 }
 
 export const SocialAccountList = (props: SocialAccountsProps) => {

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Wrapper = styled.footer`
   display: flex;
   justify-content: flex-end;
-  margin-top: 18px;
-  padding: 12px;
+  margin-top: 24px;
+  padding: 12px 24px;
   border-top: 1px solid var(--border-default-color);
   background-color: var(--bg-wash-color);
   color: var(--fg-light-color);

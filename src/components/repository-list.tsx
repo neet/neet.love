@@ -6,13 +6,21 @@ import { RepostiroyCard } from './repository-card';
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 8px -8px -16px;
+  margin: 8px -4px -12px;
+
+  @media screen and (min-width: 580px) {
+    margin: 8px -8px -16px;
+  }
 `;
 
 const ListItem = styled.li`
   box-sizing: border-box;
   flex: 1 0 50%;
-  padding: 0 8px 16px;
+  padding: 0 4px 12px;
+
+  @media screen and (min-width: 580px) {
+    padding: 0 8px 16px;
+  }
 `;
 
 interface RepositoryListProps {

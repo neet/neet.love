@@ -7,20 +7,7 @@ const List = styled.ul`
   margin: 18px 0;
 `;
 
-const ListItem = styled.li`
-  a {
-    display: flex;
-    margin-bottom: 18px;
-    padding: 18px;
-    border-radius: 4px;
-    box-shadow: 0 3px 16px var(--shadow-bg-color);
-    color: var(--fg-default-color);
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-`;
+const ListItem = styled.li``;
 
 export interface ArticleListProps {
   articles: Article[];

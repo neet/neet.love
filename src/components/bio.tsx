@@ -11,10 +11,11 @@ const Wrapper = styled.section`
   grid-template-areas:
     'avatar  meta'
     'actions actions';
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 24px;
 
   @media screen and (min-width: 580px) {
     grid-template-areas:
@@ -26,13 +27,16 @@ const Wrapper = styled.section`
 
 const Avatar = styled(GatsbyImage)`
   grid-area: avatar;
-  width: 116px !important;
-  height: 116px !important;
+  width: 100px !important;
+  height: 100px !important;
   margin-right: 18px;
   border-radius: 50%;
   box-shadow: 0 3px 6px var(--shadow-bg-color);
+  justify-self: flex-end;
 
   @media screen and (min-width: 580px) {
+    width: 116px !important;
+    height: 116px !important;
     margin-right: 26px;
   }
 `;
@@ -72,11 +76,12 @@ const Actions = styled.div`
   }
 
   @media screen and (min-width: 580px) {
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 14px;
 
     ${LinkButton} {
       width: auto;
+      max-width: 125px;
     }
   }
 
@@ -92,7 +97,7 @@ const Actions = styled.div`
 const Note = styled.blockquote`
   position: relative;
   flex: 0 0;
-  margin: 24px auto;
+  margin-bottom: 24px;
   padding-left: 16px;
   color: var(--fg-wash-color);
   font-size: 16px;
@@ -102,8 +107,7 @@ const Note = styled.blockquote`
 `;
 
 const QuoteIcon = styled(FontAwesomeIcon)`
-  margin-right: 0.5em;
-  color: var(--fg-default-color);
+  margin-right: .5em;
 `;
 
 interface BioProps {

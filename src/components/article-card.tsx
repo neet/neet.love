@@ -4,6 +4,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { Article } from '../utils/entities';
 
+const Wrapper = styled(Link)`
+  display: flex;
+  margin-bottom: 18px;
+  padding: 18px;
+  border-radius: 4px;
+  box-shadow: 0 3px 16px var(--shadow-bg-color);
+  color: var(--fg-default-color);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid var(--border-default-color);
+    box-shadow: none;
+  }
+`;
+
 const Thumbnail = styled(GatsbyImage)`
   flex-shrink: 0;
   width: 100px !important;
@@ -47,7 +65,7 @@ export const ArticleCard = (props: ArticleCardProps) => {
   const { article } = props;
 
   return (
-    <Link to={article.fields.slug}>
+    <Wrapper to={article.fields.slug}>
       {article.frontmatter.thumbnail && <Thumbnail fixed={article.frontmatter.thumbnail.childImageSharp.fixed} />}
 
       <Meta>
@@ -55,6 +73,6 @@ export const ArticleCard = (props: ArticleCardProps) => {
         <Excerpt>{article.excerpt}</Excerpt>
         <Time dateTime={article.frontmatter.date}>{new Date(article.frontmatter.date).toLocaleDateString()}</Time>
       </Meta>
-    </Link>
+    </Wrapper>
   );
 };

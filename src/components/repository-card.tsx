@@ -12,6 +12,11 @@ const Wrapper = styled.div`
   padding: 16px;
   border-radius: 4px;
   box-shadow: 0 3px 16px var(--shadow-bg-color);
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid var(--border-default-color);
+    box-shadow: none;
+  }
 `;
 
 const Icon = styled(FontAwesomeIcon)`

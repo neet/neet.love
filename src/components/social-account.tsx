@@ -6,6 +6,16 @@ import styled from 'styled-components';
 import { faIconMap } from '../utils/fa-icon-map';
 import { SocialAccount as ISocialAccount } from '../utils/entities';
 
+const Wrapper = styled.a`
+  display: flex;
+  align-items: center;
+  color: var(--fg-default-color);
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
 const Icon = styled.div`
   display: flex;
   box-sizing: border-box;
@@ -13,7 +23,7 @@ const Icon = styled.div`
   align-items: center;
   justify-content: center;
   width: 33px;
-  margin-right: 10px;
+  margin-right: 16px;
   font-size: 33px;
 `;
 
@@ -31,7 +41,7 @@ const Name = styled.span`
 
 const Suggested = styled.span`
   display: block;
-  margin: 0 0.5em;
+  margin: 0 .5em;
   color: var(--fg-wash-color);
   font-size: 10px;
 `;
@@ -68,7 +78,7 @@ export const SocialAccount = (props: SocialAccountProps) => {
   );
 
   return (
-    <a href={acct.href || '#'} target="__blank" onClick={handleClick}>
+    <Wrapper href={acct.href || '#'} target="__blank" onClick={handleClick}>
       <Icon>
         <FontAwesomeIcon icon={faIconMap[acct.type]} />
       </Icon>
@@ -85,6 +95,6 @@ export const SocialAccount = (props: SocialAccountProps) => {
 
         <Label>{acct.label}</Label>
       </Meta>
-    </a>
+    </Wrapper>
   );
 };

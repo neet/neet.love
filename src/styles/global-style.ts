@@ -17,8 +17,21 @@ export const GlobalStyle = createGlobalStyle`
     --fg-light-color: rgb(153,153,153);
     --fg-reverse-color: rgb(255,255,255);
     --hl-default-color: rgb(0,118,255);
-    --shadow-bg-color: rgba(0,0,0,16%);
-    --shadow-hl-color: rgba(0,118,255,16%);
+    --banner-bg-color: rgba(255, 255, 255, .8);
+    --shadow-bg-color: rgba(0,0,0,.16);
+    --shadow-hl-color: rgba(0,118,255,.16);
+
+    @media (prefers-color-scheme: dark) {
+      --bg-default-color: rgb(0,0,0);
+      --bg-wash-color: rgb(6,6,6);
+      --bg-dark-color: rgb(69,69,69);
+      --border-default-color: rgb(51,51,51);
+      --fg-default-color: rgb(196, 196, 196);
+      --fg-wash-color: rgb(113, 113, 113);
+      --fg-light-color: rgb(102, 102, 102);
+      --hl-default-color: rgb(0,112,243);
+      --banner-bg-color: rgba(0, 0, 0, .8);
+    }
   }
 
   body {

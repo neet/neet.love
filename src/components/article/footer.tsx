@@ -19,19 +19,22 @@ interface FooterProps {
 export const Footer = (props: FooterProps) => {
   const { article } = props;
 
-  const handleShare = useCallback(() => {
+  const handleShare = useCallback(async () => {
     if ((navigator as any).share === undefined) {
       const params = querystring.stringify({
         text: `${article.frontmatter.title}\n${article.fields.slug}`,
       });
 
       location.href = `https://twitter.com/intent/tweet?${params}`;
+      return;
     }
 
-    (window.navigator as any).share({
-      title: article.frontmatter.title,
+    await (window.navigator as any).share({
+      text: article.frontmatter.title,
       url: article.fields.slug,
     });
+
+    alert('Shared successfully!');
   }, [article]);
 
   return (

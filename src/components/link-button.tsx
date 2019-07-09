@@ -8,7 +8,7 @@ export interface ButtonProps {
 const button = (props: ButtonProps) => css`
   display: block;
   box-sizing: border-box;
-  padding: 8px 21px;
+  padding: 8px 16px;
   border: 1px solid var(--hl-default-color);
   border-radius: 4px;
   font-size: 12px;
@@ -16,10 +16,6 @@ const button = (props: ButtonProps) => css`
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-
-  @media screen and (min-width: 580px) {
-    padding: 8px 36px;
-  }
 
   &:hover {
     text-decoration: none;

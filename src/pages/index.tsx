@@ -7,13 +7,13 @@ import { SocialAccountListContainer } from '../containers/social-account-list-co
 import { SingleLayout } from '../layouts/single-layout';
 
 const Border = styled.hr`
-  margin: 28px auto;
+  margin: 24px auto;
   border: none;
   border-top: 1px solid var(--border-default-color);
 `;
 
 const Section = styled.section`
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 `;
 
 const Index: React.SFC = () => (
