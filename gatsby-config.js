@@ -26,6 +26,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://neet.love',
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [

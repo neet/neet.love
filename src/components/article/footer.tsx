@@ -27,12 +27,15 @@ export const Footer = (props: FooterProps) => {
 
   const handleShare = useCallback(async () => {
     if ((navigator as any).share === undefined) {
+      const canonicalNode = document.querySelector('link[rel="canonical"]');
+      if (!canonicalNode) return;
+
+      const canonical = canonicalNode.getAttribute('href');
       const params = querystring.stringify({
-        text: `${article.frontmatter.title}\n${article.fields.slug}`,
+        text: `${article.frontmatter.title}\n${canonical}`,
       });
 
       location.href = `https://twitter.com/intent/tweet?${params}`;
-
       return;
     }
 
