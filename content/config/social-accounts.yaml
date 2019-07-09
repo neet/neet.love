@@ -7,13 +7,6 @@
   fgColor: white
   suggested: true
 
-- type: email
-  name: Email
-  label: n33t5hin@gmail.com
-  href: mailto:n33t5hin@gmail.com
-  bgColor: '#1981e0'
-  fgColor: white
-
 - type: discord
   name: Discord
   label: '@neet#9999'
@@ -38,11 +31,11 @@
   fgColor: white
   suggested: true
 
-- type: twitter
-  name: Twitter
-  label: '@TheGodOfNeet'
-  href: https://twitter.com/thegodofneet
-  bgColor: '#1a97f0'
+- type: email
+  name: Email
+  label: n33t5hin@gmail.com
+  href: mailto:n33t5hin@gmail.com
+  bgColor: '#1981e0'
   fgColor: white
 
 - type: github
@@ -65,6 +58,20 @@
   href: https://medium.com/@neetshin
   bgColor: white
   fgColor: black
+
+- type: twitter
+  name: Twitter
+  label: '@TheGodOfNeet'
+  href: https://twitter.com/thegodofneet
+  bgColor: '#1a97f0'
+  fgColor: white
+
+- type: twitter
+  name: Twitter (for sensitive topics)
+  label: '@FlawOfEduaction'
+  href: https://twitter.com/flawofeducation
+  bgColor: '#1a97f0'
+  fgColor: white
 
 - type: slideshare
   name: SlideShare
