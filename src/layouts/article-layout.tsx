@@ -6,6 +6,7 @@ import { Footer } from '../components/footer';
 import { BannerContainer } from '../containers/banner-container';
 import { GlobalStyle } from '../styles/global-style';
 import { SiteMetadata } from '../utils/entities';
+import { FontawesomeSSR } from '../components/fontawesome-ssr';
 
 const Wrapper = styled.div``;
 
@@ -35,13 +36,14 @@ export const ArticleLayout: React.SFC = ({ children }) => {
 
   return (
     <>
+      <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
+      <GlobalStyle />
+      <FontawesomeSSR />
       <Wrapper>
         <BannerContainer />
         <Content>{children}</Content>
         <Footer />
       </Wrapper>
-      <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
-      <GlobalStyle />
     </>
   );
 };

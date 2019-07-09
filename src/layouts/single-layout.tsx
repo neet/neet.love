@@ -2,8 +2,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import { BannerContainer } from '../containers/banner-container';
+import { FontawesomeSSR } from '../components/fontawesome-ssr';
 import { Footer } from '../components/footer';
+import { BannerContainer } from '../containers/banner-container';
 import { GlobalStyle } from '../styles/global-style';
 import { SiteMetadata } from '../utils/entities';
 
@@ -37,6 +38,7 @@ export const SingleLayout: React.SFC = ({ children }) => {
     <>
       <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
       <GlobalStyle />
+      <FontawesomeSSR />
       <Wrapper>
         <BannerContainer />
         <Content>{children}</Content>
