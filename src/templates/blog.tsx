@@ -17,7 +17,10 @@ interface PageTemplateProps {
 
 const Blog: React.SFC<PageTemplateProps> = ({ data }) => (
   <>
-    <SeoContainer title={`${data.markdownRemark.frontmatter.title} - ${data.site.siteMetadata.title}`} />
+    <SeoContainer
+      title={`${data.markdownRemark.frontmatter.title} - ${data.site.siteMetadata.title}`}
+      description={data.markdownRemark.excerpt}
+    />
     <ArticleLayout>
       <Article article={data.markdownRemark} author={data.bioYaml} />
     </ArticleLayout>

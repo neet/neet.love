@@ -12,7 +12,7 @@ interface SeoProps {
 }
 
 export const Seo = (props: SeoProps) => {
-  const { title, site, bio } = props;
+  const { title, description, site, bio } = props;
 
   if (!(site && bio)) return null;
 
@@ -20,15 +20,17 @@ export const Seo = (props: SeoProps) => {
     <Helmet
       title={title || site.siteMetadata.title}
       meta={[
-        { name: 'description', content: site.siteMetadata.description },
         { name: 'og:title', content: site.siteMetadata.title },
-        { name: 'og:description', content: site.siteMetadata.description },
         { name: 'og:type', content: 'website' },
         { name: 'og:image', content: site.siteMetadata.siteUrl + bio.avatar.childImageSharp.fixed.src },
+
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:creator', content: bio.name },
         { name: 'twitter:title', content: title || site.siteMetadata.title },
-        { name: 'twitter:description', content: site.siteMetadata.description },
+
+        { name: 'description', content: description || site.siteMetadata.description },
+        { name: 'og:description', content: description || site.siteMetadata.description },
+        { name: 'twitter:description', content: description || site.siteMetadata.description },
       ]}
     />
   );
