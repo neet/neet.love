@@ -4,7 +4,9 @@ import { Banner } from '../components/banner';
 import { BannerField, SiteMetadata } from '../utils/entities';
 
 interface BannerContainerQueryData {
-  siteMetadataYaml: SiteMetadata;
+  site: {
+    siteMetadata: SiteMetadata;
+  };
   allBannerYaml: {
     edges: {
       node: BannerField;
@@ -15,8 +17,10 @@ interface BannerContainerQueryData {
 export const BannerContainer = () => {
   const data = useStaticQuery<BannerContainerQueryData>(graphql`
     query BannerContainerQuery {
-      siteMetadataYaml {
-        title
+      site {
+        siteMetadata {
+          title
+        }
       }
       allBannerYaml {
         edges {
@@ -30,5 +34,5 @@ export const BannerContainer = () => {
     }
   `);
 
-  return <Banner siteTitle={data.siteMetadataYaml.title} fields={data.allBannerYaml.edges.map(edge => edge.node)} />;
+  return <Banner siteTitle={data.site.siteMetadata.title} fields={data.allBannerYaml.edges.map(edge => edge.node)} />;
 };

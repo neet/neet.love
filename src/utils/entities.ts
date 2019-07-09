@@ -80,16 +80,18 @@ export interface Article {
 export interface SiteMetadata {
   title: string;
   description: string;
-  author: {
-    name: string;
-    email: string;
-    avatar: {
-      childImageSharp: {
-        fixed: FixedObject;
-        fluid: FluidObject;
-      };
+  siteUrl: string;
+}
+
+export interface Bio {
+  name: string;
+  email: string;
+  avatar: {
+    childImageSharp: {
+      fixed: FixedObject;
+      fluid: FluidObject;
     };
-    note: string;
-    quote: string;
   };
+  note: string;
+  quote: string;
 }

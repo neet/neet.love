@@ -1,12 +1,10 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { FontawesomeSSR } from '../components/fontawesome-ssr';
 import { Footer } from '../components/footer';
 import { BannerContainer } from '../containers/banner-container';
 import { GlobalStyle } from '../styles/global-style';
-import { SiteMetadata } from '../utils/entities';
+import { SeoContainer } from '../containers/seo-container';
 
 const Wrapper = styled.main``;
 
@@ -20,23 +18,10 @@ const Content = styled.div`
   }
 `;
 
-interface SingleLayoutQueryProps {
-  siteMetadataYaml: SiteMetadata;
-}
-
 export const SingleLayout: React.SFC = ({ children }) => {
-  const data = useStaticQuery<SingleLayoutQueryProps>(graphql`
-    query SingleLayoutQuery {
-      siteMetadataYaml {
-        title
-        description
-      }
-    }
-  `);
-
   return (
     <>
-      <Helmet title={data.siteMetadataYaml.title} meta={[{ name: 'description', content: data.siteMetadataYaml.description }]} />
+      <SeoContainer />
       <GlobalStyle />
       <FontawesomeSSR />
       <Wrapper>

@@ -4,7 +4,7 @@ import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { LinkButton } from '../components/link-button';
-import { SiteMetadata } from '../utils/entities';
+import { Bio as BioEntity } from '../utils/entities';
 
 const Wrapper = styled.section`
   display: grid;
@@ -111,7 +111,7 @@ const QuoteIcon = styled(FontAwesomeIcon)`
 `;
 
 interface BioProps {
-  author?: SiteMetadata['author'];
+  author?: BioEntity;
 }
 
 export const Bio = (props: BioProps) => {

@@ -1,25 +1,23 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Bio } from '../components/bio';
-import { SiteMetadata } from '../utils/entities';
+import { Bio as BioEntity } from '../utils/entities';
 
 interface BioContainerQueryData {
-  siteMetadataYaml: SiteMetadata;
+  bioYaml: BioEntity;
 }
 
 export const BioContainer = () => {
   const data = useStaticQuery<BioContainerQueryData>(graphql`
     query BioContainerQuery {
-      siteMetadataYaml {
-        author {
-          name
-          note
-          quote
-          avatar {
-            childImageSharp {
-              fixed(width: 120, height: 120) {
-                ...GatsbyImageSharpFixed
-              }
+      bioYaml {
+        name
+        note
+        quote
+        avatar {
+          childImageSharp {
+            fixed(width: 120, height: 120) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -27,5 +25,5 @@ export const BioContainer = () => {
     }
   `);
 
-  return <Bio author={data.siteMetadataYaml.author} />;
+  return <Bio author={data.bioYaml} />;
 };
