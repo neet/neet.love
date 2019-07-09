@@ -3,6 +3,11 @@
 require('dotenv').config();
 
 module.exports = {
+  siteMetadata: {
+    title: 'neet.love',
+    description: 'Portfolio and blog, hosted by Ryo Igarashi',
+    siteUrl: 'https://neet.love',
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
