@@ -78,7 +78,7 @@ export const SocialAccount = (props: SocialAccountProps) => {
   );
 
   return (
-    <Wrapper href={acct.href || '#'} target="__blank" onClick={handleClick}>
+    <Wrapper href={acct.href || '#'} target="__blank" rel="me" onClick={handleClick}>
       <Icon>
         <FontAwesomeIcon icon={faIconMap[acct.type]} />
       </Icon>
