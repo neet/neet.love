@@ -44,7 +44,7 @@ export const syntaxHighlight = css`
     -ms-hyphens: none;
     hyphens: none;
 
-    @media (prefers-color-scheme) {
+    @media (prefers-color-scheme: dark) {
       color: var(--solarized-base0);
     }
   }
@@ -55,7 +55,7 @@ export const syntaxHighlight = css`
   code[class*='language-'] ::-moz-selection {
     background-color: var(--solarized-base02);
 
-    @media (prefers-color-scheme) {
+    @media (prefers-color-scheme: dark) {
       background-color: var(--solarized-base2);
     }
   }
@@ -66,7 +66,7 @@ export const syntaxHighlight = css`
   code[class*='language-'] ::selection {
     background-color: var(--solarized-base02);
 
-    @media (prefers-color-scheme) {
+    @media (prefers-color-scheme: dark) {
       background-color: var(--solarized-base2);
     }
   }
@@ -83,7 +83,7 @@ export const syntaxHighlight = css`
   pre[class*='language-'] {
     background-color: var(--solarized-base3);
 
-    @media (prefers-color-scheme) {
+    @media (prefers-color-scheme: dark) {
       background-color: var(--solarized-base03);
     }
   }
@@ -141,7 +141,7 @@ export const syntaxHighlight = css`
     color: var(--solarized-base00);
     background-color: var(--solarized-base2);
 
-    @media (prefers-color-scheme) {
+    @media (prefers-color-scheme: dark) {
       color: var(--solarized-base0);
       background-color: var(--solarized-base02);
     }
