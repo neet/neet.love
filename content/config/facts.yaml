@@ -1,4 +1,8 @@
 ---
+- name: Pronoun
+  value: he/him
+  image: ../assets/male-symbol.png
+
 - name: Nation
   value: Japan
   image: ../assets/japan.png
@@ -7,13 +11,13 @@
   value: Chai
   image: ../assets/chai.png
 
-- name: IDE
-  value: VSCode
-  image: ../assets/vscode.png
-
 - name: Workstation
   value: Macbook Pro
   image: ../assets/computer.png
+
+- name: IDE
+  value: VSCode
+  image: ../assets/vscode.png
 
 - name: 2nd languages
   value: English, Mandarin
