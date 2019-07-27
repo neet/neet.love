@@ -36,6 +36,10 @@ export const LinkButton = styled(Link)<ButtonProps>`
   ${button}
 `;
 
+export const AnchorButton = styled.a<ButtonProps>`
+  ${button}
+`;
+
 export const Button = styled.button<ButtonProps>`
   ${button}
 `;

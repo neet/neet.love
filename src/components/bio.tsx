@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import { LinkButton } from '../components/link-button';
+import { AnchorButton, LinkButton } from '../components/link-button';
 import { Bio as BioEntity } from '../utils/entities';
 
 const Wrapper = styled.section`
@@ -71,7 +71,7 @@ const Actions = styled.div`
   justify-content: center;
   margin-top: 18px;
 
-  ${LinkButton} {
+  ${LinkButton}, ${AnchorButton} {
     flex: 1 1 50%;
   }
 
@@ -79,7 +79,7 @@ const Actions = styled.div`
     justify-content: flex-start;
     margin-top: 14px;
 
-    ${LinkButton} {
+    ${LinkButton}, ${AnchorButton} {
       width: auto;
       max-width: 125px;
     }
@@ -107,7 +107,7 @@ const Note = styled.blockquote`
 `;
 
 const QuoteIcon = styled(FontAwesomeIcon)`
-  margin-right: .5em;
+  margin-right: 0.5em;
 `;
 
 interface BioProps {
@@ -131,9 +131,9 @@ export const Bio = (props: BioProps) => {
 
         <Actions>
           <LinkButton to="/links">Contact</LinkButton>
-          <LinkButton to="/" appearance="skeleton">
-            Profile
-          </LinkButton>
+          <AnchorButton href="https://wantedly.com/users/62403069" target="__blank" appearance="skeleton">
+            Hire me
+          </AnchorButton>
         </Actions>
       </Wrapper>
 
