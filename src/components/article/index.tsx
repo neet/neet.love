@@ -10,7 +10,7 @@ const Wrapper = styled.article``;
 
 const Title = styled.h1`
   margin-bottom: 24px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.5;
 `;
 
@@ -27,7 +27,7 @@ const Content = styled.div`
   h4,
   h5,
   h6 {
-    font-weight: 500;
+    font-weight: bold;
     line-height: 2;
   }
 
@@ -46,6 +46,41 @@ const Content = styled.div`
   ul {
     margin-left: 24px;
     list-style: inside;
+  }
+
+  ol {
+    margin-left: 24px;
+    list-style: inside decimal;
+  }
+
+  hr {
+    margin: 24px auto;
+    border: none;
+    border-top: 1px solid var(--border-default-color);
+  }
+
+  table {
+    max-width: 100%;
+    overflow-x: scroll;
+
+    th {
+      font-weight: bold;
+    }
+
+    th, td {
+      padding: 0.4em 0.8em;
+      border: 1px solid var(--border-default-color);
+    }
+
+    tr:nth-child(even) > td {
+      background-color: var(--bg-wash-color);
+    }
+  }
+
+  .footnotes {
+    p {
+      display: inline;
+    }
   }
 `;
 
