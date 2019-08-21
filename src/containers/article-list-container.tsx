@@ -14,7 +14,7 @@ interface ArticleListContainerQueryData {
 export const ArticleListContainer = () => {
   const data = useStaticQuery<ArticleListContainerQueryData>(graphql`
     query ArticleListContainerQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             excerpt(pruneLength: 80)
