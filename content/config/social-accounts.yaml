@@ -62,35 +62,35 @@
 - type: twitter
   name: Twitter
   label: '@TheGodOfNeet'
-  href: https://twitter.com/thegodofneet
+  url: https://twitter.com/thegodofneet
   bgColor: '#1a97f0'
   fgColor: white
 
 - type: twitter
   name: Twitter (for sensitive topics)
   label: '@FlawOfEduaction'
-  href: https://twitter.com/flawofeducation
+  url: https://twitter.com/flawofeducation
   bgColor: '#1a97f0'
   fgColor: white
 
 - type: slideshare
   name: SlideShare
   label: ssuser881c4e
-  href: https://www.slideshare.net/ssuser881c4e
+  url: https://www.slideshare.net/ssuser881c4e
   bgColor: '#0077b5'
   fgColor: white
 
 - type: npm
   name: npm
   label: neetshin
-  href: https://www.npmjs.com/~neetshin
+  url: https://www.npmjs.com/~neetshin
   bgColor: '#cb3837'
   fgColor: white
 
 - type: docker
   name: DockerHub
   label: neetshin
-  href: https://hub.docker.com/r/neetshin/
+  url: https://hub.docker.com/r/neetshin/
   bgColor: '#1488c6'
   fgColor: white
 
@@ -104,6 +104,6 @@
 - type: patreon
   name: Patreon
   label: neetshin
-  href: https://www.patreon.com/neetshin
+  url: https://www.patreon.com/neetshin
   bgColor: '#f96854'
   fgColor: white
