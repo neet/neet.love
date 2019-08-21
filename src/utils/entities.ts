@@ -20,7 +20,7 @@ export interface SocialAccount {
   type: SocialAccountType;
   name: string;
   label: string;
-  href?: string;
+  url?: string;
   copyable?: string;
   suggested?: boolean;
   bgColor?: string;
@@ -29,7 +29,8 @@ export interface SocialAccount {
 
 export interface Fact {
   name: string;
-  value: string;
+  label: string;
+  url?: string;
   image: {
     childImageSharp: {
       fixed: FixedObject;
@@ -39,7 +40,7 @@ export interface Fact {
 
 export interface BannerField {
   name: string;
-  value: string;
+  url: string;
   external?: boolean;
 }
 

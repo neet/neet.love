@@ -3,18 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
-import { faIconMap } from '../utils/fa-icon-map';
 import { SocialAccount as ISocialAccount } from '../utils/entities';
-
-const Wrapper = styled.a`
-  display: flex;
-  align-items: center;
-  color: var(--fg-default-color);
-
-  &:hover {
-    text-decoration: none;
-  }
-`;
+import { faIconMap } from '../utils/fa-icon-map';
 
 const Icon = styled.div`
   display: flex;
@@ -41,7 +31,7 @@ const Name = styled.span`
 
 const Suggested = styled.span`
   display: block;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   color: var(--fg-wash-color);
   font-size: 10px;
 `;
@@ -53,9 +43,19 @@ const Label = styled.span`
   color: var(--fg-wash-color);
   text-overflow: ellipsis;
   white-space: nowrap;
+`;
+
+const Wrapper = styled.a`
+  display: flex;
+  align-items: center;
+  color: var(--fg-default-color);
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+
+    ${Label} {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -78,7 +78,7 @@ export const SocialAccount = (props: SocialAccountProps) => {
   );
 
   return (
-    <Wrapper href={acct.href || '#'} target="__blank" rel="me" onClick={handleClick}>
+    <Wrapper href={acct.url || '#'} target="_blank" rel="me" onClick={handleClick}>
       <Icon>
         <FontAwesomeIcon icon={faIconMap[acct.type]} />
       </Icon>

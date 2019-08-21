@@ -18,7 +18,8 @@ export const FactListContainer = () => {
         edges {
           node {
             name
-            value
+            label
+            url
             image {
               childImageSharp {
                 fixed(width: 33, height: 33) {

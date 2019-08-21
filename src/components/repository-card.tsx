@@ -74,7 +74,7 @@ export const RepostiroyCard = (props: RepostiroyCardProps) => {
 
   return (
     <Wrapper>
-      <Name href={repository.url} target="__blank">
+      <Name href={repository.url} target="_blank">
         <Icon icon={faBook} style={{ fontSize: '12px', marginRight: '8px' }} />
         {repository.name}
       </Name>

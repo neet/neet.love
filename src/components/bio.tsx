@@ -58,7 +58,7 @@ const Name = styled.h2`
 const Description = styled.span`
   color: var(--fg-wash-color);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
 
   @media screen and (min-width: 580px) {
     font-size: 18px;
@@ -131,7 +131,7 @@ export const Bio = (props: BioProps) => {
 
         <Actions>
           <LinkButton to="/links">Contact</LinkButton>
-          <AnchorButton href="https://wantedly.com/users/62403069" target="__blank" appearance="skeleton">
+          <AnchorButton href="https://wantedly.com/users/62403069" target="_blank" appearance="skeleton">
             Hire me
           </AnchorButton>
         </Actions>

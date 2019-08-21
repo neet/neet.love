@@ -24,7 +24,7 @@ export const SocialAccountListContainer = ({ onlySuggested, limit }: SocialAccou
           node {
             id
             copyable
-            href
+            url
             label
             name
             suggested

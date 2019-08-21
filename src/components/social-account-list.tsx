@@ -19,6 +19,7 @@ const ListItem = styled.li`
   @media screen and (min-width: 580px) {
     flex-basis: 50%;
     padding-right: 8px;
+    /* flex-basis: calc(100% / 3); */
   }
 `;
 

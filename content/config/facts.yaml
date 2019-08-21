@@ -1,24 +1,28 @@
 ---
 - name: Pronouns
-  value: he/him
+  label: he/him
   image: ../assets/male-symbol.png
+  url: https://pronoun.is/he
 
 - name: Nation
-  value: Japan
+  label: Japan
   image: ../assets/japan.png
+  url: https://www.japan.go.jp
 
 - name: 2nd languages
-  value: English, Mandarin
+  label: English, Mandarin
   image: ../assets/globe.png
 
 - name: Favourite drink
-  value: Chai
+  label: Chai
   image: ../assets/chai.png
+  url: https://en.wikipedia.org/wiki/Masala_chai
 
 - name: Workstation
-  value: Macbook Pro
+  label: Macbook Pro
   image: ../assets/computer.png
 
 - name: Waifu
-  value: Nakano Nino
+  label: Nino Nakano
   image: ../assets/nino.png
+  url: https://5hanayome.fandom.com/wiki/Nino_Nakano

@@ -58,7 +58,7 @@ const ListItem = styled.li`
     }
   }
 
-  & > a {
+  a {
     color: var(--fg-default-color);
     font-size: 14px;
     font-weight: 500;
@@ -93,11 +93,11 @@ export const Banner = (props: BannerProps) => {
           {props.fields.map((field, i) => (
             <ListItem key={`${field.name}-${i}`}>
               {field.external ? (
-                <a href={field.value} target="__blank">
+                <a href={field.url} target="_blank">
                   {field.name}
                 </a>
               ) : (
-                <Link to={field.value} activeClassName="active" partiallyActive>
+                <Link to={field.url} activeClassName="active" partiallyActive>
                   {field.name}
                 </Link>
               )}

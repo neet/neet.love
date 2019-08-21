@@ -25,7 +25,7 @@ export const BannerContainer = () => {
       allBannerYaml {
         edges {
           node {
-            value
+            url
             name
             external
           }
