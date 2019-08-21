@@ -7,6 +7,10 @@
   value: Japan
   image: ../assets/japan.png
 
+- name: 2nd languages
+  value: English, Mandarin
+  image: ../assets/globe.png
+
 - name: Favourite drink
   value: Chai
   image: ../assets/chai.png
@@ -15,10 +19,6 @@
   value: Macbook Pro
   image: ../assets/computer.png
 
-- name: IDE
-  value: VSCode
-  image: ../assets/vscode.png
-
-- name: 2nd languages
-  value: English, Mandarin
-  image: ../assets/globe.png
+- name: Waifu
+  value: Nakano Nino
+  image: ../assets/nino.png
