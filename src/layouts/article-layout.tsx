@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontawesomeSSR } from '../components/fontawesome-ssr';
 import { Footer } from '../components/footer';
 import { BannerContainer } from '../containers/banner-container';
+import { OpenGraphContainer } from '../containers/open-graph-container';
 import { GlobalStyle } from '../styles/global-style';
 
 const Wrapper = styled.div``;
@@ -22,6 +23,7 @@ export const ArticleLayout: React.SFC = ({ children }) => {
     <>
       <GlobalStyle />
       <FontawesomeSSR />
+      <OpenGraphContainer />
       <Wrapper>
         <BannerContainer />
         <Content>{children}</Content>

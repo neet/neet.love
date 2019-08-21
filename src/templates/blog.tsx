@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Article } from '../components/article';
-import { SeoContainer } from '../containers/seo-container';
+import { OpenGraphContainer } from '../containers/open-graph-container';
 import { ArticleLayout } from '../layouts/article-layout';
 import { Article as ArticleEntity, Bio, SiteMetadata } from '../utils/entities';
 
@@ -17,12 +17,17 @@ interface PageTemplateProps {
 
 const Blog: React.SFC<PageTemplateProps> = ({ data }) => (
   <>
-    <SeoContainer
-      title={`${data.markdownRemark.frontmatter.title} - ${data.site.siteMetadata.title}`}
+    {/* Overrides layouts/article-layout.tsx */}
+    <OpenGraphContainer
+      title={data.markdownRemark.frontmatter.title}
       description={data.markdownRemark.excerpt}
+      thumbnail={
+        data.markdownRemark.frontmatter.thumbnail &&
+        data.site.siteMetadata.siteUrl + data.markdownRemark.frontmatter.thumbnail.childImageSharp.fixed.src
+      }
     />
     <ArticleLayout>
-      <Article article={data.markdownRemark} author={data.bioYaml} />
+      <Article article={data.markdownRemark} bio={data.bioYaml} />
     </ArticleLayout>
   </>
 );
@@ -34,11 +39,15 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
         description
       }
     }
     bioYaml {
       name
+      email
+      note
+      quote
       avatar {
         childImageSharp {
           fixed(width: 46) {

@@ -2,7 +2,7 @@ import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { oc } from 'ts-optchain';
-import { Article as ArticleEntity, SiteMetadata } from '../../utils/entities';
+import { Article as ArticleEntity, Bio } from '../../utils/entities';
 import { Footer } from './footer';
 import { Header } from './header';
 
@@ -67,7 +67,8 @@ const Content = styled.div`
       font-weight: bold;
     }
 
-    th, td {
+    th,
+    td {
       padding: 0.4em 0.8em;
       border: 1px solid var(--border-default-color);
     }
@@ -86,17 +87,17 @@ const Content = styled.div`
 
 export interface ArticleProps {
   article: ArticleEntity;
-  author: SiteMetadata['author'];
+  bio: Bio;
 }
 
 export const Article = (props: ArticleProps) => {
-  const { article, author } = props;
+  const { article, bio } = props;
 
   return (
     <Wrapper>
       <Title>{article.frontmatter.title}</Title>
       <Thumbnail fluid={oc(article.frontmatter.thumbnail).childImageSharp.fluid()} />
-      <Header article={article} author={author} />
+      <Header article={article} bio={bio} />
       <Content dangerouslySetInnerHTML={{ __html: article.html }} />
       <Footer article={article} />
     </Wrapper>

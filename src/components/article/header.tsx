@@ -1,7 +1,7 @@
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import { Article, SiteMetadata } from '../../utils/entities';
+import { Article, Bio } from '../../utils/entities';
 import { Link } from 'gatsby';
 
 const Name = styled.span`
@@ -46,16 +46,16 @@ const Time = styled.time`
 
 interface HeaderProps {
   article: Article;
-  author: SiteMetadata['author'];
+  bio: Bio;
 }
 
 export const Header = (props: HeaderProps) => {
   return (
     <Wrapper>
       <Link to='/'>
-        <Avatar fixed={props.author.avatar.childImageSharp.fixed} />
+        <Avatar fixed={props.bio.avatar.childImageSharp.fixed} />
         <Meta>
-          <Name>{props.author.name}</Name>
+          <Name>{props.bio.name}</Name>
           <Time dateTime={props.article.frontmatter.date}>Published at {new Date(props.article.frontmatter.date).toLocaleDateString()}</Time>
         </Meta>
       </Link>

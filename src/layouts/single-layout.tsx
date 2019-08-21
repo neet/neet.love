@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { FontawesomeSSR } from '../components/fontawesome-ssr';
 import { Footer } from '../components/footer';
 import { BannerContainer } from '../containers/banner-container';
+import { OpenGraphContainer } from '../containers/open-graph-container';
 import { GlobalStyle } from '../styles/global-style';
-import { SeoContainer } from '../containers/seo-container';
 
 const Wrapper = styled.main``;
 
@@ -21,7 +21,7 @@ const Content = styled.div`
 export const SingleLayout: React.SFC = ({ children }) => {
   return (
     <>
-      <SeoContainer />
+      <OpenGraphContainer />
       <GlobalStyle />
       <FontawesomeSSR />
       <Wrapper>
