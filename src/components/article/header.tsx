@@ -56,7 +56,7 @@ export const Header = (props: HeaderProps) => {
         <Avatar fixed={props.bio.avatar.childImageSharp.fixed} />
         <Meta>
           <Name>{props.bio.name}</Name>
-          <Time dateTime={props.article.frontmatter.date}>Published at {new Date(props.article.frontmatter.date).toLocaleDateString()}</Time>
+          <Time dateTime={props.article.frontmatter.date}>Published on {new Date(props.article.frontmatter.date).toLocaleDateString()}</Time>
         </Meta>
       </Link>
     </Wrapper>
