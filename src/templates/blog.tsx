@@ -17,18 +17,19 @@ interface PageTemplateProps {
 
 const Blog: React.SFC<PageTemplateProps> = ({ data }) => (
   <>
+    <ArticleLayout>
+      <Article article={data.markdownRemark} bio={data.bioYaml} />
+    </ArticleLayout>
+
     {/* Overrides layouts/article-layout.tsx */}
     <OpenGraphContainer
-      title={data.markdownRemark.frontmatter.title}
+      title={data.markdownRemark.frontmatter.title + ' - ' + data.site.siteMetadata.title}
       description={data.markdownRemark.excerpt}
       thumbnail={
         data.markdownRemark.frontmatter.thumbnail &&
         data.site.siteMetadata.siteUrl + data.markdownRemark.frontmatter.thumbnail.childImageSharp.fixed.src
       }
     />
-    <ArticleLayout>
-      <Article article={data.markdownRemark} bio={data.bioYaml} />
-    </ArticleLayout>
   </>
 );
 

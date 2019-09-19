@@ -14,19 +14,19 @@ export const OpenGraph = (props: OpenGraphProps) => {
 
   return (
     <Helmet
-      title={title}
+      title={title || defaults.title}
       meta={[
-        { name: 'og:title', content: defaults.title || title },
-        { name: 'og:image', content: defaults.thumbnail || thumbnail },
+        { name: 'og:title', content: title || defaults.title },
+        { name: 'og:image', content: thumbnail || defaults.thumbnail },
         { name: 'og:type', content: 'website' },
 
         { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:creator', content: defaults.author || author },
-        { name: 'twitter:title', content: defaults.title || title },
+        { name: 'twitter:creator', content: author || defaults.author },
+        { name: 'twitter:title', content: title || defaults.title },
 
-        { name: 'description', content: defaults.description || description },
-        { name: 'og:description', content: defaults.description || description },
-        { name: 'twitter:description', content: defaults.description || description },
+        { name: 'description', content: description || defaults.description },
+        { name: 'og:description', content: description || defaults.description },
+        { name: 'twitter:description', content: description || defaults.description },
       ]}
     />
   );
