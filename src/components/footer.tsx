@@ -13,7 +13,7 @@ const Wrapper = styled.footer`
 
 export const Footer = () => {
   return (
-    <Wrapper>
+    <Wrapper role="contentinfo">
       <p>
         Copyright © 2019 Ryo Igarashi, Released under the MIT license
       </p>

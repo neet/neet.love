@@ -81,7 +81,7 @@ export interface BannerProps {
 
 export const Banner = (props: BannerProps) => {
   return (
-    <Wrapper>
+    <Wrapper role="banner">
       <Hgroup>
         <Title>
           <Link to="/">{props.siteTitle}</Link>

@@ -6,9 +6,9 @@ import { BannerContainer } from '../containers/banner-container';
 import { OpenGraphContainer } from '../containers/open-graph-container';
 import { GlobalStyle } from '../styles/global-style';
 
-const Wrapper = styled.main``;
+const Wrapper = styled.div``;
 
-const Content = styled.div`
+const Content = styled.main`
   box-sizing: border-box;
   margin: auto;
   padding: 0 24px;
