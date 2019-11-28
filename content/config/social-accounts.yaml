@@ -52,13 +52,6 @@
   bgColor: '#de3a25'
   fgColor: white
 
-- type: medium
-  name: Medium
-  label: '@neetshin'
-  url: https://medium.com/@neetshin
-  bgColor: white
-  fgColor: black
-
 - type: twitter
   name: Twitter
   label: '@TheGodOfNeet'
@@ -67,11 +60,25 @@
   fgColor: white
 
 - type: twitter
-  name: Twitter (for sensitive topics)
+  name: Twitter (NSFW)
   label: '@FlawOfEduaction'
   url: https://twitter.com/flawofeducation
   bgColor: '#1a97f0'
   fgColor: white
+
+- type: instagram
+  name: Instagram
+  label: '@TheGodOfNeet'
+  url: https://www.instagram.com/thegodofneet/
+  bgColor: '#E4405F'
+  fgColor: white
+
+- type: medium
+  name: Medium
+  label: '@neetshin'
+  url: https://medium.com/@neetshin
+  bgColor: white
+  fgColor: black
 
 - type: slideshare
   name: SlideShare
