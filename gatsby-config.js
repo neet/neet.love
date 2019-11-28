@@ -80,7 +80,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#0076FF',
         display: 'minimal-ui',
-        icon: 'content/assets/avatar.jpg',
+        icon: 'content/assets/avatar.png',
       },
     },
     'gatsby-plugin-feed',
