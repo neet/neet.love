@@ -65,11 +65,11 @@ const PrimaryLanguageName = styled.span`
   font-size: 12px;
 `;
 
-export interface RepostiroyCardProps {
+export interface RepositoryCardProps {
   repository: GithubRepository;
 }
 
-export const RepostiroyCard = (props: RepostiroyCardProps) => {
+export const RepositoryCard = (props: RepositoryCardProps) => {
   const { repository } = props;
 
   return (

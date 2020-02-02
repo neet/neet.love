@@ -18,7 +18,7 @@ export const RepositoryListContainer = () => {
     query RepositoryListContainerQuery {
       github {
         user(login: "neet") {
-          pinnedItems(first: 6) {
+          pinnedItems(first: 6, types: [REPOSITORY]) {
             nodes {
               ... on GitHub_Repository {
                 id

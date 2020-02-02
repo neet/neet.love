@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GithubRepository } from '../utils/entities';
-import { RepostiroyCard } from './repository-card';
+import { RepositoryCard } from './repository-card';
 
 const List = styled.ul`
   display: flex;
@@ -32,7 +32,7 @@ export const RepositoryList = (props: RepositoryListProps) => {
     <List>
       {props.repositories.map(repository => (
         <ListItem key={repository.id}>
-          <RepostiroyCard repository={repository} />
+          <RepositoryCard repository={repository} />
         </ListItem>
       ))}
     </List>
