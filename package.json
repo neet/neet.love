@@ -65,7 +65,7 @@
     "@types/styled-components": "^4.1.19",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "stylelint": "^11.0.0",
+    "stylelint": "^12.0.1",
     "stylelint-config-property-sort-order-smacss": "^5.2.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
