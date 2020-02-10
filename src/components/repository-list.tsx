@@ -19,6 +19,7 @@ const ListItem = styled.li`
   padding: 0 4px 12px;
 
   @media screen and (min-width: 580px) {
+    flex-basis: 100%;
     padding: 0 8px 16px;
   }
 `;
