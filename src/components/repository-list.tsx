@@ -15,11 +15,11 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   box-sizing: border-box;
-  flex: 0 0 50%;
+  flex: 0 0 100%;
   padding: 0 4px 12px;
 
   @media screen and (min-width: 580px) {
-    flex-basis: 100%;
+    flex-basis: 50%;
     padding: 0 8px 16px;
   }
 `;

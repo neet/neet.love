@@ -47,7 +47,7 @@ const Meta = styled.div`
 `;
 
 const Name = styled.h2`
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 500;
 
   @media screen and (min-width: 580px) {
