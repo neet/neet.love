@@ -13,6 +13,7 @@ import {
   faTelegramPlane,
   faTwitter,
   faInstagram,
+  faLine,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,4 +33,5 @@ export const faIconMap = {
   bitcoin: faBitcoin,
   patreon: faPatreon,
   instagram: faInstagram,
+  line: faLine,
 };
