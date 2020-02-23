@@ -73,6 +73,13 @@
   bgColor: '#E4405F'
   fgColor: white
 
+- type: line
+  name: LINE
+  label: thegodofneet
+  url: http://line.naver.jp/ti/p/hCtcmGHPxY
+  bgColor: '#00B900'
+  fgColor: white
+
 - type: medium
   name: Medium
   label: '@neetshin'
