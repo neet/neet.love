@@ -4,7 +4,9 @@ import {
   faDocker,
   faGithub,
   faGitlab,
+  faInstagram,
   faKeybase,
+  faLine,
   faMastodon,
   faMediumM,
   faNpm,
@@ -12,8 +14,6 @@ import {
   faSlideshare,
   faTelegramPlane,
   faTwitter,
-  faInstagram,
-  faLine,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 

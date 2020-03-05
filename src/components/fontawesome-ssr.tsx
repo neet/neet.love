@@ -1,8 +1,6 @@
-import React from 'react';
 import { dom } from '@fortawesome/fontawesome-svg-core';
+import React from 'react';
 
 export const FontawesomeSSR = () => {
-  return (
-    <style dangerouslySetInnerHTML={{__html: dom.css()}} />
-  )
-}
+  return <style dangerouslySetInnerHTML={{ __html: dom.css() }} />;
+};

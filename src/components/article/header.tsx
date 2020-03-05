@@ -1,8 +1,9 @@
+import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+
 import { Article, Bio } from '../../types';
-import { Link } from 'gatsby';
 
 const Name = styled.span`
   font-weight: 500;
@@ -52,11 +53,14 @@ interface HeaderProps {
 export const Header = (props: HeaderProps) => {
   return (
     <Wrapper>
-      <Link to='/'>
+      <Link to="/">
         <Avatar fixed={props.bio.avatar.childImageSharp.fixed} />
         <Meta>
           <Name>{props.bio.name}</Name>
-          <Time dateTime={props.article.frontmatter.date}>Published on {new Date(props.article.frontmatter.date).toLocaleDateString()}</Time>
+          <Time dateTime={props.article.frontmatter.date}>
+            Published on{' '}
+            {new Date(props.article.frontmatter.date).toLocaleDateString()}
+          </Time>
         </Meta>
       </Link>
     </Wrapper>

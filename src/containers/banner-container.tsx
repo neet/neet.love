@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { Banner } from '../components/banner';
 import { BannerField, SiteMetadata } from '../types';
 
@@ -34,5 +35,10 @@ export const BannerContainer = () => {
     }
   `);
 
-  return <Banner siteTitle={data.site.siteMetadata.title} fields={data.allBannerYaml.edges.map(edge => edge.node)} />;
+  return (
+    <Banner
+      siteTitle={data.site.siteMetadata.title}
+      fields={data.allBannerYaml.edges.map(edge => edge.node)}
+    />
+  );
 };

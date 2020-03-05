@@ -25,7 +25,8 @@ export const syntaxHighlight = css`
   code[class*='language-'],
   pre[class*='language-'] {
     color: var(--solarized-base00);
-    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+      monospace;
     font-size: 1em;
     text-align: left;
     white-space: pre;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { BioContainer } from '../containers/bio-container';
 import { FactListContainer } from '../containers/fact-list-container';
 import { RepositoryListContainer } from '../containers/repository-list-container';

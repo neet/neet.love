@@ -14,9 +14,7 @@ const Wrapper = styled.footer`
 export const Footer = () => {
   return (
     <Wrapper role="contentinfo">
-      <p>
-        Copyright © 2019 Ryo Igarashi, Released under the MIT license
-      </p>
+      <p>Copyright © 2019 Ryo Igarashi, Released under the MIT license</p>
     </Wrapper>
-  )
-}
+  );
+};

@@ -52,6 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   if (allMarkdown.errors) {
+    // eslint-disable-next-line no-console
     console.error(allMarkdown.errors);
     throw new Error(allMarkdown.errors);
   }

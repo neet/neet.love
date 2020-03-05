@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { OpenGraph, OpenGraphProps } from '../components/open-graph';
 import { Bio, SiteMetadata } from '../types';
 
@@ -42,7 +43,9 @@ export const OpenGraphContainer = (props: Omit<OpenGraphProps, 'defaults'>) => {
         title: data.site.siteMetadata.title,
         author: data.bioYaml.name,
         description: data.site.siteMetadata.description,
-        thumbnail: data.site.siteMetadata.siteUrl + data.bioYaml.avatar.childImageSharp.fixed.src,
+        thumbnail:
+          data.site.siteMetadata.siteUrl +
+          data.bioYaml.avatar.childImageSharp.fixed.src,
       }}
     />
   );

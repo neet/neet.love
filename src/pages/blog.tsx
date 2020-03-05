@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { ArticleListContainer } from '../containers/article-list-container';
 import { OpenGraphContainer } from '../containers/open-graph-container';
 import { SingleLayout } from '../layouts/single-layout';
@@ -8,7 +9,7 @@ import { SiteMetadata } from '../types';
 interface BlogQueryData {
   site: {
     siteMetadata: SiteMetadata;
-  }
+  };
 }
 
 const Blog = () => {

@@ -1,6 +1,7 @@
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+
 import { AnchorButton, LinkButton } from '../components/link-button';
 import { Bio as BioEntity } from '../types';
 
@@ -112,7 +113,11 @@ export const Bio = (props: BioProps) => {
 
       <Actions>
         <LinkButton to="/links">Contact</LinkButton>
-        <AnchorButton href="https://wantedly.com/users/62403069" target="_blank" appearance="skeleton">
+        <AnchorButton
+          href="https://wantedly.com/users/62403069"
+          target="_blank"
+          appearance="skeleton"
+        >
           Hire me
         </AnchorButton>
       </Actions>

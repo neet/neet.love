@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { FactList } from '../components/fact-list';
 import { Fact } from '../types';
 

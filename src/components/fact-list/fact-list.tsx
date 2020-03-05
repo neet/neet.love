@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { Fact } from '../../types';
 import { FactCard } from './fact-card';
 
@@ -25,8 +26,8 @@ export interface FactListProps {
 export const FactList = (props: FactListProps) => {
   return (
     <List>
-      {props.facts.map(fact => (
-        <ListItem>
+      {props.facts.map((fact, i) => (
+        <ListItem key={`${fact.name}-${i}`}>
           <FactCard fact={fact} />
         </ListItem>
       ))}

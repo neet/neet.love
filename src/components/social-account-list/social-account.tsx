@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
+
 import { SocialAccount as ISocialAccount } from '../../types';
 import { faIconMap } from '../../utils/fa-icon-map';
 
@@ -78,7 +79,12 @@ export const SocialAccount = (props: SocialAccountProps) => {
   );
 
   return (
-    <Wrapper href={acct.url || '#'} target="_blank" rel="me" onClick={handleClick}>
+    <Wrapper
+      href={acct.url || '#'}
+      target="_blank"
+      rel="me"
+      onClick={handleClick}
+    >
       <Icon>
         <FontAwesomeIcon icon={faIconMap[acct.type]} />
       </Icon>

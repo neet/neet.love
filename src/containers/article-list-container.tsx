@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { ArticleList } from '../components/article-list';
 import { Article } from '../types';
 
@@ -39,5 +40,9 @@ export const ArticleListContainer = () => {
     }
   `);
 
-  return <ArticleList articles={data.allMarkdownRemark.edges.map(edge => edge.node)} />;
+  return (
+    <ArticleList
+      articles={data.allMarkdownRemark.edges.map(edge => edge.node)}
+    />
+  );
 };

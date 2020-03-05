@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+
 import { BannerField } from '../types';
 
 const Wrapper = styled.header`
@@ -93,7 +94,7 @@ export const Banner = (props: BannerProps) => {
           {props.fields.map((field, i) => (
             <ListItem key={`${field.name}-${i}`}>
               {field.external ? (
-                <a href={field.url} target="_blank">
+                <a href={field.url} target="_blank" rel="noopener noreferrer">
                   {field.name}
                 </a>
               ) : (

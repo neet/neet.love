@@ -1,5 +1,1 @@
-
-
-const QualificationListItem = () => {
-
-}
+const QualificationListItem = () => {};

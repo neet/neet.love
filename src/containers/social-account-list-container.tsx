@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useMemo } from 'react';
+
 import { SocialAccountList } from '../components/social-account-list';
 import { SocialAccount } from '../types';
 
@@ -16,7 +17,10 @@ export interface SocialAccountListContainerProps {
   onlySuggested?: boolean;
 }
 
-export const SocialAccountListContainer = ({ onlySuggested, limit }: SocialAccountListContainerProps) => {
+export const SocialAccountListContainer = ({
+  onlySuggested,
+  limit,
+}: SocialAccountListContainerProps) => {
   const data = useStaticQuery<SocialAccountQueryData>(graphql`
     query SocialAccountQuery {
       allSocialAccountsYaml {
@@ -41,10 +45,15 @@ export const SocialAccountListContainer = ({ onlySuggested, limit }: SocialAccou
         .map(edge => edge.node)
         .filter(node => (onlySuggested ? node.suggested : true))
         .slice(0, limit),
-    [data],
+    [data, limit, onlySuggested],
   );
 
-  const isPartial = useMemo(() => !!(onlySuggested || limit), [onlySuggested, limit]);
+  const isPartial = useMemo(() => !!(onlySuggested || limit), [
+    onlySuggested,
+    limit,
+  ]);
 
-  return <SocialAccountList socialAccounts={socialAccounts} isPartial={isPartial} />;
+  return (
+    <SocialAccountList socialAccounts={socialAccounts} isPartial={isPartial} />
+  );
 };

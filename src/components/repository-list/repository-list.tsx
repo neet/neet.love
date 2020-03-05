@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { GithubRepository } from '../../types';
 import { RepositoryCard } from './repository-card';
 

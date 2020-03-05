@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { FontawesomeSSR } from '../components/fontawesome-ssr';
 import { Footer } from '../components/footer';
 import { BannerContainer } from '../containers/banner-container';

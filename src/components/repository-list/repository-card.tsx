@@ -1,7 +1,12 @@
-import { faBook, faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBook,
+  faCodeBranch,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components';
+
 import { GithubRepository } from '../../types';
 
 const Wrapper = styled.div`
@@ -83,17 +88,27 @@ export const RepositoryCard = (props: RepositoryCardProps) => {
 
       <Footer>
         <FooterItem>
-          <PrimaryLanguageColor style={{ backgroundColor: repository.primaryLanguage.color }} />
-          <PrimaryLanguageName>{repository.primaryLanguage.name}</PrimaryLanguageName>
+          <PrimaryLanguageColor
+            style={{ backgroundColor: repository.primaryLanguage.color }}
+          />
+          <PrimaryLanguageName>
+            {repository.primaryLanguage.name}
+          </PrimaryLanguageName>
         </FooterItem>
 
         <FooterItem>
-          <Icon icon={faStar} style={{ fontSize: '10px', marginRight: '2px' }} />
+          <Icon
+            icon={faStar}
+            style={{ fontSize: '10px', marginRight: '2px' }}
+          />
           {repository.stargazers.totalCount}
         </FooterItem>
 
         <FooterItem>
-          <Icon icon={faCodeBranch} style={{ fontSize: '10px', marginRight: '2px' }} />
+          <Icon
+            icon={faCodeBranch}
+            style={{ fontSize: '10px', marginRight: '2px' }}
+          />
           {repository.forkCount}
         </FooterItem>
       </Footer>

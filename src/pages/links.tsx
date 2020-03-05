@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { OpenGraphContainer } from '../containers/open-graph-container';
 import { SocialAccountListContainer } from '../containers/social-account-list-container';
 import { SingleLayout } from '../layouts/single-layout';

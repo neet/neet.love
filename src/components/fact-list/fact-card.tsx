@@ -1,6 +1,7 @@
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+
 import { Fact } from '../../types';
 
 const Image = styled(GatsbyImage)`

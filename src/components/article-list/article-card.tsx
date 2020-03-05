@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+
 import { Article } from '../../types';
 
 const Wrapper = styled(Link)`
@@ -73,12 +74,18 @@ export const ArticleCard = (props: ArticleCardProps) => {
 
   return (
     <Wrapper to={article.fields.slug}>
-      {article.frontmatter.thumbnail && <Thumbnail fluid={article.frontmatter.thumbnail.childImageSharp.fluid} />}
+      {article.frontmatter.thumbnail && (
+        <Thumbnail
+          fluid={article.frontmatter.thumbnail.childImageSharp.fluid}
+        />
+      )}
 
       <Meta>
         <Title>{article.frontmatter.title}</Title>
         <Excerpt>{article.excerpt}</Excerpt>
-        <Time dateTime={article.frontmatter.date}>{new Date(article.frontmatter.date).toLocaleDateString()}</Time>
+        <Time dateTime={article.frontmatter.date}>
+          {new Date(article.frontmatter.date).toLocaleDateString()}
+        </Time>
       </Meta>
     </Wrapper>
   );

@@ -25,8 +25,14 @@ export const OpenGraph = (props: OpenGraphProps) => {
         { name: 'twitter:title', content: title || defaults.title },
 
         { name: 'description', content: description || defaults.description },
-        { name: 'og:description', content: description || defaults.description },
-        { name: 'twitter:description', content: description || defaults.description },
+        {
+          name: 'og:description',
+          content: description || defaults.description,
+        },
+        {
+          name: 'twitter:description',
+          content: description || defaults.description,
+        },
       ]}
     />
   );

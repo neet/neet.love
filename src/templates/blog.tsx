@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+
 import { Article } from '../components/article';
 import { OpenGraphContainer } from '../containers/open-graph-container';
 import { ArticleLayout } from '../layouts/article-layout';
@@ -23,11 +24,16 @@ const Blog: React.SFC<PageTemplateProps> = ({ data }) => (
 
     {/* Overrides layouts/article-layout.tsx */}
     <OpenGraphContainer
-      title={data.markdownRemark.frontmatter.title + ' - ' + data.site.siteMetadata.title}
+      title={
+        data.markdownRemark.frontmatter.title +
+        ' - ' +
+        data.site.siteMetadata.title
+      }
       description={data.markdownRemark.excerpt}
       thumbnail={
         data.markdownRemark.frontmatter.thumbnail &&
-        data.site.siteMetadata.siteUrl + data.markdownRemark.frontmatter.thumbnail.childImageSharp.fixed.src
+        data.site.siteMetadata.siteUrl +
+          data.markdownRemark.frontmatter.thumbnail.childImageSharp.fixed.src
       }
     />
   </>
