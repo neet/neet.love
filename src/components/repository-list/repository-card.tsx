@@ -2,7 +2,7 @@ import { faBook, faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components';
-import { GithubRepository } from '../utils/entities';
+import { GithubRepository } from '../../utils/entities';
 
 const Wrapper = styled.div`
   display: flex;

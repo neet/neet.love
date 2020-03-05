@@ -13,7 +13,6 @@ export const BioContainer = () => {
       bioYaml {
         name
         note
-        quote
         avatar {
           childImageSharp {
             fixed(width: 120, height: 120) {

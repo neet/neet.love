@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Fact } from '../utils/entities';
+import { Fact } from '../../utils/entities';
 import { FactCard } from './fact-card';
 
 const List = styled.ul`

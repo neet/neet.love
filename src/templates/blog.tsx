@@ -48,7 +48,6 @@ export const query = graphql`
       name
       email
       note
-      quote
       avatar {
         childImageSharp {
           fixed(width: 46) {

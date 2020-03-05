@@ -1,5 +1,3 @@
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
@@ -94,22 +92,6 @@ const Actions = styled.div`
   }
 `;
 
-const Note = styled.blockquote`
-  position: relative;
-  flex: 0 0;
-  margin-bottom: 24px;
-  padding-left: 16px;
-  color: var(--fg-wash-color);
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 300;
-  text-align: center;
-`;
-
-const QuoteIcon = styled(FontAwesomeIcon)`
-  margin-right: 0.5em;
-`;
-
 interface BioProps {
   author?: BioEntity;
 }
@@ -120,27 +102,20 @@ export const Bio = (props: BioProps) => {
   if (!author) return null;
 
   return (
-    <>
-      <Wrapper>
-        <Avatar fixed={author.avatar.childImageSharp.fixed} alt="My avatar" />
+    <Wrapper>
+      <Avatar fixed={author.avatar.childImageSharp.fixed} alt="My avatar" />
 
-        <Meta>
-          <Name>{author.name}</Name>
-          <Description>{author.note}</Description>
-        </Meta>
+      <Meta>
+        <Name>{author.name}</Name>
+        <Description>{author.note}</Description>
+      </Meta>
 
-        <Actions>
-          <LinkButton to="/links">Contact</LinkButton>
-          <AnchorButton href="https://wantedly.com/users/62403069" target="_blank" appearance="skeleton">
-            Hire me
-          </AnchorButton>
-        </Actions>
-      </Wrapper>
-
-      <Note>
-        <QuoteIcon icon={faQuoteLeft} />
-        {author.quote}
-      </Note>
-    </>
+      <Actions>
+        <LinkButton to="/links">Contact</LinkButton>
+        <AnchorButton href="https://wantedly.com/users/62403069" target="_blank" appearance="skeleton">
+          Hire me
+        </AnchorButton>
+      </Actions>
+    </Wrapper>
   );
 };

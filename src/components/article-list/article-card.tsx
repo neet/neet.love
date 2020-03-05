@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import { Article } from '../utils/entities';
+import { Article } from '../../utils/entities';
 
 const Wrapper = styled(Link)`
   display: flex;

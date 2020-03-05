@@ -14,7 +14,9 @@ export type SocialAccountType =
   | 'npm'
   | 'docker'
   | 'bitcoin'
-  | 'patreon';
+  | 'patreon'
+  | 'line'
+  | 'instagram';
 
 export interface SocialAccount {
   type: SocialAccountType;
@@ -94,5 +96,4 @@ export interface Bio {
     };
   };
   note: string;
-  quote: string;
 }

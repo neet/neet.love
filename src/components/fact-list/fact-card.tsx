@@ -1,7 +1,7 @@
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import { Fact } from '../utils/entities';
+import { Fact } from '../../utils/entities';
 
 const Image = styled(GatsbyImage)`
   width: 33px;
