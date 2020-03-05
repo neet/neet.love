@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { RepositoryList } from '../components/repository-list';
-import { GithubRepository } from '../utils/entities';
+import { GithubRepository } from '../types';
 
 interface RepositoryListContainerQueryData {
   github: {

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { FactList } from '../components/fact-list';
-import { Fact } from '../utils/entities';
+import { Fact } from '../types';
 
 export interface FactListContainerQueryData {
   allFactsYaml: {

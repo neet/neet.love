@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { ArticleList } from '../components/article-list';
-import { Article } from '../utils/entities';
+import { Article } from '../types';
 
 interface ArticleListContainerQueryData {
   allMarkdownRemark: {

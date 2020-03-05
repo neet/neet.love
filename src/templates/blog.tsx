@@ -3,7 +3,7 @@ import React from 'react';
 import { Article } from '../components/article';
 import { OpenGraphContainer } from '../containers/open-graph-container';
 import { ArticleLayout } from '../layouts/article-layout';
-import { Article as ArticleEntity, Bio, SiteMetadata } from '../utils/entities';
+import { Article as ArticleEntity, Bio, SiteMetadata } from '../types';
 
 interface PageTemplateProps {
   data: {

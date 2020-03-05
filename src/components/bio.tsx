@@ -2,7 +2,7 @@ import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { AnchorButton, LinkButton } from '../components/link-button';
-import { Bio as BioEntity } from '../utils/entities';
+import { Bio as BioEntity } from '../types';
 
 const Wrapper = styled.section`
   display: grid;

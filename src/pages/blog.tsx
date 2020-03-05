@@ -3,7 +3,7 @@ import React from 'react';
 import { ArticleListContainer } from '../containers/article-list-container';
 import { OpenGraphContainer } from '../containers/open-graph-container';
 import { SingleLayout } from '../layouts/single-layout';
-import { SiteMetadata } from '../utils/entities';
+import { SiteMetadata } from '../types';
 
 interface BlogQueryData {
   site: {

@@ -1,7 +1,7 @@
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import { Article, Bio } from '../../utils/entities';
+import { Article, Bio } from '../../types';
 import { Link } from 'gatsby';
 
 const Name = styled.span`

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Article } from '../../utils/entities';
+import { Article } from '../../types';
 import { ArticleCard } from './article-card';
 
 const List = styled.ul`

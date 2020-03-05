@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Banner } from '../components/banner';
-import { BannerField, SiteMetadata } from '../utils/entities';
+import { BannerField, SiteMetadata } from '../types';
 
 interface BannerContainerQueryData {
   site: {

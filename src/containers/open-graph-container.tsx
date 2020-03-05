@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { OpenGraph, OpenGraphProps } from '../components/open-graph';
-import { Bio, SiteMetadata } from '../utils/entities';
+import { Bio, SiteMetadata } from '../types';
 
 export interface OpenGraphContainerQueryData {
   bioYaml: Bio;

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
-import { SocialAccount as ISocialAccount } from '../../utils/entities';
+import { SocialAccount as ISocialAccount } from '../../types';
 import { faIconMap } from '../../utils/fa-icon-map';
 
 const Icon = styled.div`

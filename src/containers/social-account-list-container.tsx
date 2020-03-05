@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useMemo } from 'react';
 import { SocialAccountList } from '../components/social-account-list';
-import { SocialAccount } from '../utils/entities';
+import { SocialAccount } from '../types';
 
 interface SocialAccountQueryData {
   allSocialAccountsYaml: {

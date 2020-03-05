@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { SocialAccount } from './social-account';
-import { SocialAccount as SocialAccountEntity } from '../../utils/entities';
+import { SocialAccount as SocialAccountEntity } from '../../types';
 
 const List = styled.ul`
   display: flex;

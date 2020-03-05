@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { BannerField } from '../utils/entities';
+import { BannerField } from '../types';
 
 const Wrapper = styled.header`
   display: flex;

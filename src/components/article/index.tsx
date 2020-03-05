@@ -2,7 +2,7 @@ import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { oc } from 'ts-optchain';
-import { Article as ArticleEntity, Bio } from '../../utils/entities';
+import { Article as ArticleEntity, Bio } from '../../types';
 import { Footer } from './footer';
 import { Header } from './header';
 

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Bio } from '../components/bio';
-import { Bio as BioEntity } from '../utils/entities';
+import { Bio as BioEntity } from '../types';
 
 interface BioContainerQueryData {
   bioYaml: BioEntity;

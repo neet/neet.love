@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import querystring from 'querystring';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
-import { Article } from '../../utils/entities';
+import { Article } from '../../types';
 import { Button } from '../link-button';
 
 const Wrapper = styled.footer`
