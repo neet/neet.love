@@ -23,11 +23,12 @@ const Meta = styled.div`
   min-width: 0;
 `;
 
-const Name = styled.span`
+const Name = styled.h4`
   display: flex;
   align-items: center;
   font-size: 12px;
   font-weight: 500;
+  line-height: 1.5;
 `;
 
 const Suggested = styled.span`

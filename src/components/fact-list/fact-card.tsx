@@ -10,10 +10,11 @@ const Image = styled(GatsbyImage)`
   margin-right: 10px;
 `;
 
-const Name = styled.span`
+const Name = styled.h4`
   display: block;
   font-size: 12px;
   font-weight: 500;
+  line-height: 1.5;
 `;
 
 const Value = styled.span`
