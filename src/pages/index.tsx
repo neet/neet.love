@@ -14,7 +14,9 @@ const Border = styled.hr`
 `;
 
 const Section = styled.section`
-  margin-bottom: 24px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 `;
 
 const Index: React.SFC = () => (
@@ -33,7 +35,7 @@ const Index: React.SFC = () => (
     </Section>
 
     <Section>
-      <h3>Contact</h3>
+      <h3>Social Accounts</h3>
       <SocialAccountListContainer limit={6} />
     </Section>
   </SingleLayout>

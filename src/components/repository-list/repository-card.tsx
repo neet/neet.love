@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   flex-direction: column;
   height: 100%;
-  padding: 16px;
+  padding: 14px;
   border-radius: 4px;
   box-shadow: 0 3px 16px var(--shadow-bg-color);
 

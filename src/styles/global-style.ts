@@ -46,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
-    text-rendering: optimizelegibility;
+    text-rendering: optimizeLegibility;
     font-feature-settings: "kern";
   }
 

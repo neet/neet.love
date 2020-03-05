@@ -1,5 +1,12 @@
 import { FixedObject, FluidObject } from 'gatsby-image';
 
+export interface SharpImage {
+  childImageSharp: {
+    fixed: FixedObject;
+    fluid: FluidObject;
+  };
+}
+
 export type SocialAccountType =
   | 'mastodon'
   | 'email'
@@ -33,11 +40,7 @@ export interface Fact {
   name: string;
   label: string;
   url?: string;
-  image: {
-    childImageSharp: {
-      fixed: FixedObject;
-    };
-  };
+  image: SharpImage;
 }
 
 export interface BannerField {
@@ -71,12 +74,7 @@ export interface Article {
   frontmatter: {
     title: string;
     date: string;
-    thumbnail?: {
-      childImageSharp: {
-        fixed: FixedObject;
-        fluid: FluidObject;
-      };
-    };
+    thumbnail?: SharpImage;
   };
 }
 
@@ -89,11 +87,12 @@ export interface SiteMetadata {
 export interface Bio {
   name: string;
   email: string;
-  avatar: {
-    childImageSharp: {
-      fixed: FixedObject;
-      fluid: FluidObject;
-    };
-  };
+  avatar: SharpImage;
   note: string;
+}
+
+export interface Qualification {
+  name: string;
+  url: string;
+  createdAt: string;
 }
