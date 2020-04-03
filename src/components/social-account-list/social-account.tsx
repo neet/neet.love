@@ -13,9 +13,9 @@ const Icon = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 28px;
+  width: 33px;
   margin-right: 16px;
-  font-size: 28px;
+  font-size: 33px;
 `;
 
 const Meta = styled.div`
