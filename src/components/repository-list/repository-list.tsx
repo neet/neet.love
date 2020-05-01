@@ -32,7 +32,7 @@ interface RepositoryListProps {
 export const RepositoryList = (props: RepositoryListProps) => {
   return (
     <List>
-      {props.repositories.map(repository => (
+      {props.repositories.map((repository) => (
         <ListItem key={repository.id}>
           <RepositoryCard repository={repository} />
         </ListItem>

@@ -42,7 +42,7 @@ export const ArticleListContainer = () => {
 
   return (
     <ArticleList
-      articles={data.allMarkdownRemark.edges.map(edge => edge.node)}
+      articles={data.allMarkdownRemark.edges.map((edge) => edge.node)}
     />
   );
 };

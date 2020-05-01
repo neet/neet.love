@@ -38,7 +38,7 @@ export const BannerContainer = () => {
   return (
     <Banner
       siteTitle={data.site.siteMetadata.title}
-      fields={data.allBannerYaml.edges.map(edge => edge.node)}
+      fields={data.allBannerYaml.edges.map((edge) => edge.node)}
     />
   );
 };
