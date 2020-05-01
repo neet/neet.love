@@ -42,8 +42,8 @@ export const SocialAccountListContainer = ({
   const socialAccounts = useMemo(
     () =>
       data.allSocialAccountsYaml.edges
-        .map(edge => edge.node)
-        .filter(node => (onlySuggested ? node.suggested : true))
+        .map((edge) => edge.node)
+        .filter((node) => (onlySuggested ? node.suggested : true))
         .slice(0, limit),
     [data, limit, onlySuggested],
   );

@@ -29,7 +29,7 @@ export const QualificationListContainer = () => {
 
   return (
     <QualificationList
-      qualifications={data.allQualificationsYaml.edges.map(edge => edge.node)}
+      qualifications={data.allQualificationsYaml.edges.map((edge) => edge.node)}
     />
   );
 };

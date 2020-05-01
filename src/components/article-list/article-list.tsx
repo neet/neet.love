@@ -19,7 +19,7 @@ export interface ArticleListProps {
 export const ArticleList = (props: ArticleListProps) => {
   return (
     <List>
-      {props.articles.map(article => (
+      {props.articles.map((article) => (
         <ListItem key={article.id}>
           <ArticleCard article={article} />
         </ListItem>

@@ -34,5 +34,5 @@ export const FactListContainer = () => {
     }
   `);
 
-  return <FactList facts={data.allFactsYaml.edges.map(edge => edge.node)} />;
+  return <FactList facts={data.allFactsYaml.edges.map((edge) => edge.node)} />;
 };
