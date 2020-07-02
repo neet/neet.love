@@ -6717,12 +6717,12 @@ gatsby-source-filesystem@^2.3.8:
     valid-url "^1.0.9"
     xstate "^4.9.1"
 
-gatsby-source-graphql@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-graphql/-/gatsby-source-graphql-2.5.2.tgz#33136b51f90a15f07b665aa4765fb549f49c47d3"
-  integrity sha512-aM96mHFPNWE2GSIaK6KcuL4tDYOmejO9cxQWs8adpJBYw8SiEOy604dAMDPaHCtOSM+LySz8BjjWu0CSUhcxrA==
+gatsby-source-graphql@^2.5.9:
+  version "2.5.9"
+  resolved "https://registry.yarnpkg.com/gatsby-source-graphql/-/gatsby-source-graphql-2.5.9.tgz#8d4f0b9cf502774f718ad24cbeba223f5fc39892"
+  integrity sha512-mvgtsBNTk5lKNPgLoqsYOwhxl+8O/mppnxKg4nGL/+DxVqXE1nryROj7XQobfnVyH4VRIyJupBeQzWqletR70g==
   dependencies:
-    "@babel/runtime" "^7.9.6"
+    "@babel/runtime" "^7.10.3"
     apollo-link "1.2.14"
     apollo-link-http "^1.5.17"
     dataloader "^2.0.0"
