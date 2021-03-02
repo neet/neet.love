@@ -22,7 +22,7 @@
     "@babel/core": "^7.12.10",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "babel-plugin-styled-components": "^1.11.1",
     "copy-to-clipboard": "^3.3.1",
