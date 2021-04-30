@@ -14578,10 +14578,10 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylelint-config-property-sort-order-smacss@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-7.0.0.tgz#97f7aa28380168407d6d3e3a225a6700799fd633"
-  integrity sha512-n3rB8O1QzteY+vDZRRRDgBwr2iweJhQwv2knLApqCdCRBAQq4Dt+TQhXOE6WbywxTO2+e8tBtS9jKIXnuIOxpw==
+stylelint-config-property-sort-order-smacss@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-7.1.0.tgz#3a18d74dcaf35a668dda218dea9bfe6c2c5f33f3"
+  integrity sha512-Tsr3yiRohKoWsWmVulWpF5OoAe/Ei7QYmkfLV0BEp/HJRc09dda14QtS8RwJh/ac0MIwANLUETuM9nLoet2y0w==
   dependencies:
     css-property-sort-order-smacss "~2.1.3"
     stylelint-order "^4.0.0"
