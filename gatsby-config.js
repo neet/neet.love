@@ -72,17 +72,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'neet.love',
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#0076FF',
-        display: 'minimal-ui',
-        icon: 'content/assets/avatar.jpg',
-      },
-    },
     'gatsby-plugin-feed',
     // 'gatsby-plugin-offline',
     'gatsby-transformer-yaml',
