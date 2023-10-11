@@ -13,7 +13,7 @@ import {
   faPatreon,
   faSlideshare,
   faTelegramPlane,
-  faTwitter,
+  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +23,7 @@ export const faIconMap = {
   discord: faDiscord,
   telegram: faTelegramPlane,
   keybase: faKeybase,
-  twitter: faTwitter,
+  twitter: faXTwitter,
   github: faGithub,
   gitlab: faGitlab,
   medium: faMediumM,

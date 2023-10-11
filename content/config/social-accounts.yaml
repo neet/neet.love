@@ -9,16 +9,16 @@
 
 - type: discord
   name: Discord
-  label: '@neet#9999'
-  copyable: neet#9999
+  label: '@thegodofneet'
+  copyable: thegodofneet
   bgColor: '#7289da'
   fgColor: white
   suggested: true
 
 - type: telegram
   name: Telegram
-  label: '@neetchan'
-  url: https://t.me/neetchan
+  label: '@rigarashi'
+  url: https://t.me/rigarashi
   bgColor: '#2ca5e0'
   fgColor: white
   suggested: true
@@ -53,16 +53,16 @@
   fgColor: white
 
 - type: twitter
-  name: Twitter
+  name: X
   label: '@TheGodOfNeet'
-  url: https://twitter.com/thegodofneet
+  url: https://x.com/thegodofneet
   bgColor: '#1a97f0'
   fgColor: white
 
 - type: twitter
-  name: Twitter (NSFW)
+  name: X (NSFW)
   label: '@FlawOfEduaction'
-  url: https://twitter.com/flawofeducation
+  url: https://x.com/flawofeducation
   bgColor: '#1a97f0'
   fgColor: white
 
