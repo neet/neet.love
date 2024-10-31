@@ -23,7 +23,7 @@
     "html-react-parser": "^5.1.15",
     "js-yaml": "^4.1.0",
     "microcms-js-sdk": "^2.7.0",
-    "next": "14.0.3",
+    "next": "14.2.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.0",
