@@ -1,9 +1,0 @@
-- name: PGP
-  url: https://keybase.io/neet/pgp_keys.asc
-  external: true
-
-- name: Blog
-  url: /blog
-
-- name: Links
-  url: /links

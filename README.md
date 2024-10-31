@@ -1,50 +1,36 @@
-# gatsby-starter-typescript-plus
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
+## Getting Started
 
-This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
-
-## Features
-
-- TypeScript
-- ESLint (with custom ESLint rules)
-- Markdown rendering with Remark
-- Basic component structure
-- Styling with [emotion](https://emotion.sh/)
-
-## Geting started
-
-Install this starter (assuming you have `gatsby-cli` installed) by running the following command:
+First, run the development server:
 
 ```bash
-gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Developing
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```bash
-# install dependencies
-yarn
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-# ...or, for npm
-npm install
+## Learn More
 
-# serve with hot reload at localhost:8000
-npm start
+To learn more about Next.js, take a look at the following resources:
 
-# build for production
-npm run build
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-# build for production and push to gh-pages branch
-npm run deploy
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Credits
+## Deploy on Vercel
 
-Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

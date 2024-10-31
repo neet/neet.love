@@ -1,51 +1,30 @@
 {
-  "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "plugin:storybook/recommended",
+    "next/core-web-vitals"
   ],
-  "plugins": ["import", "simple-import-sort", "react-hooks"],
-  "parserOptions": {
-    "ecmaVersion": 9,
-    "sourceType": "module"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
+  "plugins": ["import", "simple-import-sort"],
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
   "rules": {
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-member-accessibility": [
-      "error",
-      { "accessibility": "no-public" }
-    ],
-    "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_"
+    "simple-import-sort/imports": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/strict",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
       }
-    ],
-    "no-console": "error",
-    "simple-import-sort/sort": "error",
-    "react/display-name": "off",
-    "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
-  }
+    }
+  ]
 }
