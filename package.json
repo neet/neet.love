@@ -73,7 +73,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.4.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.0.1",
     "stylelint": "^13.13.1",
     "stylelint-config-property-sort-order-smacss": "^7.1.0",
     "stylelint-config-recommended": "^5.0.0",
