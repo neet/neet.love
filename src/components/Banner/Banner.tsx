@@ -9,7 +9,7 @@ export const Banner: FC<BannerProps> = (props) => {
 
   return (
     <header aria-labelledby={id} className={className} {...rest}>
-      <div className="mx-auto flex max-w-screen-md justify-between py-4">
+      <div className="mx-auto flex max-w-screen-md justify-between p-4">
         <Link
           href="/"
           shallow={false}
