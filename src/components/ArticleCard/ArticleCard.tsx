@@ -63,9 +63,6 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 374px"
-          style={{
-            viewTransitionName: `article-image-${blog.id}`,
-          }}
         />
       </div>
 

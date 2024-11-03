@@ -78,9 +78,6 @@ export default async function Page(props: ArticlePageProps) {
             height={data.eyecatch.height}
             sizes="(max-width: 768px) 100vw, 756px"
             priority
-            style={{
-              viewTransitionName: `article-image-${data.id}`,
-            }}
           />
         </header>
 
