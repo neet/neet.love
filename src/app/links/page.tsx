@@ -22,7 +22,7 @@ export default async function Page() {
   const richLinks = load(content) as link.RichLink[];
 
   return (
-    <div className="m-auto max-w-screen-md">
+    <div className="mx-auto max-w-screen-md">
       <header className="my-8 text-center">
         <h1
           className={clsx("font-yeseva text-4xl md:text-6xl dark:text-white")}
