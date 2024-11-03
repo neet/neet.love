@@ -21,7 +21,9 @@ export default async function Page() {
   return (
     <div className="m-auto max-w-screen-md">
       <header className="my-8 text-center">
-        <h1 className={clsx("font-serif text-4xl md:text-6xl dark:text-white")}>
+        <h1
+          className={clsx("font-yeseva text-4xl md:text-6xl dark:text-white")}
+        >
           Journal
         </h1>
         <p className="mt-2 dark:text-white">

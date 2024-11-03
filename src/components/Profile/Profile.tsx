@@ -32,7 +32,7 @@ export const Profile: FC = () => {
         </div>
 
         <div className="grow">
-          <h1 id="name" className="font-serif text-2xl leading-tight">
+          <h1 id="name" className="font-yeseva text-2xl leading-tight">
             <a href="#name">Ryō Igarashi</a>
           </h1>
 

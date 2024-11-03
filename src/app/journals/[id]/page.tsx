@@ -55,7 +55,7 @@ export default async function Page(props: ArticlePageProps) {
     <>
       <article className="w-full" lang={data.lang}>
         <header className="relative z-10 m-auto mt-8 max-w-screen-md px-4 text-center md:px-0">
-          <h1 className="font-serif text-4xl md:text-6xl dark:text-white">
+          <h1 className="font-yeseva text-4xl md:text-6xl dark:text-white">
             {data.title}
           </h1>
 

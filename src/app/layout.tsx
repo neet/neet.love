@@ -2,7 +2,7 @@ import "./globals.css";
 
 import clsx from "clsx";
 import type { Metadata } from "next";
-import { Roboto, Yeseva_One } from "next/font/google";
+import { Roboto, Roboto_Mono, Yeseva_One } from "next/font/google";
 
 import { Banner } from "@/components/Banner/Banner";
 import { ContentInfo } from "@/components/ContentInfo/ContentInfo";
@@ -17,6 +17,12 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   variable: "--font-roboto",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-roboto-mono",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx(roboto.variable, yesevaOne.variable)}>
+    <html
+      lang="en"
+      className={clsx(roboto.variable, yesevaOne.variable, robotoMono.variable)}
+    >
       <body
         className={clsx(
           "bg-zinc-50 font-sans antialiased",

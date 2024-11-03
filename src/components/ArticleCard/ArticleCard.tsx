@@ -70,7 +70,7 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
       </div>
 
       <div className="p-4">
-        <h2 className="font-serif text-2xl" id={headingId}>
+        <h2 className="font-yeseva text-2xl" id={headingId}>
           <Link
             href={`/journals/${blog.id}`}
             hrefLang={lang}

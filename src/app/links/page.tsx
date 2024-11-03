@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import clsx from "clsx";
-import yaml from "js-yaml";
+import { load } from "js-yaml";
 import { Metadata } from "next";
 
 import { RichLink } from "@/components/RichLink/RichLink";
@@ -19,12 +19,14 @@ export default async function Page() {
     path.join(fileURLToPath(import.meta.url), "../links.yaml"),
     "utf-8",
   );
-  const richLinks = yaml.load(content) as link.RichLink[];
+  const richLinks = load(content) as link.RichLink[];
 
   return (
     <div className="m-auto max-w-screen-md">
       <header className="my-8 text-center">
-        <h1 className={clsx("font-serif text-4xl md:text-6xl dark:text-white")}>
+        <h1
+          className={clsx("font-yeseva text-4xl md:text-6xl dark:text-white")}
+        >
           Links
         </h1>
         <p className="mt-2 dark:text-white">
