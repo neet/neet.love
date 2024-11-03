@@ -19,7 +19,7 @@ export function parse(html: string) {
             alt={alt}
             width={width}
             height={height}
-            sizes="(min-width: 768px) 768px, 100vw"
+            sizes="(max-width: 768px) 100vw, 640px"
           />
         );
       }

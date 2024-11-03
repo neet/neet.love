@@ -62,7 +62,7 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
           alt={title}
           fill
           className="object-cover"
-          sizes="(min-width: 768px) 768px, 100vw"
+          sizes="(max-width: 768px) 100vw, 374px"
           style={{
             viewTransitionName: `article-image-${blog.id}`,
           }}
