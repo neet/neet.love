@@ -66,13 +66,6 @@
   bgColor: "#1a97f0"
   fgColor: white
 
-- type: twitter
-  name: X (NSFW)
-  label: "@FlawOfEduaction"
-  url: https://x.com/flawofeducation
-  bgColor: "#1a97f0"
-  fgColor: white
-
 - type: instagram
   name: Instagram
   label: "@TheGodOfNeet"
@@ -131,8 +124,8 @@
 
 - type: bitcoin
   name: Bitcoin
-  label: 3AucsLDnY37qipYngLM5KH9heWkJ1AEArv
-  copyable: 3AucsLDnY37qipYngLM5KH9heWkJ1AEArv
+  label: 1Mf3exp4Taxx4cFcS6cMHppPnxarPGgUUp
+  copyable: 1Mf3exp4Taxx4cFcS6cMHppPnxarPGgUUp
   bgColor: "#ff8e02"
   fgColor: white
 
