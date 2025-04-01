@@ -1,4 +1,14 @@
+import { Metadata } from "next";
+
 import { Profile } from "@/components/Profile";
+
+export const metadata: Metadata = {
+  title: "About Me",
+  description: "a little about me",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

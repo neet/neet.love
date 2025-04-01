@@ -12,6 +12,9 @@ import * as link from "@/models/link";
 export const metadata: Metadata = {
   title: "Links",
   description: "Links to things I use",
+  alternates: {
+    canonical: "/links",
+  },
 };
 
 export default async function Page() {

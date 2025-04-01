@@ -31,6 +31,9 @@ export async function generateMetadata(
     openGraph: {
       images: [new URL(data.eyecatch.url)],
     },
+    alternates: {
+      canonical: `/journals/${id}`,
+    },
   };
 }
 export const revalidate = 86_400;

@@ -26,6 +26,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://neet.love"),
   title: {
     default: "neet.love",
     template: "%s | neet.love",

@@ -7,8 +7,10 @@ import { Blog } from "@/models/content";
 
 export const metadata: Metadata = {
   title: "Journals",
-  description: "articles",
-  robots: "noindex",
+  description: "fragments of my thoughts, feelings, and memory",
+  alternates: {
+    canonical: "/journals",
+  },
 };
 
 export const revalidate = 60;
