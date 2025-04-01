@@ -14,7 +14,7 @@ export type Hashtag = {
 
 export type Blog = MicroCMSDefaultFields & {
   readonly id: string;
-  readonly lang: string;
+  readonly lang: string[];
   readonly title: string;
   readonly content: string;
   readonly eyecatch: MicroCMSImage;

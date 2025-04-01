@@ -1,4 +1,5 @@
 "use client";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -23,7 +24,8 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
   const headingId = useId();
 
   const { blog } = props;
-  const { title, eyecatch, lang } = blog;
+  const { title, eyecatch } = blog;
+  const lang = blog.lang[0];
 
   const content = useMemo(() => {
     return sanitize(blog.content);
@@ -49,7 +51,7 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
 
   return (
     <article
-      className="group relative w-full cursor-pointer overflow-hidden rounded border border-zinc-300 bg-white outline-offset-4 hover:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 dark:border dark:border-zinc-700 dark:bg-black dark:text-white"
+      className="group relative w-full cursor-pointer overflow-hidden rounded border border-zinc-300 bg-white outline-offset-4 hover:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 dark:border dark:border-zinc-500 dark:bg-black dark:text-white"
       tabIndex={0}
       aria-labelledby={headingId}
       onClick={handleClick}
@@ -67,7 +69,13 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
       </div>
 
       <div className="p-4">
-        <h2 className="font-yeseva text-2xl" id={headingId}>
+        <h2
+          className={clsx(
+            "text-2xl",
+            lang === "ja" ? "font-sans font-bold" : "font-yeseva",
+          )}
+          id={headingId}
+        >
           <Link
             href={`/journals/${blog.id}`}
             hrefLang={lang}

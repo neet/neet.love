@@ -46,6 +46,8 @@ export default async function Page(props: ArticlePageProps) {
     contentId: id,
   });
 
+  const lang = data.lang[0];
+
   const formatter = new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
     month: "short",
@@ -56,9 +58,14 @@ export default async function Page(props: ArticlePageProps) {
 
   return (
     <>
-      <article className="w-full" lang={data.lang}>
+      <article className="w-full" lang={lang}>
         <header className="relative z-10 m-auto mt-8 max-w-screen-md px-4 text-center md:px-0">
-          <h1 className="font-yeseva text-4xl md:text-6xl dark:text-white">
+          <h1
+            className={clsx(
+              "text-4xl md:text-6xl dark:text-white",
+              lang === "ja" ? "font-sans font-bold" : "font-yeseva",
+            )}
+          >
             {data.title}
           </h1>
 

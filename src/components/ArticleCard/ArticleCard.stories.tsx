@@ -14,7 +14,7 @@ export const Default: Story = {
   args: {
     blog: {
       id: "1",
-      lang: "en",
+      lang: ["en"],
       title: "Hello world",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       eyecatch: {

@@ -10,7 +10,14 @@ const config: Config = {
     extend: {
       // https://nextjs.org/docs/pages/building-your-application/optimizing/fonts#with-tailwind-css
       fontFamily: {
-        sans: ["var(--font-roboto)"],
+        sans: [
+          "var(--font-roboto)",
+          "Hiragino Kaku Gothic ProN",
+          "Hiragino Sans",
+          "Meiryo",
+          "ui-sans-serif",
+          "system-ui",
+        ],
         mono: ["var(--font-roboto-mono)"],
         yeseva: ["var(--font-yeseva-one)"],
       },

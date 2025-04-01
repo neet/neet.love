@@ -18,7 +18,7 @@ export const Profile: FC = () => {
         "flex aspect-video w-full max-w-96 rotate-2 scale-95 items-center",
         "rounded border-b-8 border-l-2 border-r-8 border-t-2 border-black",
         "bg-white p-4 shadow-lg transition",
-        "dark:border dark:border-zinc-700 dark:bg-black dark:text-white",
+        "dark:border dark:border-zinc-500 dark:bg-black dark:text-white",
       )}
     >
       <div className="flex gap-4">
