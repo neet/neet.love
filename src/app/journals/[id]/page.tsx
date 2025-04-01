@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { Metadata, ResolvingMetadata } from "next";
+import { unstable_noStore as noStore } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +12,9 @@ type ArticlePageProps = {
   readonly params: {
     readonly id: string;
   };
+  readonly searchParams: {
+    readonly draftKey?: string;
+  };
 };
 
 export async function generateMetadata(
@@ -18,10 +22,12 @@ export async function generateMetadata(
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { id } = props.params;
+  const { draftKey } = props.searchParams;
 
   const data = await client.get<Blog>({
     endpoint: "blogs",
     contentId: id,
+    queries: { draftKey },
   });
 
   return {
@@ -36,14 +42,21 @@ export async function generateMetadata(
     },
   };
 }
+
 export const revalidate = 86_400;
 
 export default async function Page(props: ArticlePageProps) {
   const { id } = props.params;
+  const { draftKey } = props.searchParams;
+
+  if (draftKey != null) {
+    noStore();
+  }
 
   const data = await client.get<Blog>({
     endpoint: "blogs",
     contentId: id,
+    queries: { draftKey },
   });
 
   const lang = data.lang[0];
