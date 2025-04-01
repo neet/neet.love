@@ -51,7 +51,7 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
 
   return (
     <article
-      className="group relative w-full cursor-pointer overflow-hidden rounded border border-zinc-300 bg-white outline-offset-4 hover:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 dark:border dark:border-zinc-500 dark:bg-black dark:text-white"
+      className="group relative w-full cursor-pointer overflow-hidden rounded border border-zinc-300 bg-white outline-offset-4 hover:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 dark:border dark:border-zinc-700 dark:bg-black dark:text-white"
       tabIndex={0}
       aria-labelledby={headingId}
       onClick={handleClick}

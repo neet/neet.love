@@ -93,7 +93,8 @@ export default async function Page(props: ArticlePageProps) {
             className={clsx(
               "mt-4 rounded-lg",
               "border-b-8 border-l-4 border-r-8 border-t-4",
-              "border-black bg-black shadow-lg  dark:border-zinc-700",
+              "border-black bg-black shadow-lg",
+              "dark:border dark:border-zinc-700",
             )}
             src={data.eyecatch.url}
             alt=""
