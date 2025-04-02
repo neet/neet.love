@@ -7,6 +7,7 @@ import Link from "next/link";
 import { client } from "@/api";
 import { Blog } from "@/models/content";
 import { parse } from "@/utils/parse";
+import { sanitize } from "@/utils/sanitize";
 
 type ArticlePageProps = {
   readonly params: {
@@ -30,10 +31,12 @@ export async function generateMetadata(
     queries: { draftKey },
   });
 
+  const description = sanitize(data.content).slice(0, 160) + "…";
+
   return {
     title: data.title,
     robots: (await parent).robots?.basic,
-    // description: data.description,
+    description,
     openGraph: {
       images: [new URL(data.eyecatch.url)],
     },

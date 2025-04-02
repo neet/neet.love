@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Profile } from "@/components/Profile";
 
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "neet.love",
   description: "a little about me",
   alternates: {
     canonical: "/",
