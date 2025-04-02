@@ -41,6 +41,7 @@ export const RichLink: FC<RichLinkProps> = (props) => {
         className="text-sm underline"
         target="_blank"
         rel="noreferrer noopener"
+        tabIndex={-1}
       >
         {richLink.label}
       </a>
