@@ -33,7 +33,7 @@
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.20",
     "@storybook/addon-interactions": "^7.6.20",
-    "@storybook/addon-links": "^7.6.20",
+    "@storybook/addon-links": "^8.4.6",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.20",
     "@storybook/nextjs": "^7.6.20",
