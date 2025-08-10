@@ -11,7 +11,7 @@ import * as link from "@/models/link";
 
 export const metadata: Metadata = {
   title: "Links",
-  description: "Links to things I use",
+  description: "Get in touch with me or find some of the tools I use",
   alternates: {
     canonical: "/links",
   },
@@ -33,7 +33,7 @@ export default async function Page() {
           Links
         </h1>
         <p className="mt-2 dark:text-white">
-          links to where I am on the internet
+          Get in touch with me or find some of the tools I use
         </p>
       </header>
 

@@ -1,11 +1,17 @@
 ---
-- type: mastodon
-  name: Mastodon
-  label: "@neet@mastodon.social"
-  url: https://mastodon.social/@neet
-  bgColor: "#297ccd"
+- type: email
+  name: Email
+  label: n33t5hin@gmail.com
+  url: mailto:n33t5hin@gmail.com
+  bgColor: "#1981e0"
   fgColor: white
-  suggested: true
+
+- type: twitter
+  name: X
+  label: "@TheGodOfNeet"
+  url: https://x.com/thegodofneet
+  bgColor: "#1a97f0"
+  fgColor: white
 
 - type: discord
   name: Discord
@@ -15,28 +21,13 @@
   fgColor: white
   suggested: true
 
-- type: telegram
-  name: Telegram
-  label: "@rigarashi"
-  url: https://t.me/rigarashi
-  bgColor: "#2ca5e0"
+- type: mastodon
+  name: Mastodon
+  label: "@neet@mastodon.social"
+  url: https://mastodon.social/@neet
+  bgColor: "#297ccd"
   fgColor: white
   suggested: true
-
-- type: keybase
-  name: Keybase
-  label: "@neet"
-  url: https://keybase.io/neet
-  bgColor: "#FF6300"
-  fgColor: white
-  suggested: true
-
-- type: email
-  name: Email
-  label: n33t5hin@gmail.com
-  url: mailto:n33t5hin@gmail.com
-  bgColor: "#1981e0"
-  fgColor: white
 
 - type: github
   name: GitHub
@@ -57,41 +48,6 @@
   label: "@neetshin"
   url: https://gitlab.com/neetshin
   bgColor: "#de3a25"
-  fgColor: white
-
-- type: twitter
-  name: X
-  label: "@TheGodOfNeet"
-  url: https://x.com/thegodofneet
-  bgColor: "#1a97f0"
-  fgColor: white
-
-- type: instagram
-  name: Instagram
-  label: "@TheGodOfNeet"
-  url: https://www.instagram.com/thegodofneet/
-  bgColor: "#E4405F"
-  fgColor: white
-
-- type: line
-  name: LINE
-  label: thegodofneet
-  url: http://line.naver.jp/ti/p/hCtcmGHPxY
-  bgColor: "#00B900"
-  fgColor: white
-
-- type: medium
-  name: Medium
-  label: "@neetshin"
-  url: https://medium.com/@neetshin
-  bgColor: white
-  fgColor: black
-
-- type: slideshare
-  name: SlideShare
-  label: ssuser881c4e
-  url: https://www.slideshare.net/ssuser881c4e
-  bgColor: "#0077b5"
   fgColor: white
 
 - type: npm
@@ -135,3 +91,11 @@
   url: https://www.patreon.com/neetshin
   bgColor: "#f96854"
   fgColor: white
+
+- type: keybase
+  name: Keybase
+  label: "@neet"
+  url: https://keybase.io/neet
+  bgColor: "#FF6300"
+  fgColor: white
+  suggested: true
