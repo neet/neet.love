@@ -1,15 +1,15 @@
-type RichLinkBase = {
+type BaseContact = {
   type: string;
   name: string;
   label: string;
 };
 
-export type RichLinkWithURL = RichLinkBase & {
+export type ContactWithURL = BaseContact & {
   url: string;
 };
 
-export type RichLinkWithCopyable = RichLinkBase & {
+export type ContactWithCopyable = BaseContact & {
   copyable: string;
 };
 
-export type RichLink = RichLinkWithURL | RichLinkWithCopyable;
+export type Contact = ContactWithURL | ContactWithCopyable;

@@ -6,23 +6,23 @@ import clsx from "clsx";
 import { load } from "js-yaml";
 import { Metadata } from "next";
 
-import { RichLink } from "@/components/RichLink/RichLink";
+import { ContactCard } from "@/components/ContactCard/ContactCard";
 import * as link from "@/models/link";
 
 export const metadata: Metadata = {
-  title: "Links",
+  title: "Contact",
   description: "Get in touch with me or find some of the tools I use",
   alternates: {
-    canonical: "/links",
+    canonical: "/contact",
   },
 };
 
 export default async function Page() {
-  const content = await fs.readFile(
-    path.join(fileURLToPath(import.meta.url), "../links.yaml"),
+  const items = await fs.readFile(
+    path.join(fileURLToPath(import.meta.url), "../items.yaml"),
     "utf-8",
   );
-  const richLinks = load(content) as link.RichLink[];
+  const contacts = load(items) as link.Contact[];
 
   return (
     <div className="mx-auto max-w-screen-md">
@@ -30,7 +30,7 @@ export default async function Page() {
         <h1
           className={clsx("font-yeseva text-4xl md:text-6xl dark:text-white")}
         >
-          Links
+          Contact
         </h1>
         <p className="mt-2 dark:text-white">
           Get in touch with me or find some of the tools I use
@@ -38,9 +38,9 @@ export default async function Page() {
       </header>
 
       <ul className="mx-auto grid max-w-xl grid-cols-2 gap-2 px-3 md:grid-cols-4 md:gap-3 md:px-0">
-        {richLinks.map((richLink, i) => (
-          <li key={`${richLink.name}-${i}`} className="col-span-1">
-            <RichLink richLink={richLink} />
+        {contacts.map((contact, i) => (
+          <li key={`${contact.name}-${i}`} className="col-span-1">
+            <ContactCard contact={contact} />
           </li>
         ))}
       </ul>

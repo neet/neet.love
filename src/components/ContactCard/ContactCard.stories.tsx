@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { RichLink } from "./RichLink";
+import { ContactCard } from "./ContactCard";
 
-const meta: Meta<typeof RichLink> = {
-  title: "Components/RichLink",
-  component: RichLink,
+const meta: Meta<typeof ContactCard> = {
+  title: "Components/ContactCard",
+  component: ContactCard,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof RichLink>;
+type Story = StoryObj<typeof ContactCard>;
 
 export const Default: Story = {
   args: {
-    richLink: {
+    contact: {
       name: "Twitter",
       label: "@twitter",
       url: "https://twitter.com",

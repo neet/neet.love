@@ -6,19 +6,19 @@ import { FC, KeyboardEventHandler, MouseEventHandler } from "react";
 import * as link from "@/models/link";
 import { faIconMap } from "@/utils/icon";
 
-export type RichLinkProps = {
-  richLink: link.RichLink;
+export type ContactCardProps = {
+  contact: link.Contact;
 };
 
-export const RichLink: FC<RichLinkProps> = (props) => {
-  const { richLink } = props;
+export const ContactCard: FC<ContactCardProps> = (props) => {
+  const { contact } = props;
 
   const invoke = () => {
-    if ("url" in richLink) {
-      return window.open(richLink.url, "_blank");
+    if ("url" in contact) {
+      return window.open(contact.url, "_blank");
     } else {
-      navigator.clipboard.writeText(richLink.copyable);
-      window.alert(`Copied "${richLink.copyable}" to clipboard!`);
+      navigator.clipboard.writeText(contact.copyable);
+      window.alert(`“${contact.copyable}” has been copied to clipboard!`);
     }
   };
 
@@ -35,18 +35,18 @@ export const RichLink: FC<RichLinkProps> = (props) => {
   };
 
   const labelNode =
-    "url" in richLink ? (
+    "url" in contact ? (
       <a
-        href={richLink.url}
+        href={contact.url}
         className="text-sm underline"
         target="_blank"
         rel="noreferrer noopener"
         tabIndex={-1}
       >
-        {richLink.label}
+        {contact.label}
       </a>
     ) : (
-      <button className="text-sm underline">{richLink.label}</button>
+      <button className="text-sm underline">{contact.label}</button>
     );
 
   return (
@@ -75,7 +75,7 @@ export const RichLink: FC<RichLinkProps> = (props) => {
       >
         <FontAwesomeIcon
           // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          icon={faIconMap[richLink.type]!}
+          icon={faIconMap[contact.type]!}
           fixedWidth
           size="xl"
         />
@@ -83,7 +83,7 @@ export const RichLink: FC<RichLinkProps> = (props) => {
 
       <div className="mt-1 w-full overflow-hidden text-ellipsis text-center text-zinc-600 dark:text-zinc-400">
         <div className="line-clamp-1 text-black dark:text-white">
-          {richLink.name}
+          {contact.name}
         </div>
 
         {labelNode}

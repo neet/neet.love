@@ -34,10 +34,10 @@ export const Banner: FC<BannerProps> = (props) => {
             </li>
             <li>
               <Link
-                href="/links"
+                href="/contact"
                 className="lowercase text-blue-600 underline dark:text-blue-400"
               >
-                Links
+                Contact
               </Link>
             </li>
           </ul>
