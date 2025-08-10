@@ -2,9 +2,10 @@
 - type: email
   name: Email
   label: n33t5hin@gmail.com
-  url: mailto:n33t5hin@gmail.com
+  copyable: n33t5hin@gmail.com
   bgColor: "#1981e0"
   fgColor: white
+  suggested: true
 
 - type: twitter
   name: X
@@ -12,6 +13,7 @@
   url: https://x.com/thegodofneet
   bgColor: "#1a97f0"
   fgColor: white
+  suggested: true
 
 - type: discord
   name: Discord
@@ -98,4 +100,3 @@
   url: https://keybase.io/neet
   bgColor: "#FF6300"
   fgColor: white
-  suggested: true
