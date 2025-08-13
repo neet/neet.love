@@ -1,4 +1,5 @@
 import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import clsx from "clsx";
 import type { Metadata } from "next";
