@@ -8,6 +8,8 @@ import { Roboto, Roboto_Mono, Yeseva_One } from "next/font/google";
 import { Banner } from "@/components/Banner/Banner";
 import { ContentInfo } from "@/components/ContentInfo/ContentInfo";
 
+import { Mixpanel } from "./_mixpanel";
+
 const yesevaOne = Yeseva_One({
   subsets: ["latin"],
   weight: "400",
@@ -59,6 +61,8 @@ export default function RootLayout({
         {children}
         <ContentInfo />
       </body>
+
+      <Mixpanel token="881bf577656f082bda1f9daf71264e20" />
     </html>
   );
 }

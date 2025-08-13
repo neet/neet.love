@@ -1,6 +1,7 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
+import mixpanel from "mixpanel-browser";
 import { FC, KeyboardEventHandler, MouseEventHandler } from "react";
 
 import * as link from "@/models/link";
@@ -14,8 +15,13 @@ export const ContactCard: FC<ContactCardProps> = (props) => {
   const { contact } = props;
 
   const invoke = () => {
+    mixpanel.track("ContactCard::click", {
+      type: contact.type,
+      label: contact.label,
+    });
+
     if ("url" in contact) {
-      return window.open(contact.url, "_blank");
+      window.open(contact.url, "_blank");
     } else {
       navigator.clipboard.writeText(contact.copyable);
       window.alert(`“${contact.copyable}” has been copied to clipboard!`);
