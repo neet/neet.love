@@ -34,11 +34,14 @@ export const ContactCard: FC<ContactCardProps> = (props) => {
     }
   };
 
+  const labelClass =
+    "block w-full overflow-hidden text-ellipsis text-sm underline";
+
   const labelNode =
     "url" in contact ? (
       <a
         href={contact.url}
-        className="text-sm underline"
+        className={labelClass}
         target="_blank"
         rel="noreferrer noopener"
         tabIndex={-1}
@@ -46,7 +49,7 @@ export const ContactCard: FC<ContactCardProps> = (props) => {
         {contact.label}
       </a>
     ) : (
-      <button className="text-sm underline">{contact.label}</button>
+      <button className={labelClass}>{contact.label}</button>
     );
 
   return (
@@ -81,8 +84,8 @@ export const ContactCard: FC<ContactCardProps> = (props) => {
         />
       </div>
 
-      <div className="mt-1 w-full overflow-hidden text-ellipsis text-center text-zinc-600 dark:text-zinc-400">
-        <div className="line-clamp-1 text-black dark:text-white">
+      <div className="mt-1 w-full text-center text-zinc-600 dark:text-zinc-400">
+        <div className="overflow-hidden text-ellipsis whitespace-nowrap text-black dark:text-white">
           {contact.name}
         </div>
 
