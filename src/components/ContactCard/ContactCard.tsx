@@ -41,7 +41,7 @@ export const ContactCard: FC<ContactCardProps> = (props) => {
   };
 
   const labelClass =
-    "block w-full overflow-hidden text-ellipsis text-sm underline";
+    "block w-full overflow-hidden text-ellipsis text-nowrap text-sm underline";
 
   const labelNode =
     "url" in contact ? (

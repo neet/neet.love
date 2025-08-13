@@ -38,6 +38,13 @@
   bgColor: black
   fgColor: white
 
+- type: orcid
+  name: ORCID
+  label: "0009-0009-2157-7734"
+  url: https://orcid.org/0009-0009-2157-7734
+  bgColor: black
+  fgColor: white
+
 - type: huggingface
   name: Hugging Face Hub
   label: "@rigarashi"
