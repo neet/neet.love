@@ -2,7 +2,7 @@ export const ContentInfo = () => {
   return (
     <footer className="w-full py-8 text-center">
       <a
-        href="https://www.wantedly.com/id/rigarashi"
+        href="https://youtrust.jp/users/neet"
         target="_blank"
         rel="noopener noreferrer"
         className="font-mono text-sm leading-relaxed text-blue-600 underline dark:text-blue-400"
